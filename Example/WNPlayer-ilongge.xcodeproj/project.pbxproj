@@ -21,15 +21,11 @@
 		BA4697DF27E03BF4008D7A25 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4697D627E03BF3008D7A25 /* BaseNavigationController.m */; };
 		BA4697E027E03BF4008D7A25 /* CustomerControlView_test.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4697D827E03BF3008D7A25 /* CustomerControlView_test.m */; };
 		BA4697E127E03BF4008D7A25 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4697D927E03BF3008D7A25 /* SecondViewController.m */; };
-		D840D795221EEC57AB33D257 /* Pods_WNPlayer_ilongge_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52D89578393A71EAE3C46AA /* Pods_WNPlayer_ilongge_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E3C75AC1CF5F739E7EC9DA8 /* Pods_WNPlayer_ilongge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WNPlayer_ilongge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24B19BF58B08A2125C14E3D0 /* WNPlayer-ilongge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "WNPlayer-ilongge.podspec"; path = "../WNPlayer-ilongge.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4346D9A820999D168068462F /* Pods-WNPlayer-ilongge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayer-ilongge_Example.debug.xcconfig"; path = "Target Support Files/Pods-WNPlayer-ilongge_Example/Pods-WNPlayer-ilongge_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		4EBEFB621B1C82B06CAC50CB /* Pods-WNPlayer-ilongge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayer-ilongge_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WNPlayer-ilongge_Tests/Pods-WNPlayer-ilongge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		54ADCEA8D60C42DCA18D4AB9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* WNPlayer-ilongge_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WNPlayer-ilongge_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -41,10 +37,9 @@
 		6003F59C195388D20070C39A /* WNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WNAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* WNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WNAppDelegate.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A223DD3247FFC7979F8E012E /* Pods-WNPlayer-ilongge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayer-ilongge_Tests.release.xcconfig"; path = "Target Support Files/Pods-WNPlayer-ilongge_Tests/Pods-WNPlayer-ilongge_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		AEFE83F061122054916DCB6A /* Pods-WNPlayer-ilongge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayer-ilongge_Example.release.xcconfig"; path = "Target Support Files/Pods-WNPlayer-ilongge_Example/Pods-WNPlayer-ilongge_Example.release.xcconfig"; sourceTree = "<group>"; };
+		BA1C8B8D27E0956D00BFD1E2 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
 		BA4697D027E03BF2008D7A25 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		BA4697D127E03BF3008D7A25 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
 		BA4697D227E03BF3008D7A25 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -57,7 +52,6 @@
 		BA4697D927E03BF3008D7A25 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		BA4697DA27E03BF3008D7A25 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		BA4697DB27E03BF4008D7A25 /* CustomerControlView_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerControlView_test.h; sourceTree = "<group>"; };
-		F52D89578393A71EAE3C46AA /* Pods_WNPlayer_ilongge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WNPlayer_ilongge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93870FF6DB7E462027DE105 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,7 +63,6 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				D840D795221EEC57AB33D257 /* Pods_WNPlayer_ilongge_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,8 +74,6 @@
 			children = (
 				4346D9A820999D168068462F /* Pods-WNPlayer-ilongge_Example.debug.xcconfig */,
 				AEFE83F061122054916DCB6A /* Pods-WNPlayer-ilongge_Example.release.xcconfig */,
-				4EBEFB621B1C82B06CAC50CB /* Pods-WNPlayer-ilongge_Tests.debug.xcconfig */,
-				A223DD3247FFC7979F8E012E /* Pods-WNPlayer-ilongge_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -112,9 +103,6 @@
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
-				6003F5AF195388D20070C39A /* XCTest.framework */,
-				F52D89578393A71EAE3C46AA /* Pods_WNPlayer_ilongge_Example.framework */,
-				0E3C75AC1CF5F739E7EC9DA8 /* Pods_WNPlayer_ilongge_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -160,7 +148,7 @@
 			children = (
 				24B19BF58B08A2125C14E3D0 /* WNPlayer-ilongge.podspec */,
 				F93870FF6DB7E462027DE105 /* README.md */,
-				54ADCEA8D60C42DCA18D4AB9 /* LICENSE */,
+				BA1C8B8D27E0956D00BFD1E2 /* LICENSE.txt */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";

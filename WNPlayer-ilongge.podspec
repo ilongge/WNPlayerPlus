@@ -34,35 +34,28 @@ Pod::Spec.new do |spec|
         'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
     }
     
-    spec.source_files = 'WNPlayer-ilongge/Classes/WNPlayer_ilongge_Header.h'
-    spec.public_header_files = 'WNPlayer-ilongge/Classes/WNPlayer_ilongge_Header.h'
     spec.subspec 'Category' do |ss|
-        #XYHFMDB.h头文件
-        ss.source_files = 'WNPlayer-ilongge/Classes//Category/*'
-        #公开头文件
-        ss.public_header_files = 'WNPlayer-ilongge/Classes/Category/*.h'
+        ss.source_files = 'WNPlayer-ilongge/Classes/WNPlayer_ilongge/Category/*'
+        ss.public_header_files = 'WNPlayer-ilongge/Classes/WNPlayer_ilongge/Category/*.h'
     end
     
     spec.subspec 'Codec' do |ss|
-        #XYHFMDB.h头文件
-        ss.source_files = 'WNPlayer-ilongge/Classes/Codec/*'
-        #公开头文件
-        ss.public_header_files = 'WNPlayer-ilongge/Classes/Codec/*.h'
+        ss.source_files = 'WNPlayer-ilongge/Classes/WNPlayer_ilongge/Codec/*'
+        ss.public_header_files = 'WNPlayer-ilongge/Classes/WNPlayer_ilongge/Codec/*.h'
     end
+    
     spec.subspec 'Frame' do |ss|
-        #XYHFMDB.h头文件
-        ss.source_files = 'WNPlayer-ilongge/Classes/Frame/*'
-        #公开头文件
-        ss.public_header_files = 'WNPlayer-ilongge/Classes/Frame/*.h'
+        ss.source_files = 'WNPlayer-ilongge/Classes/WNPlayer_ilongge/Frame/*'
+        ss.public_header_files = 'WNPlayer-ilongge/Classes/WNPlayer_ilongge/Frame/*.h'
     end
+    
     spec.subspec 'Public' do |ss|
-        #XYHFMDB.h头文件
-        ss.source_files = 'WNPlayer-ilongge/Classes/Public/*'
-        #公开头文件
-        ss.public_header_files = 'WNPlayer-ilongge/Classes/Public/*.h'
+        ss.source_files = 'WNPlayer-ilongge/Classes/WNPlayer_ilongge/Public/*'
+        ss.public_header_files = 'WNPlayer-ilongge/Classes/WNPlayer_ilongge/Public/WNPlayer_ilongge_Header.h'
         ss.libraries = 'bz2','iconv', 'z'
         ss.frameworks = 'OpenGLES', 'VideoToolbox', 'AudioToolbox', 'MediaPlayer', 'Accelerate'
     end
+    
     spec.vendored_frameworks = 'Frameworks/FFmpeg.framework'
     spec.resource_bundle = {'WNPlayer' => [ 'WNPlayer-ilongge/**/*.{xib,xcassets,json,glsl,strings}' ]}
     spec.public_header_files = 'WNPlayer-ilongge/Classes/Public/*.h'

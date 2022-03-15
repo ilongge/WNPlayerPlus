@@ -31,7 +31,7 @@ echo "pod repo update ilonggeSpec"
 Update_Result=$(pod repo update ilonggeSpec) 
 
 echo "pod package WNPlayer-ilongge.podspec --force --dynamic --no-mangle"
-Package_Result=$(pod package WNPlayer-ilongge.podspec --force --dynamic --no-mangle) 
+Package_Result=$(pod package WNPlayer-ilongge.podspec --force --no-mangle) 
 result=$(echo $Package_Result | grep "configuration Release")
 
 if [[ "$result" == "" ]]; then

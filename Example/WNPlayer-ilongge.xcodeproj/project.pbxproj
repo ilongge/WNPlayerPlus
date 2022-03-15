@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		0E3C75AC1CF5F739E7EC9DA8 /* Pods_WNPlayer_ilongge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WNPlayer_ilongge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		24B19BF58B08A2125C14E3D0 /* WNPlayer-ilongge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "WNPlayer-ilongge.podspec"; path = "../WNPlayer-ilongge.podspec"; sourceTree = "<group>"; };
+		24B19BF58B08A2125C14E3D0 /* WNPlayer-ilongge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "WNPlayer-ilongge.podspec"; path = "../WNPlayer-ilongge.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4346D9A820999D168068462F /* Pods-WNPlayer-ilongge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayer-ilongge_Example.debug.xcconfig"; path = "Target Support Files/Pods-WNPlayer-ilongge_Example/Pods-WNPlayer-ilongge_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4EBEFB621B1C82B06CAC50CB /* Pods-WNPlayer-ilongge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayer-ilongge_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WNPlayer-ilongge_Tests/Pods-WNPlayer-ilongge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		54ADCEA8D60C42DCA18D4AB9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -42,10 +42,6 @@
 		6003F59D195388D20070C39A /* WNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WNAppDelegate.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
-		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A223DD3247FFC7979F8E012E /* Pods-WNPlayer-ilongge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayer-ilongge_Tests.release.xcconfig"; path = "Target Support Files/Pods-WNPlayer-ilongge_Tests/Pods-WNPlayer-ilongge_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		AEFE83F061122054916DCB6A /* Pods-WNPlayer-ilongge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayer-ilongge_Example.release.xcconfig"; path = "Target Support Files/Pods-WNPlayer-ilongge_Example/Pods-WNPlayer-ilongge_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,7 +92,6 @@
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for WNPlayer-ilongge */,
-				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				4DE02C308DFC590B69A3AF57 /* Pods */,
@@ -156,25 +151,6 @@
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
 				6003F59B195388D20070C39A /* WNPlayer-ilongge-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6003F5B5195388D20070C39A /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
-				6003F5B6195388D20070C39A /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		6003F5B6195388D20070C39A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5B7195388D20070C39A /* Tests-Info.plist */,
-				6003F5B8195388D20070C39A /* InfoPlist.strings */,
-				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -328,14 +304,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5B9195388D20070C39A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -429,6 +397,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WNPlayer-ilongge/WNPlayer-ilongge-Prefix.pch";
 				INFOPLIST_FILE = "WNPlayer-ilongge/WNPlayer-ilongge-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -446,6 +415,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WNPlayer-ilongge/WNPlayer-ilongge-Prefix.pch";
 				INFOPLIST_FILE = "WNPlayer-ilongge/WNPlayer-ilongge-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

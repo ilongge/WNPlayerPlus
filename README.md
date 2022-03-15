@@ -17,7 +17,7 @@ WNPlayer-ilongge is available through [CocoaPods](https://cocoapods.org). To ins
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'WNPlayer-ilongge'
+pod 'WNPlayer-ilongge', :git => 'https://gitee.com/ilongge/wnplayer-ilongge.git'
 ```
 
 ## Author

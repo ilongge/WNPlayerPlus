@@ -21,11 +21,11 @@ s.description      = <<-DESC
 TODO: Add long description of the pod here.
 DESC
 
-s.homepage         = 'https://github.com/1015820857@qq.com/WNPlayer-ilongge'
+s.homepage         = 'https://gitee.com/ilongge/wnplayer-ilongge'
 # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { '1015820857@qq.com' => '1015820857@qq.com' }
-s.source           = { :git => 'https://github.com/1015820857@qq.com/WNPlayer-ilongge.git', :tag => s.version.to_s }
+s.source           = { :git => 'https://gitee.com/ilongge/wnplayer-ilongge.git', :tag => s.version.to_s }
 
 s.ios.deployment_target = '9.0'
 s.requires_arc = true

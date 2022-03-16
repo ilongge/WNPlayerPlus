@@ -6,7 +6,7 @@
 //  Copyright © 2018年 wenming. All rights reserved.
 //
 
-#import "WNDisplayView.h"
+
 #import "WNPlayerManager.h"
 #import "WNPlayerDecoder.h"
 #import "WNPlayerDef.h"
@@ -14,7 +14,7 @@
 #import "WNPlayerFrame.h"
 #import "WNPlayerVideoFrame.h"
 #import "WNPlayerAudioFrame.h"
-
+#import "WNDisplayView.h"
 @interface WNPlayerManager (){
     
 }
@@ -90,7 +90,7 @@
 - (void)open:(NSString *)url usesTCP:(BOOL)usesTCP optionDic:(NSDictionary *)optionDic{
     self.decoder.usesTCP = usesTCP;
     self.decoder.optionDic = optionDic;
-
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSError *error = nil;
         self.opening = YES;

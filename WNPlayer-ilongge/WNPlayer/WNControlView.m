@@ -10,11 +10,11 @@
 #define WNPlayerFrameworkSrcName(file) [@"Frameworks/WNPlayer.framework/WNPlayer.bundle" stringByAppendingPathComponent:file]
 #define WNPlayerImage(file)      [UIImage imageNamed:WNPlayerSrcName(file)] ? :[UIImage imageNamed:WNPlayerFrameworkSrcName(file)]
 
-
-
 #import "WNControlView.h"
 #import "WNPlayer.h"
-
+#import "WNDisplayView.h"
+#import "WNPlayerDef.h"
+#import "WNPlayerManager.h"
 
 @interface WNControlView ()<UIGestureRecognizerDelegate>
 @property (nonatomic,strong) UIView *backItemView;

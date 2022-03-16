@@ -52,7 +52,7 @@ Pod::Spec.new do |spec|
         ss.source_files        = 'WNPlayer-ilongge/WNPlayer/*.{h,m}'
         ss.frameworks          = 'OpenGLES', 'QuartzCore'
     end
-    spec.public_header_files    = 'WNPlayer-ilongge/WNPlayer/*.{h}'
+    spec.source_files          = 'WNPlayer-ilongge/WNPlayer-ilongge.h'
     spec.resource_bundle       = {
         'WNPlayer' => [ 'WNPlayer-ilongge/**/*.{xib,xcassets,json,glsl,strings}' ]
     }

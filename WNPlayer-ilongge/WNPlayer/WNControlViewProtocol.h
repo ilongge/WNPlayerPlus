@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WNPlayerManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @class WNPlayer;

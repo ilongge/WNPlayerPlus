@@ -7,7 +7,6 @@
 //
 @class WNDisplayView;
 #import <Foundation/Foundation.h>
-#import "WNPlayerDef.h"
 typedef void (^onPauseComplete)(void);
 
 

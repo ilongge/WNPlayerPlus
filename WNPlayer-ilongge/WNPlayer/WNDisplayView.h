@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 @class WNPlayerVideoFrame;
 
-
-
 @interface WNDisplayView : UIView
 @property (nonatomic,assign) CGSize contentSize;
 @property (nonatomic,assign) CGFloat rotation;

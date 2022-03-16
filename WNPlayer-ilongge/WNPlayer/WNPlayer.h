@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WNPlayerManager.h"
-#import "WNControlView.h"
 #import "WNControlViewProtocol.h"
-#import "WNDisplayView.h"
 
 typedef enum : NSUInteger {
     WNPlayerStatusNone,
@@ -24,10 +21,9 @@ typedef enum : NSUInteger {
     WNPlayerStatusClosed,
 } WNPlayerStatus;
 
-
-
-
 @class WNPlayer;
+@class WNPlayerManager;
+
 @protocol WNPlayerDelegate <NSObject>
 @optional
 //点击播放暂停按钮代理方法

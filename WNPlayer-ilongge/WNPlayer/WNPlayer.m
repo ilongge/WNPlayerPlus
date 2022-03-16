@@ -8,7 +8,10 @@
 
 #import "WNPlayer.h"
 #import "WNPlayerUtils.h"
-
+#import "WNPlayerDef.h"
+#import "WNDisplayView.h"
+#import "WNControlView.h"
+#import "WNPlayerManager.h"
 
 typedef enum : NSUInteger {
     WNPlayerOperationNone,

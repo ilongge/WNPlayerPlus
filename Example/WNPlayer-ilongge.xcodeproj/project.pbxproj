@@ -16,12 +16,6 @@
 		6003F59E195388D20070C39A /* WNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* WNAppDelegate.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		BA4697DC27E03BF4008D7A25 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4697D327E03BF3008D7A25 /* FirstViewController.m */; };
-		BA4697DD27E03BF4008D7A25 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4697D427E03BF3008D7A25 /* RootTabBarController.m */; };
-		BA4697DE27E03BF4008D7A25 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4697D527E03BF3008D7A25 /* DetailViewController.m */; };
-		BA4697DF27E03BF4008D7A25 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4697D627E03BF3008D7A25 /* BaseNavigationController.m */; };
-		BA4697E027E03BF4008D7A25 /* CustomerControlView_test.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4697D827E03BF3008D7A25 /* CustomerControlView_test.m */; };
-		BA4697E127E03BF4008D7A25 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4697D927E03BF3008D7A25 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,18 +36,6 @@
 		A09142694A8F0CB486C25617 /* Pods_WNPlayer_ilongge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WNPlayer_ilongge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEFE83F061122054916DCB6A /* Pods-WNPlayer-ilongge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayer-ilongge_Example.release.xcconfig"; path = "Target Support Files/Pods-WNPlayer-ilongge_Example/Pods-WNPlayer-ilongge_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BA1C8B8D27E0956D00BFD1E2 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
-		BA4697D027E03BF2008D7A25 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		BA4697D127E03BF3008D7A25 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
-		BA4697D227E03BF3008D7A25 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		BA4697D327E03BF3008D7A25 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		BA4697D427E03BF3008D7A25 /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
-		BA4697D527E03BF3008D7A25 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		BA4697D627E03BF3008D7A25 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
-		BA4697D727E03BF3008D7A25 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		BA4697D827E03BF3008D7A25 /* CustomerControlView_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerControlView_test.m; sourceTree = "<group>"; };
-		BA4697D927E03BF3008D7A25 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		BA4697DA27E03BF3008D7A25 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
-		BA4697DB27E03BF4008D7A25 /* CustomerControlView_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerControlView_test.h; sourceTree = "<group>"; };
 		F93870FF6DB7E462027DE105 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,20 +96,8 @@
 		6003F593195388D20070C39A /* Example for WNPlayer-ilongge */ = {
 			isa = PBXGroup;
 			children = (
-				BA4697DA27E03BF3008D7A25 /* BaseNavigationController.h */,
-				BA4697D627E03BF3008D7A25 /* BaseNavigationController.m */,
-				BA4697DB27E03BF4008D7A25 /* CustomerControlView_test.h */,
-				BA4697D827E03BF3008D7A25 /* CustomerControlView_test.m */,
-				BA4697D227E03BF3008D7A25 /* DetailViewController.h */,
-				BA4697D527E03BF3008D7A25 /* DetailViewController.m */,
-				BA4697D027E03BF2008D7A25 /* FirstViewController.h */,
-				BA4697D327E03BF3008D7A25 /* FirstViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				BA4697D127E03BF3008D7A25 /* RootTabBarController.h */,
-				BA4697D427E03BF3008D7A25 /* RootTabBarController.m */,
-				BA4697D727E03BF3008D7A25 /* SecondViewController.h */,
-				BA4697D927E03BF3008D7A25 /* SecondViewController.m */,
 				6003F594195388D20070C39A /* Supporting Files */,
 				6003F59C195388D20070C39A /* WNAppDelegate.h */,
 				6003F59D195388D20070C39A /* WNAppDelegate.m */,
@@ -274,14 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA4697E127E03BF4008D7A25 /* SecondViewController.m in Sources */,
 				6003F59E195388D20070C39A /* WNAppDelegate.m in Sources */,
-				BA4697DF27E03BF4008D7A25 /* BaseNavigationController.m in Sources */,
-				BA4697E027E03BF4008D7A25 /* CustomerControlView_test.m in Sources */,
-				BA4697DD27E03BF4008D7A25 /* RootTabBarController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				BA4697DC27E03BF4008D7A25 /* FirstViewController.m in Sources */,
-				BA4697DE27E03BF4008D7A25 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

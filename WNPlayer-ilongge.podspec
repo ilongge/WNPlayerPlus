@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name             = 'WNPlayer-ilongge'
-    spec.version          = '0.0.3.1'
+    spec.version          = '0.0.2'
     spec.summary          = 'A short description of WNPlayer-ilongge.'
     spec.description      = <<-DESC
     '基于WNPlayer开发，原始库地址https://github.com/zhengwenming/WNPlayer.git，项目内使用自编译FFMpeg.Framework，版本4.3.3。'
@@ -32,7 +32,8 @@ Pod::Spec.new do |spec|
         ss.dependency              'WNPlayer-ilongge/Common'
         ss.dependency              'WNPlayer-ilongge/Frame'
         ss.source_files          = 'WNPlayer-ilongge/Codec/*.{h,m}'
-        ss.frameworks            = 'AVFoundation', 'AudioToolbox', 'Accelerate' 
+        ss.libraries             = 'bz2','iconv', 'z'
+        ss.frameworks            = 'AVFoundation', 'AudioToolbox', 'Accelerate'
         ss.vendored_frameworks   = 'Frameworks/FFmpeg.framework'
     end
     
@@ -49,7 +50,6 @@ Pod::Spec.new do |spec|
         ss.dependency            'WNPlayer-ilongge/Frame'
         ss.dependency            'WNPlayer-ilongge/Codec'
         ss.source_files        = 'WNPlayer-ilongge/WNPlayer/*.{h,m}'
-        ss.libraries           = 'bz2','iconv', 'z'
         ss.frameworks          = 'OpenGLES', 'QuartzCore'
     end
     spec.public_header_files    = 'WNPlayer-ilongge/WNPlayer/*.{h}'

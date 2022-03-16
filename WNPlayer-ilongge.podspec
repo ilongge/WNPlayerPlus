@@ -30,7 +30,9 @@ Pod::Spec.new do |spec|
     
     spec.subspec 'Codec' do |ss|
         ss.vendored_frameworks   = 'Frameworks/FFmpeg.framework'
+        
         ss.source_files          = 'WNPlayer-ilongge/Codec/*'
+        ss.public_header_files   = 'WNPlayer-ilongge/Codec/*.h'
         ss.frameworks            = 'AVFoundation', 'AudioToolbox', 'Accelerate', 'VideoToolbox'
         ss.dependency              'WNPlayer-ilongge/Common'
         ss.dependency              'WNPlayer-ilongge/Frame'
@@ -38,12 +40,13 @@ Pod::Spec.new do |spec|
     
     spec.subspec 'Frame' do |ss|
         ss.source_files        = 'WNPlayer-ilongge/Frame/*'
+        ss.public_header_files = 'WNPlayer-ilongge/Frame/*.h'
         ss.frameworks          = 'OpenGLES'
     end
     
     spec.subspec 'Common' do |ss|
         ss.source_files        = 'WNPlayer-ilongge/Common/*'
-        ss.frameworks          = 'OpenGLES'
+        ss.public_header_files = 'WNPlayer-ilongge/Common/*.h'
     end
     
     spec.subspec 'WNPlayer' do |ss|

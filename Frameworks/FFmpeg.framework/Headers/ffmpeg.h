@@ -9,3 +9,5 @@
 #include <FFmpeg/swscale.h>
 #include <FFmpeg/swresample.h>
 #include <FFmpeg/imgutils.h>
+#include <FFmpeg/display.h>
+#include <FFmpeg/eval.h>

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name             = 'WNPlayer-ilongge'
-    spec.version          = '0.0.2'
+    spec.version          = '0.0.3'
     spec.summary          = 'A short description of WNPlayer-ilongge.'
     spec.description      = <<-DESC
     '基于WNPlayer开发，原始库地址https://github.com/zhengwenming/WNPlayer.git，项目内使用自编译FFMpeg.Framework，版本4.3.3。'
@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
     spec.author           = { 'ilongge' => '1015820857@qq.com' }
     spec.source           = { :git => 'https://gitee.com/ilongge/wnplayer-ilongge.git', :tag => spec.version.to_s }
     
-    spec.ios.deployment_target = '9.0'
+    spec.ios.deployment_target = '11.0'
     spec.requires_arc = true
     
     spec.pod_target_xcconfig = {
@@ -29,8 +29,9 @@ Pod::Spec.new do |spec|
     end
     
     spec.subspec 'Codec' do |ss|
-        ss.source_files        = 'WNPlayer-ilongge/Classes/Codec/*'
-        ss.frameworks          = 'AVFoundation', 'AudioToolbox', 'Accelerate', 'VideoToolbox'
+        ss.vendored_frameworks   = 'Frameworks/FFmpeg.framework'
+        ss.source_files          = 'WNPlayer-ilongge/Classes/Codec/*'
+        ss.frameworks            = 'AVFoundation', 'AudioToolbox', 'Accelerate', 'VideoToolbox'
     end
     
     spec.subspec 'Frame' do |ss|
@@ -45,7 +46,7 @@ Pod::Spec.new do |spec|
         ss.frameworks          = 'OpenGLES', 'QuartzCore'
     end
     
-    spec.vendored_frameworks   = 'Frameworks/FFmpeg.framework'
+    
     spec.resource_bundle       = {
         'WNPlayer' => [ 'WNPlayer-ilongge/**/*.{xib,xcassets,json,glsl,strings}' ]
     }

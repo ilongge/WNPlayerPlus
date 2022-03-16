@@ -26,12 +26,14 @@ Pod::Spec.new do |spec|
     
     spec.subspec 'Category' do |ss|
         ss.source_files        = 'WNPlayer-ilongge/Category/*.{h,m}'
+        ss.public_header_files = 'WNPlayer-ilongge/Category/Category.h'
     end
     
     spec.subspec 'Codec' do |ss|
         ss.dependency              'WNPlayer-ilongge/Common'
         ss.dependency              'WNPlayer-ilongge/Frame'
         ss.source_files          = 'WNPlayer-ilongge/Codec/*.{h,m}'
+        ss.public_header_files   = 'WNPlayer-ilongge/Codec/Codec.h'
         ss.libraries             = 'bz2','iconv', 'z'
         ss.frameworks            = 'AVFoundation', 'AudioToolbox', 'Accelerate'
         ss.vendored_frameworks   = 'Frameworks/FFmpeg.framework'
@@ -39,20 +41,24 @@ Pod::Spec.new do |spec|
     
     spec.subspec 'Frame' do |ss|
         ss.source_files        = 'WNPlayer-ilongge/Frame/*.{h,m}'
+        ss.public_header_files = 'WNPlayer-ilongge/Frame/Frame.h'
         ss.frameworks          = 'OpenGLES'
     end
     
     spec.subspec 'Common' do |ss|
         ss.source_files        = 'WNPlayer-ilongge/Common/*.{h,m}'
+        ss.public_header_files = 'WNPlayer-ilongge/Common/*.h'
     end
     
     spec.subspec 'WNPlayer' do |ss|
         ss.dependency            'WNPlayer-ilongge/Frame'
         ss.dependency            'WNPlayer-ilongge/Codec'
         ss.source_files        = 'WNPlayer-ilongge/WNPlayer/*.{h,m}'
+        ss.public_header_files = 'WNPlayer-ilongge/WNPlayer/*.h'
         ss.frameworks          = 'OpenGLES', 'QuartzCore'
     end
     spec.source_files          = 'WNPlayer-ilongge/WNPlayer-ilongge.h'
+    spec.public_header_files   = 'WNPlayer-ilongge/WNPlayer-ilongge.h'
     spec.resource_bundle       = {
         'WNPlayer' => [ 'WNPlayer-ilongge/**/*.{xib,xcassets,json,glsl,strings}' ]
     }

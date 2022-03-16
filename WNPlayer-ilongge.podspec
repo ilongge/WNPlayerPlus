@@ -25,26 +25,36 @@ Pod::Spec.new do |spec|
     }
     
     spec.subspec 'Category' do |ss|
-        ss.source_files        = 'WNPlayer-ilongge/Classes/Category/*.{h,m}'
+        ss.source_files        = 'WNPlayer-ilongge/Category/*'
     end
     
     spec.subspec 'Codec' do |ss|
-        ss.source_files          = 'WNPlayer-ilongge/Classes/Codec/*.{h,m}'
+        ss.vendored_frameworks   = 'Frameworks/FFmpeg.framework'
+        ss.source_files          = 'WNPlayer-ilongge/Codec/*'
+        ss.frameworks            = 'AVFoundation', 'AudioToolbox', 'Accelerate', 'VideoToolbox'
+        ss.dependency              'WNPlayer-ilongge/Common'
     end
     
     spec.subspec 'Frame' do |ss|
-        ss.source_files        = 'WNPlayer-ilongge/Classes/Frame/*.{h,m}'
+        ss.source_files        = 'WNPlayer-ilongge/Frame/*'
+        ss.frameworks          = 'OpenGLES'
     end
     
-    spec.subspec 'Public' do |ss|
-        ss.source_files        = 'WNPlayer-ilongge/Classes/Public/*.{h,m}'
+    spec.subspec 'Common' do |ss|
+        ss.source_files        = 'WNPlayer-ilongge/Common/*'
+        ss.frameworks          = 'OpenGLES'
     end
     
-    spec.vendored_frameworks   = 'Frameworks/FFmpeg.framework'
-    spec.public_header_files = 'WNPlayer-ilongge/Classes/Public/*.h'
-    spec.libraries           = 'bz2','iconv', 'z'
-    spec.frameworks          = 'OpenGLES', 'QuartzCore', 'OpenGLES','AVFoundation', 'AudioToolbox', 'Accelerate', 'VideoToolbox'
-    spec.resource_bundle     = {
+    spec.subspec 'WNPlayer' do |ss|
+        ss.source_files        = 'WNPlayer-ilongge/WNPlayer/*'
+        ss.public_header_files = 'WNPlayer-ilongge/WNPlayer/*.h'
+        ss.libraries           = 'bz2','iconv', 'z'
+        ss.frameworks          = 'OpenGLES', 'QuartzCore'
+        ss.dependency            'WNPlayer-ilongge/Frame'
+        ss.dependency            'WNPlayer-ilongge/Codec'
+    end
+
+    spec.resource_bundle       = {
         'WNPlayer' => [ 'WNPlayer-ilongge/**/*.{xib,xcassets,json,glsl,strings}' ]
     }
 end

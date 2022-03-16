@@ -33,6 +33,7 @@ Pod::Spec.new do |spec|
         ss.source_files          = 'WNPlayer-ilongge/Codec/*'
         ss.frameworks            = 'AVFoundation', 'AudioToolbox', 'Accelerate', 'VideoToolbox'
         ss.dependency              'WNPlayer-ilongge/Common'
+        ss.dependency              'WNPlayer-ilongge/Frame'
     end
     
     spec.subspec 'Frame' do |ss|

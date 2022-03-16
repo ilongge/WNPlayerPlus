@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name             = 'WNPlayer-ilongge'
-    spec.version          = '0.0.3'
+    spec.version          = '0.0.3.1'
     spec.summary          = 'A short description of WNPlayer-ilongge.'
     spec.description      = <<-DESC
     '基于WNPlayer开发，原始库地址https://github.com/zhengwenming/WNPlayer.git，项目内使用自编译FFMpeg.Framework，版本4.3.3。'

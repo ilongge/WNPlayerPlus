@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WNPlayer : UIView
 @property (nonatomic,copy) NSString *urlString;
 @property (nonatomic, weak)id <WNPlayerDelegate> delegate;
-@property (nonatomic,strong) UIView <WNControlViewProtocol> *controlView;
+@property (nonatomic, strong) UIView <WNControlViewProtocol> *controlView;
 @property (nonatomic, strong) WNPlayerManager *playerManager;
 //控制层，开发者可自定义(自定义一个UIView，遵守WNControlViewProtocol，添加自己的子控件，控件的事件连接WNControlViewProtocol的事件)
 @property (nonatomic,assign) BOOL autoplay;
@@ -69,7 +69,6 @@ NS_ASSUME_NONNULL_BEGIN
 ///默认是UDP，如有需要用TCP，请传YES,optionDic里面可以设置key-value，比如headers-cookie：xxxx
 - (void)openWithTCP:(BOOL)usesTCP optionDic:(NSDictionary *)optionDic;
 - (void)close;
-
 - (void)play;
 - (void)pause;
 //判断是否为iPhone X系列

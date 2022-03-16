@@ -10,7 +10,7 @@
 #import "WNControlViewProtocol.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CustomerControlView_test : UIView<WNControlViewProtocol>
+@interface CustomerControlView_test : UIView
 @property (nonatomic,strong) UIImageView *coverImageView;// 播放器默认背景
 
 @end

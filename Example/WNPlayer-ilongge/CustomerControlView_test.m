@@ -9,6 +9,9 @@
 #import "CustomerControlView_test.h"
 #import <WNPlayer.h>
 @interface CustomerControlView_test ()
+<
+WNControlViewProtocol
+>
 @property(nonatomic,strong)UIView *container;
 @property(nonatomic,strong)UIButton *centerPlayerBtn;
 @end
@@ -55,7 +58,24 @@
     }
     double duration = player.playerManager.duration;
     int seconds = ceil(duration);
-    
+    NSLog(@"视频时长%02d:%02d", seconds/60, seconds%60);
     self.coverImageView.hidden = YES;
+}
+#pragma mark WNControlViewProtocol
+
+- (void)play{
+    
+}
+
+- (void)pause{
+    
+}
+
+-(void)singleTaped{
+    
+}
+
+-(void)doubleTaped{
+    
 }
 @end

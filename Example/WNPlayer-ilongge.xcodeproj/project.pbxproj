@@ -16,6 +16,12 @@
 		6003F59E195388D20070C39A /* WNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* WNAppDelegate.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		BA1C8BAF27E1D95A00BFD1E2 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1C8BA427E1D95A00BFD1E2 /* RootTabBarController.m */; };
+		BA1C8BB027E1D95A00BFD1E2 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1C8BA627E1D95A00BFD1E2 /* BaseNavigationController.m */; };
+		BA1C8BB127E1D95A00BFD1E2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1C8BA827E1D95A00BFD1E2 /* DetailViewController.m */; };
+		BA1C8BB227E1D95A00BFD1E2 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1C8BA927E1D95A00BFD1E2 /* FirstViewController.m */; };
+		BA1C8BB327E1D95A00BFD1E2 /* CustomerControlView_test.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1C8BAB27E1D95A00BFD1E2 /* CustomerControlView_test.m */; };
+		BA1C8BB427E1D95A00BFD1E2 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1C8BAC27E1D95A00BFD1E2 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,18 @@
 		A09142694A8F0CB486C25617 /* Pods_WNPlayer_ilongge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WNPlayer_ilongge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEFE83F061122054916DCB6A /* Pods-WNPlayer-ilongge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayer-ilongge_Example.release.xcconfig"; path = "Target Support Files/Pods-WNPlayer-ilongge_Example/Pods-WNPlayer-ilongge_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BA1C8B8D27E0956D00BFD1E2 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
+		BA1C8BA327E1D95A00BFD1E2 /* CustomerControlView_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerControlView_test.h; sourceTree = "<group>"; };
+		BA1C8BA427E1D95A00BFD1E2 /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
+		BA1C8BA527E1D95A00BFD1E2 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		BA1C8BA627E1D95A00BFD1E2 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		BA1C8BA727E1D95A00BFD1E2 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		BA1C8BA827E1D95A00BFD1E2 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		BA1C8BA927E1D95A00BFD1E2 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		BA1C8BAA27E1D95A00BFD1E2 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
+		BA1C8BAB27E1D95A00BFD1E2 /* CustomerControlView_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerControlView_test.m; sourceTree = "<group>"; };
+		BA1C8BAC27E1D95A00BFD1E2 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		BA1C8BAD27E1D95A00BFD1E2 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		BA1C8BAE27E1D95A00BFD1E2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F93870FF6DB7E462027DE105 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +114,7 @@
 		6003F593195388D20070C39A /* Example for WNPlayer-ilongge */ = {
 			isa = PBXGroup;
 			children = (
+				BA1C8BA227E1D95A00BFD1E2 /* WNPlayerDemo */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -125,6 +144,25 @@
 				BA1C8B8D27E0956D00BFD1E2 /* LICENSE.txt */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		BA1C8BA227E1D95A00BFD1E2 /* WNPlayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BA1C8BAD27E1D95A00BFD1E2 /* BaseNavigationController.h */,
+				BA1C8BA627E1D95A00BFD1E2 /* BaseNavigationController.m */,
+				BA1C8BA327E1D95A00BFD1E2 /* CustomerControlView_test.h */,
+				BA1C8BAB27E1D95A00BFD1E2 /* CustomerControlView_test.m */,
+				BA1C8BAE27E1D95A00BFD1E2 /* DetailViewController.h */,
+				BA1C8BA827E1D95A00BFD1E2 /* DetailViewController.m */,
+				BA1C8BA527E1D95A00BFD1E2 /* FirstViewController.h */,
+				BA1C8BA927E1D95A00BFD1E2 /* FirstViewController.m */,
+				BA1C8BAA27E1D95A00BFD1E2 /* RootTabBarController.h */,
+				BA1C8BA427E1D95A00BFD1E2 /* RootTabBarController.m */,
+				BA1C8BA727E1D95A00BFD1E2 /* SecondViewController.h */,
+				BA1C8BAC27E1D95A00BFD1E2 /* SecondViewController.m */,
+			);
+			path = WNPlayerDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA1C8BB127E1D95A00BFD1E2 /* DetailViewController.m in Sources */,
+				BA1C8BB227E1D95A00BFD1E2 /* FirstViewController.m in Sources */,
+				BA1C8BB327E1D95A00BFD1E2 /* CustomerControlView_test.m in Sources */,
+				BA1C8BB027E1D95A00BFD1E2 /* BaseNavigationController.m in Sources */,
+				BA1C8BB427E1D95A00BFD1E2 /* SecondViewController.m in Sources */,
+				BA1C8BAF27E1D95A00BFD1E2 /* RootTabBarController.m in Sources */,
 				6003F59E195388D20070C39A /* WNAppDelegate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

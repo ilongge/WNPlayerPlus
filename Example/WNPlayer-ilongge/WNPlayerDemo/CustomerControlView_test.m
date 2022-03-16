@@ -7,7 +7,7 @@
 //
 
 #import "CustomerControlView_test.h"
-#import <WNPlayer.h>
+#import <WNPlayer-ilongge.h>
 @interface CustomerControlView_test ()
 <
 WNControlViewProtocol

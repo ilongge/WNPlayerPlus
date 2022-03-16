@@ -5,10 +5,12 @@
 //  Created by zhengwenming on 2018/10/15.
 //  Copyright © 2018年 wenming. All rights reserved.
 //
-@class WNDisplayView;
-#import <Foundation/Foundation.h>
-typedef void (^onPauseComplete)(void);
 
+@class WNDisplayView;
+
+#import <Foundation/Foundation.h>
+
+typedef void (^onPauseComplete)(void);
 
 NS_ASSUME_NONNULL_BEGIN
 

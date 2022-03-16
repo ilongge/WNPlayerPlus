@@ -7,7 +7,7 @@
 //
 
 #import "SecondViewController.h"
-#import <WNPlayer.h>
+#import <WNPlayer-ilongge.h>
 #import "CustomerControlView_test.h"
 
 @interface SecondViewController ()<WNPlayerDelegate>

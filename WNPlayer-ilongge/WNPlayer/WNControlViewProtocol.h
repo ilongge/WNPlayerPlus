@@ -6,10 +6,11 @@
 //  Copyright © 2019 apple. All rights reserved.
 //
 
+@class WNPlayer;
+
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@class WNPlayer;
 
 @protocol WNControlViewProtocol <NSObject>
 

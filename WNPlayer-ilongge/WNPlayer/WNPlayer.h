@@ -6,8 +6,12 @@
 //  Copyright © 2018年 wenming. All rights reserved.
 //
 
+@class WNPlayer;
+@class WNPlayerManager;
+
 #import <UIKit/UIKit.h>
 #import "WNControlViewProtocol.h"
+
 
 typedef enum : NSUInteger {
     WNPlayerStatusNone,
@@ -20,9 +24,6 @@ typedef enum : NSUInteger {
     WNPlayerStatusClosing,
     WNPlayerStatusClosed,
 } WNPlayerStatus;
-
-@class WNPlayer;
-@class WNPlayerManager;
 
 @protocol WNPlayerDelegate <NSObject>
 @optional

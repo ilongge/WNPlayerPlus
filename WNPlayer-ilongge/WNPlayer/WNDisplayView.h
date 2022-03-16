@@ -6,8 +6,9 @@
 //  Copyright © 2018年 wenming. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 @class WNPlayerVideoFrame;
+
+#import <UIKit/UIKit.h>
 
 @interface WNDisplayView : UIView
 @property (nonatomic,assign) CGSize contentSize;

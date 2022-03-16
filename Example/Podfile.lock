@@ -1,13 +1,13 @@
 PODS:
-  - WNPlayer-ilongge (0.0.2):
-    - WNPlayer-ilongge/Category (= 0.0.2)
-    - WNPlayer-ilongge/Codec (= 0.0.2)
-    - WNPlayer-ilongge/Frame (= 0.0.2)
-    - WNPlayer-ilongge/Public (= 0.0.2)
-  - WNPlayer-ilongge/Category (0.0.2)
-  - WNPlayer-ilongge/Codec (0.0.2)
-  - WNPlayer-ilongge/Frame (0.0.2)
-  - WNPlayer-ilongge/Public (0.0.2)
+  - WNPlayer-ilongge (0.0.3):
+    - WNPlayer-ilongge/Category (= 0.0.3)
+    - WNPlayer-ilongge/Codec (= 0.0.3)
+    - WNPlayer-ilongge/Frame (= 0.0.3)
+    - WNPlayer-ilongge/Public (= 0.0.3)
+  - WNPlayer-ilongge/Category (0.0.3)
+  - WNPlayer-ilongge/Codec (0.0.3)
+  - WNPlayer-ilongge/Frame (0.0.3)
+  - WNPlayer-ilongge/Public (0.0.3)
 
 DEPENDENCIES:
   - WNPlayer-ilongge (from `../`)
@@ -17,8 +17,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WNPlayer-ilongge: 27e1744ef16943ee21fce05e67acef6e08bd85a0
+  WNPlayer-ilongge: 388deb79e568b5fe07a36a55951cbbcaddda7843
 
-PODFILE CHECKSUM: 1c616241908b53c4533156184df45b854106f517
+PODFILE CHECKSUM: 9f06e2554bd275dfa3cc3a7d2934d74b3130fba3
 
 COCOAPODS: 1.10.2

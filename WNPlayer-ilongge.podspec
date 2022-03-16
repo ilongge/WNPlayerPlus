@@ -25,29 +25,26 @@ Pod::Spec.new do |spec|
     }
     
     spec.subspec 'Category' do |ss|
-        ss.source_files        = 'WNPlayer-ilongge/Classes/Category/*'
+        ss.source_files        = 'WNPlayer-ilongge/Classes/Category/*.{h,m}'
     end
     
     spec.subspec 'Codec' do |ss|
-        ss.vendored_frameworks   = 'Frameworks/FFmpeg.framework'
-        ss.source_files          = 'WNPlayer-ilongge/Classes/Codec/*'
-        ss.frameworks            = 'AVFoundation', 'AudioToolbox', 'Accelerate', 'VideoToolbox'
+        ss.source_files          = 'WNPlayer-ilongge/Classes/Codec/*.{h,m}'
     end
     
     spec.subspec 'Frame' do |ss|
-        ss.source_files        = 'WNPlayer-ilongge/Classes/Frame/*'
-        ss.frameworks          = 'OpenGLES'
+        ss.source_files        = 'WNPlayer-ilongge/Classes/Frame/*.{h,m}'
     end
     
     spec.subspec 'Public' do |ss|
-        ss.source_files        = 'WNPlayer-ilongge/Classes/Public/*'
-        ss.public_header_files = 'WNPlayer-ilongge/Classes/Public/*.h'
-        ss.libraries           = 'bz2','iconv', 'z'
-        ss.frameworks          = 'OpenGLES', 'QuartzCore'
+        ss.source_files        = 'WNPlayer-ilongge/Classes/Public/*.{h,m}'
     end
     
-    
-    spec.resource_bundle       = {
+    spec.vendored_frameworks   = 'Frameworks/FFmpeg.framework'
+    spec.public_header_files = 'WNPlayer-ilongge/Classes/Public/*.h'
+    spec.libraries           = 'bz2','iconv', 'z'
+    spec.frameworks          = 'OpenGLES', 'QuartzCore', 'OpenGLES','AVFoundation', 'AudioToolbox', 'Accelerate', 'VideoToolbox'
+    spec.resource_bundle     = {
         'WNPlayer' => [ 'WNPlayer-ilongge/**/*.{xib,xcassets,json,glsl,strings}' ]
     }
 end

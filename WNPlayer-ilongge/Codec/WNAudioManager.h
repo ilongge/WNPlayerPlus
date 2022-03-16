@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)pause;
 - (BOOL)pause:(NSError **)error;
 - (BOOL)close;
-- (BOOL)close:(NSArray<NSError *> **)errors;
+- (BOOL)close:(NSArray<NSError *> *_Nullable*_Nullable)errors;
 
 - (double)sampleRate;
 - (UInt32)channels;

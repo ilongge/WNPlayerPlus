@@ -6,17 +6,21 @@
 //  Copyright © 2018年 wenming. All rights reserved.
 //
 
-#import "WNPlayerDecoder.h"
+// Common
 #import "WNPlayerDef.h"
 #import "WNPlayerUtils.h"
+// Frame
 #import "WNPlayerVideoFrame.h"
 #import "WNPlayerAudioFrame.h"
 #import "WNPlayerVideoRGBFrame.h"
 #import "WNPlayerVideoYUVFrame.h"
+// FFMpeg
 #import <FFMpeg/ffmpeg.h>
-#import <FFMpeg/display.h>
-#import <FFMpeg/eval.h>
+
 #import <Accelerate/Accelerate.h>
+
+#import "WNPlayerDecoder.h"
+
 #define WNPlayerIOTimeout 30
 
 static NSTimeInterval g_dIOStartTime = 0;

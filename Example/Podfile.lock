@@ -1,19 +1,5 @@
 PODS:
-  - WNPlayer-ilongge (0.0.2):
-    - WNPlayer-ilongge/Category (= 0.0.2)
-    - WNPlayer-ilongge/Codec (= 0.0.2)
-    - WNPlayer-ilongge/Common (= 0.0.2)
-    - WNPlayer-ilongge/Frame (= 0.0.2)
-    - WNPlayer-ilongge/WNPlayer (= 0.0.2)
-  - WNPlayer-ilongge/Category (0.0.2)
-  - WNPlayer-ilongge/Codec (0.0.2):
-    - WNPlayer-ilongge/Common
-    - WNPlayer-ilongge/Frame
-  - WNPlayer-ilongge/Common (0.0.2)
-  - WNPlayer-ilongge/Frame (0.0.2)
-  - WNPlayer-ilongge/WNPlayer (0.0.2):
-    - WNPlayer-ilongge/Codec
-    - WNPlayer-ilongge/Frame
+  - WNPlayer-ilongge (0.0.2)
 
 DEPENDENCIES:
   - WNPlayer-ilongge (from `../`)
@@ -23,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WNPlayer-ilongge: c909914ed7206e74a0b6f7abdd6c124798ec25fa
+  WNPlayer-ilongge: f0df505666be9475fed6afa296efc226802ee98b
 
 PODFILE CHECKSUM: 9f06e2554bd275dfa3cc3a7d2934d74b3130fba3
 

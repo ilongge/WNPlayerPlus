@@ -1,16 +1,16 @@
 PODS:
-  - WNPlayer-ilongge (1.0.1)
+  - WNPlayerIlongge (1.0.1)
 
 DEPENDENCIES:
-  - WNPlayer-ilongge (from `../`)
+  - WNPlayerIlongge (from `../`)
 
 EXTERNAL SOURCES:
-  WNPlayer-ilongge:
+  WNPlayerIlongge:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WNPlayer-ilongge: 3ae22037c5e4004dcf43f85f408b009ef08a4acc
+  WNPlayerIlongge: 6cf6eee89c55ad0614e3b91795dc23f3e9a5c5b9
 
-PODFILE CHECKSUM: 9f06e2554bd275dfa3cc3a7d2934d74b3130fba3
+PODFILE CHECKSUM: e207c4256f308235cee69ad057603acaac1767ef
 
 COCOAPODS: 1.11.3

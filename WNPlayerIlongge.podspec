@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-    spec.name             = 'WNPlayer-ilongge'
+    spec.name             = 'WNPlayerIlongge'
     spec.version          = '1.0.1'
     spec.summary          = 'A short description of WNPlayer-ilongge.'
     spec.description      = <<-DESC
@@ -26,9 +26,9 @@ Pod::Spec.new do |spec|
     spec.vendored_frameworks   = 'Frameworks/FFmpeg.framework'
     spec.libraries             = 'bz2','iconv', 'z'
     spec.frameworks            = 'AVFoundation', 'AudioToolbox', 'VideoToolbox', 'Accelerate', 'OpenGLES', 'QuartzCore'
-    spec.source_files          = 'WNPlayer-ilongge/**/*.{h,m}'
-    spec.public_header_files   = 'WNPlayer-ilongge/WNPlayer-ilongge.h','WNPlayer-ilongge/WNPlayer/*.h'
+    spec.source_files          = 'WNPlayerIlongge/**/*.{h,m}'
+    spec.public_header_files   = 'WNPlayerIlongge/WNPlayer-ilongge.h','WNPlayerIlongge/WNPlayer/*.h'
     spec.resource_bundle       = {
-        'WNPlayer' => [ 'WNPlayer-ilongge/**/*.{xib,xcassets,json,glsl,strings}' ]
+        'WNPlayer' => [ 'WNPlayerIlongge/**/*.{xib,xcassets,json,glsl,strings}' ]
     }
 end

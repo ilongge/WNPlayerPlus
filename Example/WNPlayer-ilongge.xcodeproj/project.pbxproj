@@ -25,7 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		24B19BF58B08A2125C14E3D0 /* WNPlayer-ilongge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "WNPlayer-ilongge.podspec"; path = "../WNPlayer-ilongge.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		24B19BF58B08A2125C14E3D0 /* WNPlayerIlongge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WNPlayerIlongge.podspec; path = ../WNPlayerIlongge.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4346D9A820999D168068462F /* Pods-WNPlayer-ilongge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayer-ilongge_Example.debug.xcconfig"; path = "Target Support Files/Pods-WNPlayer-ilongge_Example/Pods-WNPlayer-ilongge_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* WNPlayer-ilongge_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WNPlayer-ilongge_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -139,7 +139,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				24B19BF58B08A2125C14E3D0 /* WNPlayer-ilongge.podspec */,
+				24B19BF58B08A2125C14E3D0 /* WNPlayerIlongge.podspec */,
 				F93870FF6DB7E462027DE105 /* README.md */,
 				BA1C8B8D27E0956D00BFD1E2 /* LICENSE.txt */,
 			);
@@ -242,11 +242,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WNPlayer-ilongge_Example/Pods-WNPlayer-ilongge_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/WNPlayer-ilongge/WNPlayer_ilongge.framework",
+				"${BUILT_PRODUCTS_DIR}/WNPlayerIlongge/WNPlayerIlongge.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WNPlayer_ilongge.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WNPlayerIlongge.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

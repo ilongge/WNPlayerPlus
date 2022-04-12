@@ -21,11 +21,8 @@ fi
 
 echo "The spec did pass validation"
 
-echo "pod repo push ilonggeSpec WNPlayer-ilongge.podspec --allow-warnings"
-Push_Result=$(pod repo push ilonggeSpec WNPlayer-ilongge.podspec --allow-warnings)
-
-echo "pod repo update ilonggeSpec"
-Update_Result=$(pod repo update ilonggeSpec)
+echo "pod trunk push --allow-warnings WNPlayer-ilongge.podspec"
+Push_Result=$(pod trunk push --allow-warnings WNPlayer-ilongge.podspec)
 
 echo "pod package WNPlayer-ilongge.podspec --force --no-mangle"
 Package_Result=$(pod package WNPlayer-ilongge.podspec --force --no-mangle)

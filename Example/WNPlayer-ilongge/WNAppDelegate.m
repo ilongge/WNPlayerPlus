@@ -7,14 +7,14 @@
 //
 
 #import "WNAppDelegate.h"
-//#import "RootTabBarController.h"
+#import "RootTabBarController.h"
 @implementation WNAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window  = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [[UIViewController alloc]init];
+    self.window.rootViewController = [[RootTabBarController alloc] init];
     [self.window makeKeyAndVisible];
 
     return YES;

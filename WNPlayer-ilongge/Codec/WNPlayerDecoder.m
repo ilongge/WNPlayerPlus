@@ -20,6 +20,7 @@
 #import <Accelerate/Accelerate.h>
 
 #import "WNPlayerDecoder.h"
+#import "FFMpegBasicTool.h"
 
 #define WNPlayerIOTimeout 30
 
@@ -57,21 +58,30 @@ static int interruptCallback(void *context) {
 @end
 
 @implementation WNPlayerDecoder
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [FFMpegBasicTool showFFmpegInfo];
+    }
+    return self;
+}
+
 - (BOOL)open:(NSString *)url error:(NSError **)error {
     if (url == nil || url.length == 0) {
         [WNPlayerUtils createError:error
-                         withDomain:WNPlayerErrorDomainDecoder
-                            andCode:WNPlayerErrorCodeInvalidURL
-                         andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_INVALID_URL"]];
+                        withDomain:WNPlayerErrorDomainDecoder
+                           andCode:WNPlayerErrorCodeInvalidURL
+                        andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_INVALID_URL"]];
         return NO;
     }
     
     // 1. Init
     avformat_network_init();
     
-
+    
     // 2. Open Input
-    AVFormatContext *fmtctx = NULL;
+    AVFormatContext *fmtctx = avformat_alloc_context();;
     AVDictionary* options = NULL;
     //默认为UDP连接，如果需要，请开发者手动切换为tcp连接（一般播放RTSP协议的摄像头数据需要TCP连接）
     if (self.usesTCP) {
@@ -81,16 +91,15 @@ static int interruptCallback(void *context) {
         for (NSString *aKey in self.optionDic.allKeys) {
             av_dict_set(&options, [aKey UTF8String], [[self.optionDic valueForKey:aKey] UTF8String], 0);
         }
-//        av_dict_set(&options, [optionDic ], "Cookie:FTN5K=f44da28b", 0);
     }
-
+    
     int ret = avformat_open_input(&fmtctx, [url UTF8String], NULL, &options);
     if (ret != 0) {
         if (fmtctx != NULL) avformat_free_context(fmtctx);
         [WNPlayerUtils createError:error
-                         withDomain:WNPlayerErrorDomainDecoder
-                            andCode:WNPlayerErrorCodeCannotOpenInput
-                         andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_OPEN_INPUT"]];
+                        withDomain:WNPlayerErrorDomainDecoder
+                           andCode:WNPlayerErrorCodeCannotOpenInput
+                        andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_OPEN_INPUT"]];
         return NO;
     }
     
@@ -103,9 +112,9 @@ static int interruptCallback(void *context) {
     if (ret < 0) {
         avformat_close_input(&fmtctx);
         [WNPlayerUtils createError:error
-                         withDomain:WNPlayerErrorDomainDecoder
-                            andCode:WNPlayerErrorCodeCannotFindStreamInfo
-                         andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_FIND_STREAM_INFO"]];
+                        withDomain:WNPlayerErrorDomainDecoder
+                           andCode:WNPlayerErrorCodeCannotFindStreamInfo
+                        andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_FIND_STREAM_INFO"]];
         return NO;
     }
     
@@ -118,7 +127,7 @@ static int interruptCallback(void *context) {
     double rotation = 0;
     int picstream = -1;
     int vstream = [self findVideoStream:fmtctx context:&vcodectx pictureStream:&picstream];
-
+    
     if (vstream >= 0 && vcodectx != NULL) {
         if (vcodectx->pix_fmt != AV_PIX_FMT_NONE) {
             vframe = av_frame_alloc();
@@ -185,9 +194,9 @@ static int interruptCallback(void *context) {
     if (vstream < 0 && astream < 0) {
         avformat_close_input(&fmtctx);
         [WNPlayerUtils createError:error
-                         withDomain:WNPlayerErrorDomainDecoder
-                            andCode:WNPlayerErrorCodeNoVideoAndAudioStream
-                         andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_NO_VIDEO_AND_AUDIO_STREAM"]];
+                        withDomain:WNPlayerErrorDomainDecoder
+                           andCode:WNPlayerErrorCodeNoVideoAndAudioStream
+                        andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_NO_VIDEO_AND_AUDIO_STREAM"]];
         return NO;
     }
     
@@ -332,27 +341,27 @@ static int interruptCallback(void *context) {
     [self closeAudioStream];
     [self closePictureStream];
     if (m_pFormatContext != NULL) avformat_close_input(&m_pFormatContext);
-        avformat_network_deinit();
-        self.isYUV = NO;
-        self.hasVideo = NO;
-        self.hasAudio = NO;
-        self.hasPicture = NO;
-        self.isEOF = NO;
-        }
+    avformat_network_deinit();
+    self.isYUV = NO;
+    self.hasVideo = NO;
+    self.hasAudio = NO;
+    self.hasPicture = NO;
+    self.isEOF = NO;
+}
 
 - (void)closeVideoStream {
     m_nVideoStream = -1;
     if (m_pVideoFrame != NULL) av_frame_free(&m_pVideoFrame);
-        if (m_pVideoCodecContext != NULL) avcodec_free_context(&m_pVideoCodecContext);
-            if (m_pVideoSwsContext != NULL) { sws_freeContext(m_pVideoSwsContext); m_pVideoSwsContext = NULL; }
+    if (m_pVideoCodecContext != NULL) avcodec_free_context(&m_pVideoCodecContext);
+    if (m_pVideoSwsContext != NULL) { sws_freeContext(m_pVideoSwsContext); m_pVideoSwsContext = NULL; }
 }
 
 - (void)closeAudioStream {
     m_nAudioStream = -1;
     if (m_pAudioFrame != NULL) av_frame_free(&m_pAudioFrame);
-        if (m_pAudioCodecContext != NULL) avcodec_free_context(&m_pAudioCodecContext);
-            if (m_pAudioSwrContext != NULL) swr_free(&m_pAudioSwrContext);
-                }
+    if (m_pAudioCodecContext != NULL) avcodec_free_context(&m_pAudioCodecContext);
+    if (m_pAudioSwrContext != NULL) swr_free(&m_pAudioSwrContext);
+}
 
 - (void)closePictureStream {
     m_nPictureStream = -1;
@@ -429,7 +438,7 @@ static int interruptCallback(void *context) {
     if (provider == NULL) return nil;
     CGImageRef image = CGImageCreateWithJPEGDataProvider(provider, NULL, YES, kCGRenderingIntentDefault);
     if (image == NULL) image = CGImageCreateWithPNGDataProvider(provider, NULL, YES, kCGRenderingIntentDefault);
-        if (image == NULL) { CGDataProviderRelease(provider); return nil; }
+    if (image == NULL) { CGDataProviderRelease(provider); return nil; }
     
     size_t width = CGImageGetWidth(image);
     size_t height = CGImageGetHeight(image);
@@ -487,17 +496,17 @@ static int interruptCallback(void *context) {
         if (_isYUV) {
             WNPlayerVideoYUVFrame *yuv = [[WNPlayerVideoYUVFrame alloc] init];
             yuv.Y = [WNPlayerDecoder dataFromVideoFrame:frame->data[0]
-                                                linesize:frame->linesize[0]
-                                                   width:width
-                                                  height:height];
+                                               linesize:frame->linesize[0]
+                                                  width:width
+                                                 height:height];
             yuv.Cb = [WNPlayerDecoder dataFromVideoFrame:frame->data[1]
-                                                 linesize:frame->linesize[1]
-                                                    width:width / 2
-                                                   height:height / 2];
+                                                linesize:frame->linesize[1]
+                                                   width:width / 2
+                                                  height:height / 2];
             yuv.Cr = [WNPlayerDecoder dataFromVideoFrame:frame->data[2]
-                                                 linesize:frame->linesize[2]
-                                                    width:width / 2
-                                                   height:height / 2];
+                                                linesize:frame->linesize[2]
+                                                   width:width / 2
+                                                  height:height / 2];
             f = yuv;
         } else {
             sws_scale(swsctx,
@@ -608,17 +617,9 @@ static int interruptCallback(void *context) {
     
     //快进时，通过当前数据包获得当前的时间PTS，将该PTS换算成时间再加上一小段时间，作为seek时间点向后找关键帧，此时flags可设置为AVSEEK_FLAG_FRAME。之后用av_read_frame获取到该关键帧。完成该帧解码显示后，再在该帧的PTS时间上增加一小段时间后seek
     //快退时，通过当前数据包获得当前的时间PTS，将该PTS换算成时间再减去一小段时间，作为seek时间点向前找关键帧，此时flags可设置为AVSEEK_FLAG_BACKWARD。之后用av_read_frame获取到该关键帧。完成该帧解码显示后，再在该帧的PTS时间上减去一小段时间后seek
-  
-//    ---------------------
-//    作者：东辉在线
-//    来源：CSDN
-//    原文：https://blog.csdn.net/lihui130135/article/details/45170329
-//    版权声明：本文为博主原创文章，转载请附上博文链接！
     if (_hasVideo) {
         NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
         int64_t ts = (int64_t)(position / _videoTimebase);
-//        av_seek_frame(m_pFormatContext, m_nVideoStream, 100000*vid_time_scale/_videoTimebase, AVSEEK_FLAG_BACKWARD);
-
         avformat_seek_file(m_pFormatContext, m_nVideoStream, ts, ts, ts, AVSEEK_FLAG_FRAME);
         avcodec_flush_buffers(m_pVideoCodecContext);
         NSTimeInterval end = [NSDate timeIntervalSinceReferenceDate];
@@ -674,22 +675,28 @@ static int interruptCallback(void *context) {
     
     if (stream->avg_frame_rate.den > 0 && stream->avg_frame_rate.num) {
         f = av_q2d(stream->avg_frame_rate);
-    } else if (stream->r_frame_rate.den > 0 && stream->r_frame_rate.num > 0) {
+    }
+    else if (stream->r_frame_rate.den > 0 && stream->r_frame_rate.num > 0) {
         f = av_q2d(stream->r_frame_rate);
-    } else {
+    }
+    else {
         f = 1 / t;
     }
     
     if (fps != NULL) *fps = f;
-        if (timebase != NULL) *timebase = t;
-            }
+    if (timebase != NULL) *timebase = t;
+}
 
 + (double)rotationFromVideoStream:(AVStream *)stream {
     double rotation = 0;
     AVDictionaryEntry *entry = av_dict_get(stream->metadata, "rotate", NULL, AV_DICT_MATCH_CASE);
-    if (entry && entry->value) { rotation = av_strtod(entry->value, NULL); }
+    if (entry && entry->value) {
+        rotation = av_strtod(entry->value, NULL);
+    }
     uint8_t *display_matrix = av_stream_get_side_data(stream, AV_PKT_DATA_DISPLAYMATRIX, NULL);
-    if (display_matrix) { rotation = -av_display_rotation_get((int32_t *)display_matrix); }
+    if (display_matrix) {
+        rotation = -av_display_rotation_get((int32_t *)display_matrix);
+    }
     return rotation;
 }
 - (void)dealloc {

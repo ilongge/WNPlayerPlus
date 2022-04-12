@@ -1,6 +1,15 @@
 # WNPlayer-ilongge
 
+
+Base on [WNPlayer](https://github.com/zhengwenming/WNPlayer.git)
+
 ## Cocoapods Installation
+
+### Cocoapods
+
+```ruby
+pod 'WNPlayer-ilongge'
+```
 
 ### Github
 

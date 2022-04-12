@@ -31,7 +31,7 @@
 #endif
 
 #include <errno.h>
-#include <FFmpeg/inttypes.h>
+#include "inttypes.h"
 #include <limits.h>
 #include <math.h>
 #include <stdint.h>
@@ -39,10 +39,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <FFmpeg/attributes.h>
-#include <FFmpeg/macros.h>
-#include <FFmpeg/libavutilVersion.h>
-#include <FFmpeg/avconfig.h>
+#include "attributes.h"
+#include "macros.h"
+#include "libavutilVersion.h"
+#include "avconfig.h"
 
 #if AV_HAVE_BIGENDIAN
 #   define AV_NE(be, le) (be)
@@ -107,7 +107,7 @@
 #endif
 
 /* Pull in unguarded fallback defines at the end of this file. */
-#include <FFmpeg/common.h>
+#include "common.h"
 
 #ifndef av_log2
 av_const int av_log2(unsigned v);
@@ -527,7 +527,7 @@ static av_always_inline av_const int av_parity_c(uint32_t v)
 
 
 
-#include <FFmpeg/mem.h>
+#include "mem.h"
 
 #ifdef HAVE_AV_CONFIG_H
 #    include "internal.h"

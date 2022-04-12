@@ -6,10 +6,10 @@ Pod::Spec.new do |spec|
     '基于WNPlayer开发，原始库地址https://github.com/zhengwenming/WNPlayer.git，项目内使用自编译FFMpeg.Framework，版本4.3.3。'
     DESC
     
-    spec.homepage         = 'https://github.com/ilongge/wnplayer-ilongge'
+    spec.homepage         = 'https://gitee.com/ilongge/wnplayer-ilongge'
     spec.license          = { :type => 'MIT', :file => 'LICENSE.txt' }
     spec.author           = { 'ilongge' => '1015820857@qq.com' }
-    spec.source           = { :git => 'https://github.com/ilongge/wnplayer-ilongge.git', :tag => spec.version.to_s }
+    spec.source           = { :git => 'https://gitee.com/ilongge/wnplayer-ilongge.git', :tag => spec.version.to_s }
     
     spec.ios.deployment_target = '9.0'
     spec.requires_arc = true

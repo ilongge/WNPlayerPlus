@@ -90,7 +90,13 @@ typedef enum : NSUInteger {
 - (UIView *)viewStatusBar{
     if (!_viewStatusBar) {
         if (@available(iOS 13.0, *)) {
-            _viewStatusBar = [[UIApplication sharedApplication].keyWindow.windowScene.statusBarManager performSelector:NSSelectorFromString(@"createLocalStatusBar")];
+            UIStatusBarManager *statusBarManager = [[UIApplication sharedApplication].keyWindow.windowScene statusBarManager];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+            if ([statusBarManager respondsToSelector:NSSelectorFromString(@"createLocalStatusBar")]) {
+                _viewStatusBar = [statusBarManager performSelector:NSSelectorFromString(@"createLocalStatusBar")];
+            }
+#pragma clang diagnostic pop
             _viewStatusBar.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
             _viewStatusBar.backgroundColor = [UIColor clearColor];
             _viewStatusBar.hidden = YES;

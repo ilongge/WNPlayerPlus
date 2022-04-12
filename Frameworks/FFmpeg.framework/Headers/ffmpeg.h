@@ -12,4 +12,4 @@
 #include <FFmpeg/display.h>
 #include <FFmpeg/eval.h>
 #include <FFmpeg/ffversion.h>
-#define FFmpegVersionNumber = 4.3.3;
+#define FFmpegVersionNumber @"4.3.3"

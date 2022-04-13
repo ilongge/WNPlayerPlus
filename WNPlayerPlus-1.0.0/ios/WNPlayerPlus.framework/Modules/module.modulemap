@@ -1,0 +1,6 @@
+framework module WNPlayerPlus {
+  umbrella header "WNPlayerPlus.h"
+
+  export *
+  module * { export * }
+}

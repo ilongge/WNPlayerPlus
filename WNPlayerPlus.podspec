@@ -33,7 +33,7 @@ Pod::Spec.new do |spec|
     }
     spec.vendored_frameworks   = 'Frameworks/FFmpeg.framework'
     spec.libraries             = 'bz2','iconv', 'z'
-    spec.frameworks            = 'AVFoundation', 'AudioToolbox', 'VideoToolbox', 'Accelerate', 'OpenGLES', 'QuartzCore'
+    spec.frameworks            = 'AVFoundation', 'Accelerate', 'OpenGLES'
     spec.source_files          = 'WNPlayerPlus/**/*.{h,m}'
     spec.public_header_files   = 'WNPlayerPlus/WNPlayerPlus.h','WNPlayerPlus/WNPlayer/*.h'
     spec.resource_bundle       = {

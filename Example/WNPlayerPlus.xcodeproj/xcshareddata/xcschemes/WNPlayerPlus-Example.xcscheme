@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6003F589195388D20070C39A"
-               BuildableName = "WNPlayer-ilongge_Example.app"
-               BlueprintName = "WNPlayer-ilongge_Example"
-               ReferencedContainer = "container:WNPlayer-ilongge.xcodeproj">
+               BuildableName = "WNPlayerPlus_Example.app"
+               BlueprintName = "WNPlayerPlus_Example"
+               ReferencedContainer = "container:WNPlayerPlus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,27 +27,29 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "WNPlayer-ilongge_Example.app"
-            BlueprintName = "WNPlayer-ilongge_Example"
-            ReferencedContainer = "container:WNPlayer-ilongge.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "WNPlayer-ilongge_Tests.xctest"
-               BlueprintName = "WNPlayer-ilongge_Tests"
-               ReferencedContainer = "container:WNPlayer-ilongge.xcodeproj">
+               BuildableName = "WNPlayerPlus_Tests.xctest"
+               BlueprintName = "WNPlayerPlus_Tests"
+               ReferencedContainer = "container:WNPlayerPlus.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6003F589195388D20070C39A"
+            BuildableName = "WNPlayerPlus_Example.app"
+            BlueprintName = "WNPlayerPlus_Example"
+            ReferencedContainer = "container:WNPlayerPlus.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -64,11 +66,13 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "WNPlayer-ilongge_Example.app"
-            BlueprintName = "WNPlayer-ilongge_Example"
-            ReferencedContainer = "container:WNPlayer-ilongge.xcodeproj">
+            BuildableName = "WNPlayerPlus_Example.app"
+            BlueprintName = "WNPlayerPlus_Example"
+            ReferencedContainer = "container:WNPlayerPlus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -81,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "WNPlayer-ilongge_Example.app"
-            BlueprintName = "WNPlayer-ilongge_Example"
-            ReferencedContainer = "container:WNPlayer-ilongge.xcodeproj">
+            BuildableName = "WNPlayerPlus_Example.app"
+            BlueprintName = "WNPlayerPlus_Example"
+            ReferencedContainer = "container:WNPlayerPlus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

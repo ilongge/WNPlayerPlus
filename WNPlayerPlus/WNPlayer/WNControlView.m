@@ -6,9 +6,9 @@
 //  Copyright © 2019 apple. All rights reserved.
 //
 
-#define WNPlayerSrcName(file) [@"WNPlayer.bundle" stringByAppendingPathComponent:file]
-#define WNPlayerFrameworkSrcName(file) [@"Frameworks/WNPlayer.framework/WNPlayer.bundle" stringByAppendingPathComponent:file]
-#define WNPlayerImage(file)      [UIImage imageNamed:WNPlayerSrcName(file)] ? :[UIImage imageNamed:WNPlayerFrameworkSrcName(file)]
+#define WNPlayerSrcName(file)          [@"WNPlayerPlus.bundle" stringByAppendingPathComponent:file]
+#define WNPlayerFrameworkSrcName(file) [@"Frameworks/WNPlayerPlus.framework/WNPlayerPlus.bundle" stringByAppendingPathComponent:file]
+#define WNPlayerImage(file)            [UIImage imageNamed:WNPlayerSrcName(file)] ? :[UIImage imageNamed:WNPlayerFrameworkSrcName(file)]
 
 #import "WNControlView.h"
 #import "WNPlayer.h"

@@ -28,4 +28,4 @@ ilongge, 1015820857@qq.com
 
 ## License
 
-WNPlayer-ilongge is available under the MIT license.txt See the LICENSE.txt file for more info.
+WNPlayerPlus is available under the MIT license. See the LICENSE file for more info.

@@ -1,7 +1,15 @@
+#
+# Be sure to run `pod lib lint WNPlayerPlus.podspec' to ensure this is a
+# valid spec before submitting.
+#
+# Any lines starting with a # are optional, but their use is encouraged
+# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
+#
+
 Pod::Spec.new do |spec|
-    spec.name             = 'WNPlayerIlongge'
-    spec.version          = '1.0.1'
-    spec.summary          = 'A short description of WNPlayer-ilongge.'
+    spec.name             = 'WNPlayerPlus'
+    spec.version          = '1.0.0'
+    spec.summary          = 'A short description of WNPlayerPlus.'
     spec.description      = <<-DESC
     '基于WNPlayer开发，原始库地址https://github.com/zhengwenming/WNPlayer.git，项目内使用自编译FFMpeg.Framework，版本4.3.3。'
     DESC
@@ -26,9 +34,9 @@ Pod::Spec.new do |spec|
     spec.vendored_frameworks   = 'Frameworks/FFmpeg.framework'
     spec.libraries             = 'bz2','iconv', 'z'
     spec.frameworks            = 'AVFoundation', 'AudioToolbox', 'VideoToolbox', 'Accelerate', 'OpenGLES', 'QuartzCore'
-    spec.source_files          = 'WNPlayerIlongge/**/*.{h,m}'
-    spec.public_header_files   = 'WNPlayerIlongge/WNPlayer-ilongge.h','WNPlayerIlongge/WNPlayer/*.h'
+    spec.source_files          = 'WNPlayerPlus/**/*.{h,m}'
+    spec.public_header_files   = 'WNPlayerPlus/WNPlayerPlus.h','WNPlayerPlus/WNPlayer/*.h'
     spec.resource_bundle       = {
-        'WNPlayer' => [ 'WNPlayerIlongge/**/*.{xib,xcassets,json,glsl,strings}' ]
+        'WNPlayerPlus' => [ 'WNPlayerPlus/**/*.{xib,xcassets,json,glsl,strings}' ]
     }
 end

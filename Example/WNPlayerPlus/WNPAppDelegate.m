@@ -1,14 +1,14 @@
 //
-//  WNAppDelegate.m
-//  WNPlayer-ilongge
+//  WNPAppDelegate.m
+//  WNPlayerPlus
 //
-//  Created by 1015820857@qq.com on 03/15/2022.
-//  Copyright (c) 2022 1015820857@qq.com. All rights reserved.
+//  Created by ilongge on 04/13/2022.
+//  Copyright (c) 2022 ilongge. All rights reserved.
 //
 
-#import "WNAppDelegate.h"
+#import "WNPAppDelegate.h"
 #import "RootTabBarController.h"
-@implementation WNAppDelegate
+@implementation WNPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window  = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

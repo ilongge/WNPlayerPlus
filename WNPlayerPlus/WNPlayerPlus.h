@@ -1,12 +1,12 @@
 //
-//  WNPlayer-ilongge.h
+//  WNPlayerPlus.h
 //  Pods
 //
 //  Created by ilongge on 2022/3/16.
 //
 
-#ifndef WNPlayer_ilongge_h
-#define WNPlayer_ilongge_h
+#ifndef WNPlayerPlus_h
+#define WNPlayerPlus_h
 
 #import "WNPlayer.h"
 #import "WNControlView.h"
@@ -14,4 +14,4 @@
 #import "WNDisplayView.h"
 #import "WNPlayerManager.h"
 
-#endif /* WNPlayer_ilongge_h */
+#endif /* WNPlayerPlus_h */

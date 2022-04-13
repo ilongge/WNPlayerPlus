@@ -157,7 +157,7 @@
     static NSBundle *resourcesBundle = nil;
     if (resourcesBundle == nil) {
         NSBundle *currrentBundle = [NSBundle bundleForClass:[self class]];
-        NSString *buntdlePath = [currrentBundle pathForResource:@"WNPlayer" ofType:@"bundle"];
+        NSString *buntdlePath = [currrentBundle pathForResource:@"WNPlayerPlus" ofType:@"bundle"];
         NSBundle *bundle = [NSBundle bundleWithPath:buntdlePath];
         dispatch_once(&onceToken, ^{
             resourcesBundle = bundle;

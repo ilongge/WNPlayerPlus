@@ -7,7 +7,7 @@
 //
 
 #import "DetailViewController.h"
-#import <WNPlayer-ilongge.h>
+#import <WNPlayerPlus.h>
 @interface DetailViewController ()<WNPlayerDelegate>
 @property(nonatomic,strong)WNPlayer *wnPlayer;
 @property(nonatomic,assign)CGRect originalRect;

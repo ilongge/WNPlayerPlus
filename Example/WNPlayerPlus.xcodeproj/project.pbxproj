@@ -137,10 +137,10 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				BA9E29C528066D0300322FF0 /* package.sh */,
-				0F1299FBD4AFFD0F5429FF7A /* WNPlayerPlus.podspec */,
-				DD58BDC7C29E00D1B5753990 /* README.md */,
 				D47178C450ECC7504A5227DE /* LICENSE */,
+				BA9E29C528066D0300322FF0 /* package.sh */,
+				DD58BDC7C29E00D1B5753990 /* README.md */,
+				0F1299FBD4AFFD0F5429FF7A /* WNPlayerPlus.podspec */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";

@@ -11,7 +11,6 @@
 #import "WNPlayerDef.h"
 
 #import <AVFoundation/AVFoundation.h>
-#import <AudioToolbox/AudioToolbox.h>
 #import <Accelerate/Accelerate.h>
 
 #define MAX_FRAME_SIZE  4096

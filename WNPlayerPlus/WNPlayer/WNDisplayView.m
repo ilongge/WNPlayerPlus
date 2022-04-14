@@ -7,7 +7,6 @@
 //
 
 #import "WNDisplayView.h"
-#import <QuartzCore/QuartzCore.h>
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
 #import "WNPlayerVideoFrame.h"

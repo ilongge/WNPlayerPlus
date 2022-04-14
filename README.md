@@ -1,4 +1,4 @@
-# WNPlayer-ilongge
+# WNPlayerPlus
 
 
 Base on [WNPlayer](https://github.com/zhengwenming/WNPlayer.git)
@@ -10,16 +10,11 @@ Base on [WNPlayer](https://github.com/zhengwenming/WNPlayer.git)
 ```ruby
 pod 'WNPlayer-ilongge'
 ```
-
-### Github
-
-```ruby
-pod 'WNPlayer-ilongge', :git => 'https://github.com/ilongge/wnplayer-ilongge.git'
-```
-### Gitee
+ 
+### Git
 
 ```ruby
-pod 'WNPlayer-ilongge', :git => 'https://gitee.com/ilongge/wnplayer-ilongge.git'
+pod 'WNPlayerPlus', :git => 'https://github.com/ilongge/WNPlayerPlus.git'
 ```
 
 ## Author
@@ -28,4 +23,4 @@ ilongge, 1015820857@qq.com
 
 ## License
 
-WNPlayerPlus is available under the MIT license. See the LICENSE file for more info.
+WNPlayerPlus is available under the MIT license. See the LICENSE.txt file for more info.

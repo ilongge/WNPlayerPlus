@@ -11,13 +11,13 @@ Pod::Spec.new do |spec|
     spec.version          = '1.0.0'
     spec.summary          = 'A short description of WNPlayerPlus.'
     spec.description      = <<-DESC
-    '基于WNPlayer开发，原始库地址https://github.com/zhengwenming/WNPlayer.git，项目内使用自编译FFMpeg.Framework，版本4.3.3。'
+    '基于WNPlayer开发，原始库地址[https://github.com/zhengwenming/WNPlayer.git]，项目内使用自编译FFMpeg.Framework，版本4.3.3。鉴于本人网络环境堪忧，故首选国内开源库托管网站Gitee，同时Github亦会同步一份，望见谅、'
     DESC
     
-    spec.homepage         = 'https://github.com/ilongge/WNPlayerPlus'
+    spec.homepage         = 'https://gitee.com/ilongge/WNPlayerPlus'
     spec.license          = { :type => 'MIT', :file => 'LICENSE.txt' }
     spec.author           = { 'ilongge' => '1015820857@qq.com' }
-    spec.source           = { :git => 'https://github.com/ilongge/WNPlayerPlus.git', :tag => spec.version.to_s }
+    spec.source           = { :git => 'https://gitee.com/ilongge/WNPlayerPlus.git', :tag => spec.version.to_s }
     
     spec.ios.deployment_target = '9.0'
     spec.requires_arc = true

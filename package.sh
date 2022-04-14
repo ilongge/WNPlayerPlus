@@ -1,5 +1,8 @@
-
 Spec=WNPlayerPlus.podspec
+
+PodVersion=
+
+LintConfig=
 
 current_path=$(
     cd "$(dirname "$0")"
@@ -10,29 +13,56 @@ echo into $current_path
 
 cd $current_path
 
-echo "pod spec lint $Spec --allow-warnings"
-validate=$(pod spec lint $Spec --allow-warnings)
+function PodLintSpec() {
 
-Not_Pass_Word="The spec did not pass validation"
+    echo "pod $PodVersion spec lint $Spec --allow-warnings $LintConfig"
 
-result=$(echo $validate | grep "${Not_Pass_Word}")
+    validate=$(pod $PodVersion spec lint $Spec --allow-warnings $LintConfig)
 
-if [[ "$result" != "" ]]; then
-    echo $Not_Pass_Word
-    exit
-fi
+    Not_Pass_Word="The spec did not pass validation"
 
-echo "The spec did pass validation"
+    result=$(echo $validate | grep "${Not_Pass_Word}")
 
-#echo "pod trunk push $Spec --allow-warnings "
-#Push_Result=$(pod trunk push $Spec --allow-warnings)
-#
-#echo "pod package $Spec --force --no-mangle"
-#Package_Result=$(pod package $Spec --force --no-mangle)
-#Configuration_Release= "with configuration Release"
-#result=$(echo $Package_Result | grep "${Configuration_Release}")
-#if [[ "$result" != "" ]]; then
-#    echo "Framework Build Fail"
-#else
-#    echo "Framework Build Success"
-#fi
+    if [[ "$result" != "" ]]; then
+        echo $validate
+        exit
+    fi
+
+    echo "The spec did pass validation"
+}
+
+function PodRepoPush() {
+
+    echo "pod $PodVersion trunk push $Spec --allow-warnings "
+
+    Push_Result=$(pod $PodVersion trunk push $Spec --allow-warnings)
+}
+
+function PodRepoUpdate() {
+
+    echo "pod $PodVersion repo  update"
+
+    Push_Result=$(pod $PodVersion repo update)
+}
+
+function PodPackage() {
+
+    echo "pod $PodVersion package $Spec --force --no-mangle"
+
+    Package_Result=$(pod $PodVersion package $Spec --force --no-mangle)
+
+    Configuration_Release="with configuration Release"
+
+    result=$(echo $Package_Result | grep "${Configuration_Release}")
+
+    if [[ "$result" != "" ]]; then
+        echo "Framework Build Fail"
+    else
+        echo "Framework Build Success"
+    fi
+}
+
+PodLintSpec
+PodRepoPush
+PodRepoUpdate
+# PodPackage

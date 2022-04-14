@@ -8,7 +8,7 @@ Base on [WNPlayer](https://github.com/zhengwenming/WNPlayer.git)
 ### Cocoapods
 
 ```ruby
-pod 'WNPlayer-ilongge'
+pod 'WNPlayerPlus'
 ```
  
 ### Git

@@ -36,6 +36,8 @@ function PodRepoPush() {
     echo "pod $PodVersion trunk push $Spec --allow-warnings "
 
     Push_Result=$(pod $PodVersion trunk push $Spec --allow-warnings)
+
+    echo $Push_Result
 }
 
 function PodRepoUpdate() {
@@ -43,6 +45,8 @@ function PodRepoUpdate() {
     echo "pod $PodVersion repo  update"
 
     Push_Result=$(pod $PodVersion repo update)
+
+    echo $Push_Result
 }
 
 function PodPackage() {

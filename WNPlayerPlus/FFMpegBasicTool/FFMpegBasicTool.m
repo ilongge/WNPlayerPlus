@@ -22,56 +22,49 @@
 
 + (void)showFFmpegInfo
 {
-    printf("FFMpeg -%s\n", FFMPEG_VERSION);
+    printf("ffmpeg version %s Copyright (c) 2000-2022 the FFmpeg developers\n", FFMPEG_VERSION);
     NSString *configuration = [NSString stringWithUTF8String:avformat_configuration()];
-    configuration = [configuration stringByReplacingOccurrencesOfString:@"--" withString:@"\n\t--"];
-    printf("BuildConfiguration%s\n", [configuration UTF8String]);
-    
-    printf("\n");
+    printf("\tconfiguration: %s\n", [configuration UTF8String]);
+    [FFMpegBasicTool showAllLibInfo];
+    printf("Hyper fast Audio and Video encoder\n");
+}
+
++ (void)showAllLibInfo {
     int ver_major,ver_minor,ver_micro;
     unsigned version = avcodec_version();
-    ver_major = (version>>16)&0xff;
-    ver_minor = (version>>8)&0xff;
-    ver_micro = (version)&0xff;
-    printf("\tavcodec version    %3d.%3d.%3d\n",ver_major,ver_minor,ver_micro);
-    
-    version = avformat_version();
-    ver_major = (version>>16)&0xff;
-    ver_minor = (version>>8)&0xff;
-    ver_micro = (version)&0xff;
-    printf("\tavformat version   %3d.%3d.%3d\n",ver_major,ver_minor,ver_micro);
-    
-    version = avfilter_version();
-    ver_major = (version>>16)&0xff;
-    ver_minor = (version>>8)&0xff;
-    ver_micro = (version)&0xff;
-    printf("\tavfilter version   %3d.%3d.%3d\n",ver_major,ver_minor,ver_micro);
-    
     version = avutil_version();
     ver_major = (version>>16)&0xff;
     ver_minor = (version>>8)&0xff;
     ver_micro = (version)&0xff;
-    printf("\tavutil version     %3d.%3d.%3d\n",ver_major,ver_minor,ver_micro);
-    
-    version = swscale_version();
+    printf("\tlibavutil     %3d.%2d.%3d\n",ver_major,ver_minor,ver_micro);
     ver_major = (version>>16)&0xff;
     ver_minor = (version>>8)&0xff;
     ver_micro = (version)&0xff;
-    printf("\tswscale version    %3d.%3d.%3d\n",ver_major,ver_minor,ver_micro);
-    
+    printf("\tlibavcodec    %3d.%2d.%3d\n",ver_major,ver_minor,ver_micro);
+    version = avformat_version();
+    ver_major = (version>>16)&0xff;
+    ver_minor = (version>>8)&0xff;
+    ver_micro = (version)&0xff;
+    printf("\tlibavformat   %3d.%2d.%3d\n",ver_major,ver_minor,ver_micro);
     version = avdevice_version();
     ver_major = (version>>16)&0xff;
     ver_minor = (version>>8)&0xff;
     ver_micro = (version)&0xff;
-    printf("\tavdevice version   %3d.%3d.%3d\n",ver_major,ver_minor,ver_micro);
-    
+    printf("\tlibavdevice   %3d.%2d.%3d\n",ver_major,ver_minor,ver_micro);
+    version = avfilter_version();
+    ver_major = (version>>16)&0xff;
+    ver_minor = (version>>8)&0xff;
+    ver_micro = (version)&0xff;
+    printf("\tlibavfilter   %3d.%2d.%3d\n",ver_major,ver_minor,ver_micro);
+    version = swscale_version();
+    ver_major = (version>>16)&0xff;
+    ver_minor = (version>>8)&0xff;
+    ver_micro = (version)&0xff;
+    printf("\tlibswscale    %3d.%2d.%3d\n",ver_major,ver_minor,ver_micro);
     version = swresample_version();
     ver_major = (version>>16)&0xff;
     ver_minor = (version>>8)&0xff;
     ver_micro = (version)&0xff;
-    printf("\tswresample version %3d.%3d.%3d\n",ver_major,ver_minor,ver_micro);
-    
-//    printf("%s", avcodec_configuration());
+    printf("\tlibswresample %3d.%2d.%3d\n",ver_major,ver_minor,ver_micro);
 }
-
 @end

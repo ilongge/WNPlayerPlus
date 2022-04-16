@@ -50,25 +50,72 @@ typedef enum : NSUInteger {
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WNPlayer : UIView
+/**
+ * 播放链接
+ */
 @property (nonatomic,copy) NSString *urlString;
+/**
+ * WNPlayerDelegate委托代理
+ */
 @property (nonatomic, weak)id <WNPlayerDelegate> delegate;
+/**
+ * 控制层
+ * 开发者可自定义一个UIView
+ * 遵守WNControlViewProtocol
+ * 添加自己的子控件，控件的事件连接WNControlViewProtocol的事件
+ */
 @property (nonatomic, strong) UIView <WNControlViewProtocol> *controlView;
+/**
+ * 播放器管理器
+ */
 @property (nonatomic, strong) WNPlayerManager *playerManager;
-//控制层，开发者可自定义(自定义一个UIView，遵守WNControlViewProtocol，添加自己的子控件，控件的事件连接WNControlViewProtocol的事件)
+/**
+ * 是否自动播放
+ */
 @property (nonatomic,assign) BOOL autoplay;
+/**
+ * 是否全屏
+ */
 @property (nonatomic,assign) BOOL isFullScreen;
+/**
+ * 是否重复播放
+ */
 @property (nonatomic,assign) BOOL repeat;
+/**
+ * 是否锁屏
+ */
 @property (nonatomic,assign) BOOL preventFromScreenLock;
+/**
+ * app进入前台后继续播放
+ */
 @property (nonatomic,assign) BOOL restorePlayAfterAppEnterForeground;
+/**
+ * 播放器状态
+ */
 @property (nonatomic,readonly) WNPlayerStatus status;
-//获取当前视频播放帧的截图UIImage
+/**
+ * 获取当前视频播放帧的截图UIImage
+ */
 - (UIImage*)snapshot:(CGSize)viewSize;
-///默认是UDP，如有需要用TCP，请传YES,optionDic里面可以设置key-value，比如headers-cookie：xxxx
+/**
+ * 默认是UDP，如有需要用TCP，请传YES,optionDic里面可以设置key-value，比如headers-cookie：xxxx
+ */
 - (void)openWithTCP:(BOOL)usesTCP optionDic:(NSDictionary *)optionDic;
+/**
+ * 关闭播放器
+ */
 - (void)close;
+/**
+ * 开始播放
+ */
 - (void)play;
+/**
+ * 暂停
+ */
 - (void)pause;
-//判断是否为iPhone X系列
+/**
+ * 判断是否为iPhone X系列
+ */
 +(BOOL)IsiPhoneX;
 @end
 

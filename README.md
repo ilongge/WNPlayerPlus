@@ -1,9 +1,7 @@
 # WNPlayerPlus
+WNPlayerPlus万能播放器，使用FFmpeg解码，支持几乎所有视频格式(avi、flv、m3u8、3gp、RTMP、RTSP、MKV、rmvb、wmv、mp4、mov)，网络和本地视频同时支持；支持自定义控制层。基于[WNPlayer](https://github.com/zhengwenming/WNPlayer.git)
 
-
-Base on [WNPlayer](https://github.com/zhengwenming/WNPlayer.git)
-
-## Cocoapods Installation
+## 快速集成
 
 ### Cocoapods
 
@@ -14,13 +12,6 @@ pod 'WNPlayerPlus'
 ### Git
 
 ```ruby
-pod 'WNPlayerPlus', :git => 'https://github.com/ilongge/WNPlayerPlus.git'
+pod 'WNPlayerPlus', :git => 'https://gitee.com/ilongge/WNPlayerPlus.git'
 ```
 
-## Author
-
-ilongge, 1015820857@qq.com
-
-## License
-
-WNPlayerPlus is available under the MIT license. See the LICENSE.txt file for more info.

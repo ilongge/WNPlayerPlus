@@ -15,8 +15,17 @@
 @property (nonatomic,assign) CGFloat rotation;
 @property (nonatomic,assign) BOOL isYUV;
 @property (nonatomic,assign) BOOL keepLastFrame;
+/**
+ * 渲染尺寸
+ */
 + (UIImage *)glToUIImage:(CGSize)size;
+/**
+ * 渲染范围
+ */
 - (void)render:(WNPlayerVideoFrame *)frame;
+/**
+ * 清理显示内容
+ */
 - (void)clear;
 @end
 

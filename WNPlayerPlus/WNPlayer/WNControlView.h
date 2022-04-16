@@ -12,17 +12,25 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WNControlView : UIView<WNControlViewProtocol>
+/**
+ * 播放器标题title
+ */
+@property (nonatomic,copy) NSString *title;
+/**
+ * 播放器默认背景
+ */
+@property (nonatomic,strong) UIImageView *coverImageView;
+/**
+ * 播放器着色
+ */
+@property (nonatomic,strong) UIColor *tintColor;
 
-@property (nonatomic,copy) NSString *title;      // 播放器标题title
-@property (nonatomic,strong) UIImageView *coverImageView;// 播放器默认背景
-@property (nonatomic,strong) UIColor *tintColor;// 播放器着色
-
--(void)syncScrubber:(NSNumber *_Nonnull)position;
--(void)playerReadyToPlay:(WNPlayer *_Nonnull)player;
--(void)playerBufferStateChanged:(NSNumber *_Nonnull)info;
--(void)playerError:(NSError *_Nonnull)error;
--(void)playerEOF:(WNPlayer *_Nonnull)player;;
--(void)playerIsFullScreen:(NSNumber *_Nonnull)isFullScreen;
+- (void)syncScrubber:(NSNumber *_Nonnull)position;
+- (void)playerReadyToPlay:(WNPlayer *_Nonnull)player;
+- (void)playerBufferStateChanged:(NSNumber *_Nonnull)info;
+- (void)playerError:(NSError *_Nonnull)error;
+- (void)playerEOF:(WNPlayer *_Nonnull)player;;
+- (void)playerIsFullScreen:(NSNumber *_Nonnull)isFullScreen;
 
 @end
 

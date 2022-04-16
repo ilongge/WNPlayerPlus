@@ -27,22 +27,38 @@ typedef enum : NSUInteger {
 
 @protocol WNPlayerDelegate <NSObject>
 @optional
-//点击播放暂停按钮代理方法
--(void)player:(WNPlayer *_Nullable)player clickedPlayOrPauseButton:(UIButton *_Nullable)playOrPauseBtn;
-//点击关闭按钮代理方法
--(void)player:(WNPlayer *_Nullable)player clickedCloseButton:(UIButton *_Nonnull)backBtn;
-//点击全屏按钮代理方法
--(void)player:(WNPlayer *_Nonnull)player clickedFullScreenButton:(UIButton *_Nonnull)fullScreenBtn;
-//单击WMPlayer的代理方法
--(void)player:(WNPlayer *_Nullable)player singleTaped:(UITapGestureRecognizer *_Nullable)singleTap;
-//双击WMPlayer的代理方法
--(void)player:(WNPlayer *_Nullable)player doubleTaped:(UITapGestureRecognizer *_Nullable)doubleTaped;
-//播放失败的代理方法
--(void)playerFailedPlay:(WNPlayer *_Nullable)player error:(NSError *_Nullable)error;
-//播放器已经拿到视频的尺寸大小
--(void)playerReadyToPlay:(WNPlayer *_Nullable)player videoSize:(CGSize )presentationSize;
-//播放完毕的代理方法
--(void)playerFinishedPlay:(WNPlayer *_Nullable)player;
+/**
+ * 点击播放暂停按钮代理方法
+ */
+- (void)player:(WNPlayer *_Nullable)player clickedPlayOrPauseButton:(UIButton *_Nullable)playOrPauseBtn;
+/**
+ * 点击关闭按钮代理方法
+ */
+- (void)player:(WNPlayer *_Nullable)player clickedCloseButton:(UIButton *_Nonnull)backBtn;
+/**
+ * 点击全屏按钮代理方法
+ */
+- (void)player:(WNPlayer *_Nonnull)player clickedFullScreenButton:(UIButton *_Nonnull)fullScreenBtn;
+/**
+ * 单击WMPlayer的代理方法
+ */
+- (void)player:(WNPlayer *_Nullable)player singleTaped:(UITapGestureRecognizer *_Nullable)singleTap;
+/**
+ * 双击WMPlayer的代理方法
+ */
+- (void)player:(WNPlayer *_Nullable)player doubleTaped:(UITapGestureRecognizer *_Nullable)doubleTaped;
+/**
+ * 播放失败的代理方法
+ */
+- (void)playerFailedPlay:(WNPlayer *_Nullable)player error:(NSError *_Nullable)error;
+/**
+ * 播放器已经拿到视频的尺寸大小
+ */
+- (void)playerReadyToPlay:(WNPlayer *_Nullable)player videoSize:(CGSize )presentationSize;
+/**
+ * 播放完毕的代理方法
+ */
+- (void)playerFinishedPlay:(WNPlayer *_Nullable)player;
 @end
 
 

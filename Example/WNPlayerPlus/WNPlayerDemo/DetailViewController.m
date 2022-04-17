@@ -42,7 +42,7 @@
                                                object:nil
     ];
     self.view.backgroundColor = UIColor.blackColor;
-    self.originalRect = CGRectMake(0, [WNPlayer IsiPhoneX]?44:0, self.view.frame.size.width, self.view.frame.size.width*(9.0/16));
+    self.originalRect = CGRectMake(0, [[UIApplication sharedApplication] statusBarFrame].size.height, self.view.frame.size.width, self.view.frame.size.width*(9.0/16));
     self.wnPlayer = [[WNPlayer alloc] initWithFrame:self.originalRect];
     self.wnPlayer.autoplay = YES;
     self.wnPlayer.delegate = self;
@@ -53,10 +53,11 @@
     contrlView.title = @"测试播放wmv";
     contrlView.coverImageView.image = [UIImage imageNamed:@"cover"];
     self.wnPlayer.controlView = contrlView;
-    self.wnPlayer.urlString = HTTPS_MOV;
-    [self.view addSubview:self.wnPlayer];
-    [self.wnPlayer play];
     
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videoSample" ofType:@"mp4"];
+    self.wnPlayer.urlString = filePath;
+    [self.view addSubview:self.wnPlayer];
+    [self.wnPlayer play]; 
 }
 -(BOOL)shouldAutorotate{
     return YES;
@@ -128,7 +129,7 @@
 
 //点击进入,退出全屏,或者监测到屏幕旋转去调用的方法
 -(void)toOrientation:(UIInterfaceOrientation)orientation{
-    if (orientation ==UIInterfaceOrientationPortrait) {
+    if (orientation == UIInterfaceOrientationPortrait) {
         self.wnPlayer.frame = self.originalRect;
         self.wnPlayer.isFullScreen = NO;
     }else{

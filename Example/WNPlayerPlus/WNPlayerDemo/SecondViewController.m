@@ -20,7 +20,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.originalRect = CGRectMake(0, [WNPlayer IsiPhoneX]?44:0, self.view.frame.size.width, self.view.frame.size.width*(9.0/16));
+    self.originalRect = CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, self.view.frame.size.width, self.view.frame.size.width*(9.0/16));
     WNPlayer *wnPlayer = [[WNPlayer alloc] initWithFrame:self.originalRect];
     wnPlayer.autoplay = YES;
     wnPlayer.delegate = self;

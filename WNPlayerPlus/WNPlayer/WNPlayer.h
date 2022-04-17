@@ -130,11 +130,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 暂停
  */
-- (void)pause;
-/**
- * 判断是否为iPhone X系列
- */
-+(BOOL)IsiPhoneX;
+- (void)pause; 
 @end
 
 NS_ASSUME_NONNULL_END

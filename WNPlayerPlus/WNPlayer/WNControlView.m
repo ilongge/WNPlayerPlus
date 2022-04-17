@@ -390,7 +390,7 @@
 #pragma mark layoutSubviews
 -(void)layoutSubviews{
     [super layoutSubviews];
-    if ([WNPlayer IsiPhoneX]) {
+    if (kStatusBarHeight > 24) {
         if (self.player.isFullScreen) {
             self.topView.frame = CGRectMake(0, 0, self.frame.size.width, 120);
             self.bottomView.frame = CGRectMake(0, self.frame.size.height-50-44, self.frame.size.width, 50+44);

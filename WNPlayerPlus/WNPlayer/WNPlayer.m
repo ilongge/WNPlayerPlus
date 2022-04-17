@@ -231,7 +231,7 @@ typedef enum : NSUInteger {
     _isFullScreen = isFullScreen;
     if (isFullScreen) {
         //状态栏处理
-        if ([WNPlayer IsiPhoneX]) {
+        if (kStatusBarHeight > 24) {
             if(![self.controlView viewWithTag:ControlViewTag]){
                 self.viewStatusBar.hidden = NO;
                 [self.controlView addSubview:self.viewStatusBar];
@@ -241,7 +241,7 @@ typedef enum : NSUInteger {
             
         }
     }else{
-        if ([WNPlayer IsiPhoneX]) {
+        if (kStatusBarHeight > 24) {
             self.viewStatusBar.hidden = YES;
             if ([self.controlView viewWithTag:ControlViewTag]) {
                 [self.viewStatusBar removeFromSuperview];

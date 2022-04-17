@@ -79,7 +79,6 @@ static int interruptCallback(void *context) {
     // 1. Init
     avformat_network_init();
     
-    
     // 2. Open Input
     AVFormatContext *fmtctx = avformat_alloc_context();;
     AVDictionary* options = NULL;

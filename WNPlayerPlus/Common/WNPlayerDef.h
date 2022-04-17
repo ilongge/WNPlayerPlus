@@ -51,5 +51,6 @@
 #define WNPlayerNotificationErrorKey               @"WNPlayerNotificationErrorKey"
 #define WNPlayerNotificationRawErrorKey            @"WNPlayerNotificationRawErrorKey"
 
+#define ControlViewTag                             321
 
 #endif /* WNPlayerDef_h */

@@ -76,9 +76,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak)id <WNPlayerDelegate> delegate;
 /**
  * 控制层
+ * 设置控制层，如果不设置这个controlView，则没有控制层，只有视频画面
  * 开发者可自定义一个UIView
  * 遵守WNControlViewProtocol
- * 添加自己的子控件，控件的事件连接WNControlViewProtocol的事件
+ * 添加自己的子控件
+ * 控件的事件连接WNControlViewProtocol的事件
  */
 @property (nonatomic, strong) UIView <WNControlViewProtocol> *controlView;
 /**

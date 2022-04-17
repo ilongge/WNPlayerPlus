@@ -12,7 +12,8 @@
 #import "WNDisplayView.h"
 #import "WNControlView.h"
 #import "WNPlayerManager.h"
-
+#import "DefineHeader.h"
+#import "CategoryHeader.h"
 typedef enum : NSUInteger {
     WNPlayerOperationNone,
     WNPlayerOperationOpen,
@@ -61,7 +62,7 @@ typedef enum : NSUInteger {
     }
     return self;
 }
-//设置控制层，如果不设置这个controlView，则没有控制层，只有视频画面
+ 
 -(void)setControlView:(UIView<WNControlViewProtocol> *)controlView{
     _controlView = controlView;
     if (!controlView) {
@@ -231,7 +232,7 @@ typedef enum : NSUInteger {
     if (isFullScreen) {
         //状态栏处理
         if ([WNPlayer IsiPhoneX]) {
-            if(![self.controlView viewWithTag:321]){
+            if(![self.controlView viewWithTag:ControlViewTag]){
                 self.viewStatusBar.hidden = NO;
                 [self.controlView addSubview:self.viewStatusBar];
                 self.viewStatusBar.frame = CGRectMake(0, -5, 2*self.controlView.frame.size.width-40, self.viewStatusBar.frame.size.height);
@@ -242,7 +243,7 @@ typedef enum : NSUInteger {
     }else{
         if ([WNPlayer IsiPhoneX]) {
             self.viewStatusBar.hidden = YES;
-            if ([self.controlView viewWithTag:321]) {
+            if ([self.controlView viewWithTag:ControlViewTag]) {
                 [self.viewStatusBar removeFromSuperview];
             }
         }else{
@@ -326,18 +327,6 @@ typedef enum : NSUInteger {
     if (self.dispath_timer == nil) return;
     dispatch_cancel(self.dispath_timer);
     self.dispath_timer = nil;
-}
-+(BOOL)IsiPhoneX{
-    BOOL iPhoneXSeries = NO;
-    if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
-        return iPhoneXSeries;
-    }
-    if (@available(iOS 11.0, *)) {//x系列的系统从iOS11开始
-        if(UIApplication.sharedApplication.delegate.window.safeAreaInsets.bottom > 0.0) {
-            iPhoneXSeries = YES;
-        }
-    }
-    return iPhoneXSeries;
 }
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];

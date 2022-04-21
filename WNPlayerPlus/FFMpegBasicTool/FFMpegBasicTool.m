@@ -11,15 +11,6 @@
 
 @implementation FFMpegBasicTool
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
-
 + (void)showFFmpegInfo
 {
     printf("ffmpeg version %s Copyright (c) 2000-2022 the FFmpeg developers\n", FFMPEG_VERSION);

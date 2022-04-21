@@ -229,7 +229,7 @@ typedef enum : NSUInteger {
 #pragma mark 是否全屏的设置
 -(void)setIsFullScreen:(BOOL)isFullScreen{
     _isFullScreen = isFullScreen;
-    if (isFullScreen) {
+    if (_isFullScreen) {
         //状态栏处理
         if (kStatusBarHeight > 24) {
             if(![self.controlView viewWithTag:ControlViewTag]){

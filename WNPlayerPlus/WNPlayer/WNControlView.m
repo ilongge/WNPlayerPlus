@@ -6,10 +6,8 @@
 //  Copyright © 2019 apple. All rights reserved.
 //
 
-#define WNPlayerSrcName(file)          [@"WNPlayerPlus.bundle" stringByAppendingPathComponent:file]
-#define WNPlayerFrameworkSrcName(file) [@"Frameworks/WNPlayerPlus.framework/WNPlayerPlus.bundle" stringByAppendingPathComponent:file]
-#define WNPlayerImage(file)            [UIImage imageNamed:WNPlayerSrcName(file)] ? :[UIImage imageNamed:WNPlayerFrameworkSrcName(file)]
-
+#define WNPlayerImage(file)            [ProjectResourcesManager imageWithName:file]
+#import "ProjectResourcesManager.h"
 #import "WNControlView.h"
 #import "WNPlayer.h"
 #import "WNDisplayView.h"
@@ -56,6 +54,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.coverImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+        self.coverImageView.contentMode = UIViewContentModeScaleToFill;
         [self addSubview:self.coverImageView];
         
         self.topView = [[UIImageView alloc]initWithImage:WNPlayerImage(@"top_shadow")];
@@ -74,8 +73,8 @@
         //backBtn
         self.backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         self.backBtn.showsTouchWhenHighlighted = YES;
-        [self.backBtn setImage:WNPlayerImage(@"player_icon_nav_back.png") forState:UIControlStateNormal];
-        [self.backBtn setImage:WNPlayerImage(@"player_icon_nav_back.png") forState:UIControlStateSelected];
+        [self.backBtn setImage:WNPlayerImage(@"player_icon_nav_back") forState:UIControlStateNormal];
+        [self.backBtn setImage:WNPlayerImage(@"player_icon_nav_back") forState:UIControlStateSelected];
         [self.backBtn addTarget:self action:@selector(colseVideo:) forControlEvents:UIControlEventTouchUpInside];
         [self.backItemView addSubview:self.backBtn];
         

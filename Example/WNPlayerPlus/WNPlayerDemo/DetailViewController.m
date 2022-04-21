@@ -15,9 +15,8 @@
 #import "DetailViewController.h"
 #import <WNPlayerPlus.h>
 @interface DetailViewController ()<WNPlayerDelegate>
-@property(nonatomic,strong)WNPlayer *wnPlayer;
-@property(nonatomic,assign)CGRect originalRect;
-@property(nonatomic,strong)WNControlView *customerControlView;
+@property(nonatomic, strong) WNPlayer *wnPlayer;
+@property(nonatomic, strong) WNControlView *customerControlView;
 @end
 
 @implementation DetailViewController
@@ -34,6 +33,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view setContentMode:UIViewContentModeScaleAspectFill];
+   
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     //旋转屏幕通知
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -42,8 +43,9 @@
                                                object:nil
     ];
     self.view.backgroundColor = UIColor.blackColor;
-    self.originalRect = CGRectMake(0, [[UIApplication sharedApplication] statusBarFrame].size.height, self.view.frame.size.width, self.view.frame.size.width*(9.0/16));
-    self.wnPlayer = [[WNPlayer alloc] initWithFrame:self.originalRect];
+    CGRect rect = CGRectMake(0, [[UIApplication sharedApplication] statusBarFrame].size.height, self.view.frame.size.width, self.view.frame.size.width*(9/16.0));
+    self.wnPlayer = [[WNPlayer alloc] initWithFrame:rect];
+    self.wnPlayer.isFullScreen = self.view.frame.size.width > self.view.frame.size.height;
     self.wnPlayer.autoplay = YES;
     self.wnPlayer.delegate = self;
     self.wnPlayer.repeat = YES;
@@ -51,13 +53,14 @@
     //连接设置控制层
     WNControlView *contrlView = [[WNControlView alloc] initWithFrame:self.wnPlayer.bounds];
     contrlView.title = @"测试播放wmv";
-    contrlView.coverImageView.image = [UIImage imageNamed:@"cover"];
+    contrlView.coverImageView.image = [UIImage imageNamed:@"Cover"];
     self.wnPlayer.controlView = contrlView;
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videoSample" ofType:@"mp4"];
     self.wnPlayer.urlString = filePath;
     [self.view addSubview:self.wnPlayer];
-    [self.wnPlayer play]; 
+    [self.wnPlayer play];
+    NSLog(@"%@", self.view);
 }
 -(BOOL)shouldAutorotate{
     return YES;
@@ -99,43 +102,38 @@
 /**
  *  旋转屏幕通知
  */
-- (void)onDeviceOrientationChange:(NSNotification *)notification{
-    UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
-    UIInterfaceOrientation interfaceOrientation = (UIInterfaceOrientation)orientation;
+- (void)onDeviceOrientationChange:(NSNotification *)notification
+{
+    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
     switch (interfaceOrientation) {
         case UIInterfaceOrientationPortraitUpsideDown:{
-            NSLog(@"第3个旋转方向---电池栏在下");
+            NSLog(@"--------屏幕旋转--------Home键在上");
         }
             break;
         case UIInterfaceOrientationPortrait:{
-            NSLog(@"第0个旋转方向---电池栏在上");
-            [self toOrientation:UIInterfaceOrientationPortrait];
+            NSLog(@"--------屏幕旋转--------Home键在下");
         }
             break;
         case UIInterfaceOrientationLandscapeLeft:{
-            NSLog(@"第2个旋转方向---电池栏在左");
-            [self toOrientation:UIInterfaceOrientationLandscapeLeft];
+            NSLog(@"--------屏幕旋转--------Home键在左");
         }
             break;
         case UIInterfaceOrientationLandscapeRight:{
-            NSLog(@"第1个旋转方向---电池栏在右");
-            [self toOrientation:UIInterfaceOrientationLandscapeRight];
+            NSLog(@"--------屏幕旋转--------Home键在右");
         }
             break;
         default:
             break;
     }
 }
-
-//点击进入,退出全屏,或者监测到屏幕旋转去调用的方法
--(void)toOrientation:(UIInterfaceOrientation)orientation{
-    if (orientation == UIInterfaceOrientationPortrait) {
-        self.wnPlayer.frame = self.originalRect;
-        self.wnPlayer.isFullScreen = NO;
-    }else{
-        self.wnPlayer.frame = self.view.bounds;
-        self.wnPlayer.isFullScreen = YES;
-    }
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    CGFloat statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
+    CGRect rect = CGRectMake(0, statusHeight, size.width, size.width*(9/16.0));
+    BOOL isFull = size.width > size.height;
+    self.wnPlayer.frame = rect;
+    self.wnPlayer.isFullScreen = isFull;
     if (@available(iOS 11.0, *)) {
         [self setNeedsUpdateOfHomeIndicatorAutoHidden];
     }

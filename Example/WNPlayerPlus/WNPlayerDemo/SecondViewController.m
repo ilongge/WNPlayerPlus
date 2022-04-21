@@ -29,7 +29,7 @@
     //连接设置控制层
     CustomerControlView_test *contrlView = [[CustomerControlView_test alloc] initWithFrame:wnPlayer.bounds];
 //        contrlView.title = @"测试播放wmv";
-    contrlView.coverImageView.image = [UIImage imageNamed:@"cover"];
+    contrlView.coverImageView.image = [UIImage imageNamed:@"Cover"];
     wnPlayer.controlView = contrlView;
 
 //        self.wnPlayer.urlString = @"rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov";

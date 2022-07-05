@@ -1,0 +1,16 @@
+PODS:
+  - WNPlayerPlus (1.0.1)
+
+DEPENDENCIES:
+  - WNPlayerPlus (from `../`)
+
+EXTERNAL SOURCES:
+  WNPlayerPlus:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WNPlayerPlus: c7506c541c6680f99a8054fe00636b89385ddc39
+
+PODFILE CHECKSUM: 75beb62ae1bd55da40c74491aa54b018bbdb1dec
+
+COCOAPODS: 1.11.3

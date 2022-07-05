@@ -399,10 +399,23 @@
     CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault;
     CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
     // make the cgimage
-    CGImageRef imageRef = CGImageCreate(viewSize.width , viewSize.height, bitsPerComponent, bitsPerPixel, bytesPerRow, colorSpaceRef, bitmapInfo, provider, NULL, NO, renderingIntent);
+    CGImageRef imageRef = CGImageCreate(viewSize.width ,
+                                        viewSize.height,
+                                        bitsPerComponent,
+                                        bitsPerPixel,
+                                        bytesPerRow,
+                                        colorSpaceRef,
+                                        bitmapInfo,
+                                        provider,
+                                        NULL,
+                                        NO,
+                                        renderingIntent);
     
     // then make the uiimage from that
     UIImage *myImage = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    CGDataProviderRelease(provider);
+    CGColorSpaceRelease(colorSpaceRef);
     return myImage;
 }
 

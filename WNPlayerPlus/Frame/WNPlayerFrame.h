@@ -13,8 +13,6 @@ typedef enum : NSUInteger {
     kWNPlayerFrameTypeAudio
 } WNPlayerFrameType;
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface WNPlayerFrame : NSObject
 @property (nonatomic) WNPlayerFrameType type;
 @property (nonatomic) NSData *data;
@@ -22,4 +20,3 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) double duration;
 @end
 
-NS_ASSUME_NONNULL_END

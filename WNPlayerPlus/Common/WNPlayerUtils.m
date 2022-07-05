@@ -31,7 +31,8 @@
     return YES;
 }
 + (NSString *)localizedString:(NSString *)name {
-    return NSLocalizedStringFromTable(name, WNPlayerLocalizedStringTable, nil);
+    NSString *string = NSLocalizedStringFromTable(name, WNPlayerLocalizedStringTable, nil);
+    return string;
 }
 @end
 

@@ -14,6 +14,8 @@
 #import "WNPlayerDef.h"
 #import "WNPlayerManager.h"
 #import "ConfigHeader.h"
+#import "WNPlayerUtils.h"
+
 @interface WNControlView ()<UIGestureRecognizerDelegate>
 @property (nonatomic,strong) UIView *backItemView;
 @property (nonatomic,strong) UIActivityIndicatorView *loadingView;

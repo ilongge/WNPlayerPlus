@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface WNPlayerDecoder : NSObject
 @property (nonatomic) BOOL isYUV;
 @property (nonatomic) BOOL hasVideo;
@@ -40,4 +38,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isYUV;
 @end
 
-NS_ASSUME_NONNULL_END

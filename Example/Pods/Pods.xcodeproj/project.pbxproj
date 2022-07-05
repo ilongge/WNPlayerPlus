@@ -1,0 +1,1039 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46EB2E00000620 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000610 /* Foundation.framework */; };
+		46EB2E000006B0 /* WNPlayerStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46EB2E000004A0 /* WNPlayerStrings.strings */; };
+		46EB2E000006C0 /* WNPlayerRGBFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 46EB2E000004C0 /* WNPlayerRGBFragmentShader.glsl */; };
+		46EB2E000006D0 /* WNPlayerRotationScaleVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 46EB2E000004D0 /* WNPlayerRotationScaleVertexShader.glsl */; };
+		46EB2E000006E0 /* WNPlayerRotationVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 46EB2E000004E0 /* WNPlayerRotationVertexShader.glsl */; };
+		46EB2E000006F0 /* WNPlayerVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 46EB2E000004F0 /* WNPlayerVertexShader.glsl */; };
+		46EB2E00000700 /* WNPlayerYUVFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000500 /* WNPlayerYUVFragmentShader.glsl */; };
+		46EB2E00000710 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000520 /* Images.xcassets */; };
+		46EB2E00000740 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000100 /* NSArray+Log.m */; };
+		46EB2E00000750 /* NSBundle+Resources.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000120 /* NSBundle+Resources.m */; };
+		46EB2E00000760 /* NSDate+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000140 /* NSDate+Extend.m */; };
+		46EB2E00000770 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000160 /* NSDictionary+Log.m */; };
+		46EB2E00000780 /* NSString+CaesarCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000180 /* NSString+CaesarCode.m */; };
+		46EB2E00000790 /* NSString+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001A0 /* NSString+Json.m */; };
+		46EB2E000007A0 /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001C0 /* UIDevice+Extension.m */; };
+		46EB2E000007B0 /* UIViewController+Autorotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001E0 /* UIViewController+Autorotate.m */; };
+		46EB2E000007C0 /* WNAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000210 /* WNAudioManager.m */; };
+		46EB2E000007D0 /* WNPlayerDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000230 /* WNPlayerDecoder.m */; };
+		46EB2E000007E0 /* ProjectResourcesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000260 /* ProjectResourcesManager.m */; };
+		46EB2E000007F0 /* WNPlayerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000290 /* WNPlayerUtils.m */; };
+		46EB2E00000800 /* FFMpegBasicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000300 /* FFMpegBasicTool.m */; };
+		46EB2E00000810 /* WNPlayerAudioFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000330 /* WNPlayerAudioFrame.m */; };
+		46EB2E00000820 /* WNPlayerFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000350 /* WNPlayerFrame.m */; };
+		46EB2E00000830 /* WNPlayerVideoFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000370 /* WNPlayerVideoFrame.m */; };
+		46EB2E00000840 /* WNPlayerVideoRGBFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000390 /* WNPlayerVideoRGBFrame.m */; };
+		46EB2E00000850 /* WNPlayerVideoYUVFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000003B0 /* WNPlayerVideoYUVFrame.m */; };
+		46EB2E00000860 /* WNControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000003E0 /* WNControlView.m */; };
+		46EB2E00000870 /* WNDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000410 /* WNDisplayView.m */; };
+		46EB2E00000880 /* WNPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000430 /* WNPlayer.m */; };
+		46EB2E00000890 /* WNPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000450 /* WNPlayerManager.m */; };
+		46EB2E000008A0 /* CategoryHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000000E0 /* CategoryHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E000008B0 /* NSArray+Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000000F0 /* NSArray+Log.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E000008C0 /* NSBundle+Resources.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000110 /* NSBundle+Resources.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E000008D0 /* NSDate+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000130 /* NSDate+Extend.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E000008E0 /* NSDictionary+Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000150 /* NSDictionary+Log.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E000008F0 /* NSString+CaesarCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000170 /* NSString+CaesarCode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E00000900 /* NSString+Json.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000190 /* NSString+Json.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E00000910 /* UIDevice+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000001B0 /* UIDevice+Extension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E00000920 /* UIViewController+Autorotate.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000001D0 /* UIViewController+Autorotate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E00000930 /* WNAudioManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000200 /* WNAudioManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E00000940 /* WNPlayerDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000220 /* WNPlayerDecoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E00000950 /* ProjectResourcesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000250 /* ProjectResourcesManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E00000960 /* WNPlayerDef.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000270 /* WNPlayerDef.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E00000970 /* WNPlayerUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000280 /* WNPlayerUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E00000980 /* BlockHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000002B0 /* BlockHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E00000990 /* ConfigHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000002C0 /* ConfigHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E000009A0 /* DefineHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000002D0 /* DefineHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E000009B0 /* FFMpegBasicTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000002F0 /* FFMpegBasicTool.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E000009C0 /* WNPlayerAudioFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000320 /* WNPlayerAudioFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E000009D0 /* WNPlayerFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000340 /* WNPlayerFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E000009E0 /* WNPlayerVideoFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000360 /* WNPlayerVideoFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E000009F0 /* WNPlayerVideoRGBFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000380 /* WNPlayerVideoRGBFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E00000A00 /* WNPlayerVideoYUVFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000003A0 /* WNPlayerVideoYUVFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E00000A10 /* WNControlView.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000003D0 /* WNControlView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00000A20 /* WNControlViewProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000003F0 /* WNControlViewProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00000A30 /* WNDisplayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000400 /* WNDisplayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00000A40 /* WNPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000420 /* WNPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00000A50 /* WNPlayerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000440 /* WNPlayerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00000A60 /* WNPlayerPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000460 /* WNPlayerPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00000AB0 /* WNPlayerPlus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000AA0 /* WNPlayerPlus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00000AF0 /* WNPlayerPlus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000AE0 /* WNPlayerPlus-dummy.m */; };
+		46EB2E00000B10 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000B00 /* AVFoundation.framework */; };
+		46EB2E00000B30 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000B20 /* Accelerate.framework */; };
+		46EB2E00000B50 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000B40 /* OpenGLES.framework */; };
+		46EB2E00000BF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000610 /* Foundation.framework */; };
+		46EB2E00000C60 /* Pods-WNPlayerPlus_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000C50 /* Pods-WNPlayerPlus_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00000CB0 /* Pods-WNPlayerPlus_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000CA0 /* Pods-WNPlayerPlus_Example-dummy.m */; };
+		46EB2E00000D00 /* WNPlayerPlus-WNPlayerPlus in Resources */ = {isa = PBXBuildFile; fileRef = 129BB89599AB2FDAD9E1D3F2CFDEA3C1 /* WNPlayerPlus-WNPlayerPlus */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46EB2E00000CC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63E2B09F5E6CC052B7D9006B81150B62;
+			remoteInfo = WNPlayerPlus;
+		};
+		46EB2E00000CE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0A2E6FE700F322B8BD2CFB886B819EE;
+			remoteInfo = "WNPlayerPlus-WNPlayerPlus";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		129BB89599AB2FDAD9E1D3F2CFDEA3C1 /* WNPlayerPlus-WNPlayerPlus */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "WNPlayerPlus-WNPlayerPlus"; path = WNPlayerPlus.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EB2E000000C0 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		46EB2E000000E0 /* CategoryHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CategoryHeader.h; sourceTree = "<group>"; };
+		46EB2E000000F0 /* NSArray+Log.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		46EB2E00000100 /* NSArray+Log.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		46EB2E00000110 /* NSBundle+Resources.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Resources.h"; sourceTree = "<group>"; };
+		46EB2E00000120 /* NSBundle+Resources.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Resources.m"; sourceTree = "<group>"; };
+		46EB2E00000130 /* NSDate+Extend.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extend.h"; sourceTree = "<group>"; };
+		46EB2E00000140 /* NSDate+Extend.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extend.m"; sourceTree = "<group>"; };
+		46EB2E00000150 /* NSDictionary+Log.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Log.h"; sourceTree = "<group>"; };
+		46EB2E00000160 /* NSDictionary+Log.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
+		46EB2E00000170 /* NSString+CaesarCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+CaesarCode.h"; sourceTree = "<group>"; };
+		46EB2E00000180 /* NSString+CaesarCode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+CaesarCode.m"; sourceTree = "<group>"; };
+		46EB2E00000190 /* NSString+Json.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+Json.h"; sourceTree = "<group>"; };
+		46EB2E000001A0 /* NSString+Json.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+Json.m"; sourceTree = "<group>"; };
+		46EB2E000001B0 /* UIDevice+Extension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extension.h"; sourceTree = "<group>"; };
+		46EB2E000001C0 /* UIDevice+Extension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
+		46EB2E000001D0 /* UIViewController+Autorotate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Autorotate.h"; sourceTree = "<group>"; };
+		46EB2E000001E0 /* UIViewController+Autorotate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Autorotate.m"; sourceTree = "<group>"; };
+		46EB2E00000200 /* WNAudioManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WNAudioManager.h; sourceTree = "<group>"; };
+		46EB2E00000210 /* WNAudioManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WNAudioManager.m; sourceTree = "<group>"; };
+		46EB2E00000220 /* WNPlayerDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WNPlayerDecoder.h; sourceTree = "<group>"; };
+		46EB2E00000230 /* WNPlayerDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WNPlayerDecoder.m; sourceTree = "<group>"; };
+		46EB2E00000250 /* ProjectResourcesManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ProjectResourcesManager.h; sourceTree = "<group>"; };
+		46EB2E00000260 /* ProjectResourcesManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ProjectResourcesManager.m; sourceTree = "<group>"; };
+		46EB2E00000270 /* WNPlayerDef.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WNPlayerDef.h; sourceTree = "<group>"; };
+		46EB2E00000280 /* WNPlayerUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WNPlayerUtils.h; sourceTree = "<group>"; };
+		46EB2E00000290 /* WNPlayerUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WNPlayerUtils.m; sourceTree = "<group>"; };
+		46EB2E000002B0 /* BlockHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BlockHeader.h; sourceTree = "<group>"; };
+		46EB2E000002C0 /* ConfigHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ConfigHeader.h; sourceTree = "<group>"; };
+		46EB2E000002D0 /* DefineHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DefineHeader.h; sourceTree = "<group>"; };
+		46EB2E000002F0 /* FFMpegBasicTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FFMpegBasicTool.h; sourceTree = "<group>"; };
+		46EB2E00000300 /* FFMpegBasicTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FFMpegBasicTool.m; sourceTree = "<group>"; };
+		46EB2E00000320 /* WNPlayerAudioFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WNPlayerAudioFrame.h; sourceTree = "<group>"; };
+		46EB2E00000330 /* WNPlayerAudioFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WNPlayerAudioFrame.m; sourceTree = "<group>"; };
+		46EB2E00000340 /* WNPlayerFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WNPlayerFrame.h; sourceTree = "<group>"; };
+		46EB2E00000350 /* WNPlayerFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WNPlayerFrame.m; sourceTree = "<group>"; };
+		46EB2E00000360 /* WNPlayerVideoFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WNPlayerVideoFrame.h; sourceTree = "<group>"; };
+		46EB2E00000370 /* WNPlayerVideoFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WNPlayerVideoFrame.m; sourceTree = "<group>"; };
+		46EB2E00000380 /* WNPlayerVideoRGBFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WNPlayerVideoRGBFrame.h; sourceTree = "<group>"; };
+		46EB2E00000390 /* WNPlayerVideoRGBFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WNPlayerVideoRGBFrame.m; sourceTree = "<group>"; };
+		46EB2E000003A0 /* WNPlayerVideoYUVFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WNPlayerVideoYUVFrame.h; sourceTree = "<group>"; };
+		46EB2E000003B0 /* WNPlayerVideoYUVFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WNPlayerVideoYUVFrame.m; sourceTree = "<group>"; };
+		46EB2E000003D0 /* WNControlView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WNControlView.h; sourceTree = "<group>"; };
+		46EB2E000003E0 /* WNControlView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WNControlView.m; sourceTree = "<group>"; };
+		46EB2E000003F0 /* WNControlViewProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WNControlViewProtocol.h; sourceTree = "<group>"; };
+		46EB2E00000400 /* WNDisplayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WNDisplayView.h; sourceTree = "<group>"; };
+		46EB2E00000410 /* WNDisplayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WNDisplayView.m; sourceTree = "<group>"; };
+		46EB2E00000420 /* WNPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WNPlayer.h; sourceTree = "<group>"; };
+		46EB2E00000430 /* WNPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WNPlayer.m; sourceTree = "<group>"; };
+		46EB2E00000440 /* WNPlayerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WNPlayerManager.h; sourceTree = "<group>"; };
+		46EB2E00000450 /* WNPlayerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WNPlayerManager.m; sourceTree = "<group>"; };
+		46EB2E00000460 /* WNPlayerPlus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WNPlayerPlus.h; path = WNPlayerPlus/WNPlayerPlus.h; sourceTree = "<group>"; };
+		46EB2E00000480 /* FFmpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FFmpeg.framework; path = Frameworks/FFmpeg.framework; sourceTree = "<group>"; };
+		46EB2E000004B0 /* WNPlayerStrings.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = WNPlayerStrings.strings; path = en.lproj/WNPlayerStrings.strings; sourceTree = "<group>"; };
+		46EB2E000004C0 /* WNPlayerRGBFragmentShader.glsl */ = {isa = PBXFileReference; includeInIndex = 1; path = WNPlayerRGBFragmentShader.glsl; sourceTree = "<group>"; };
+		46EB2E000004D0 /* WNPlayerRotationScaleVertexShader.glsl */ = {isa = PBXFileReference; includeInIndex = 1; path = WNPlayerRotationScaleVertexShader.glsl; sourceTree = "<group>"; };
+		46EB2E000004E0 /* WNPlayerRotationVertexShader.glsl */ = {isa = PBXFileReference; includeInIndex = 1; path = WNPlayerRotationVertexShader.glsl; sourceTree = "<group>"; };
+		46EB2E000004F0 /* WNPlayerVertexShader.glsl */ = {isa = PBXFileReference; includeInIndex = 1; path = WNPlayerVertexShader.glsl; sourceTree = "<group>"; };
+		46EB2E00000500 /* WNPlayerYUVFragmentShader.glsl */ = {isa = PBXFileReference; includeInIndex = 1; path = WNPlayerYUVFragmentShader.glsl; sourceTree = "<group>"; };
+		46EB2E00000510 /* WNPlayerStrings.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = WNPlayerStrings.strings; path = "zh-Hans.lproj/WNPlayerStrings.strings"; sourceTree = "<group>"; };
+		46EB2E00000520 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WNPlayerPlus/Images.xcassets; sourceTree = "<group>"; };
+		46EB2E00000540 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		46EB2E00000550 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		46EB2E00000560 /* WNPlayerPlus.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WNPlayerPlus.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		46EB2E00000610 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E00000730 /* ResourceBundle-WNPlayerPlus-WNPlayerPlus-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-WNPlayerPlus-WNPlayerPlus-Info.plist"; sourceTree = "<group>"; };
+		46EB2E00000A70 /* WNPlayerPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WNPlayerPlus.debug.xcconfig; sourceTree = "<group>"; };
+		46EB2E00000A80 /* WNPlayerPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WNPlayerPlus.release.xcconfig; sourceTree = "<group>"; };
+		46EB2E00000A90 /* WNPlayerPlus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WNPlayerPlus.modulemap; sourceTree = "<group>"; };
+		46EB2E00000AA0 /* WNPlayerPlus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WNPlayerPlus-umbrella.h"; sourceTree = "<group>"; };
+		46EB2E00000AC0 /* WNPlayerPlus-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WNPlayerPlus-Info.plist"; sourceTree = "<group>"; };
+		46EB2E00000AD0 /* WNPlayerPlus-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WNPlayerPlus-prefix.pch"; sourceTree = "<group>"; };
+		46EB2E00000AE0 /* WNPlayerPlus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WNPlayerPlus-dummy.m"; sourceTree = "<group>"; };
+		46EB2E00000B00 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E00000B20 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E00000B40 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E00000C10 /* Pods-WNPlayerPlus_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WNPlayerPlus_Example.release.xcconfig"; sourceTree = "<group>"; };
+		46EB2E00000C20 /* Pods-WNPlayerPlus_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WNPlayerPlus_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		46EB2E00000C30 /* Pods-WNPlayerPlus_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WNPlayerPlus_Example-Info.plist"; sourceTree = "<group>"; };
+		46EB2E00000C40 /* Pods-WNPlayerPlus_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WNPlayerPlus_Example.modulemap"; sourceTree = "<group>"; };
+		46EB2E00000C50 /* Pods-WNPlayerPlus_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WNPlayerPlus_Example-umbrella.h"; sourceTree = "<group>"; };
+		46EB2E00000C70 /* Pods-WNPlayerPlus_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WNPlayerPlus_Example-frameworks.sh"; sourceTree = "<group>"; };
+		46EB2E00000C80 /* Pods-WNPlayerPlus_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WNPlayerPlus_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		46EB2E00000C90 /* Pods-WNPlayerPlus_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WNPlayerPlus_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46EB2E00000CA0 /* Pods-WNPlayerPlus_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WNPlayerPlus_Example-dummy.m"; sourceTree = "<group>"; };
+		4EF348FDB4863EE19A86FD6D81A54D19 /* Pods-WNPlayerPlus_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WNPlayerPlus_Example"; path = Pods_WNPlayerPlus_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B748384295FE221AB6FF77F13A2BDC85 /* WNPlayerPlus */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WNPlayerPlus; path = WNPlayerPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46EB2E000005E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EB2E00000B30 /* Accelerate.framework in Frameworks */,
+				46EB2E00000B10 /* AVFoundation.framework in Frameworks */,
+				46EB2E00000620 /* Foundation.framework in Frameworks */,
+				46EB2E00000B50 /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EB2E00000690 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EB2E00000BD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EB2E00000BF0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46EB2E00000010 = {
+			isa = PBXGroup;
+			children = (
+				46EB2E000000C0 /* Podfile */,
+				46EB2E00000090 /* Development Pods */,
+				46EB2E00000060 /* Frameworks */,
+				46EB2E00000020 /* Products */,
+				46EB2E00000070 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		46EB2E00000020 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EF348FDB4863EE19A86FD6D81A54D19 /* Pods-WNPlayerPlus_Example */,
+				B748384295FE221AB6FF77F13A2BDC85 /* WNPlayerPlus */,
+				129BB89599AB2FDAD9E1D3F2CFDEA3C1 /* WNPlayerPlus-WNPlayerPlus */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46EB2E00000060 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E00000600 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46EB2E00000070 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E00000C00 /* Pods-WNPlayerPlus_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		46EB2E00000090 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E000000B0 /* WNPlayerPlus */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		46EB2E000000B0 /* WNPlayerPlus */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E00000520 /* Images.xcassets */,
+				46EB2E00000460 /* WNPlayerPlus.h */,
+				46EB2E000000D0 /* Category */,
+				46EB2E000001F0 /* Codec */,
+				46EB2E00000240 /* Common */,
+				46EB2E000002A0 /* ConfigHeaders */,
+				46EB2E000002E0 /* FFMpegBasicTool */,
+				46EB2E00000310 /* Frame */,
+				46EB2E00000470 /* Frameworks */,
+				46EB2E00000530 /* Pod */,
+				46EB2E00000490 /* Resouce */,
+				46EB2E00000720 /* Support Files */,
+				46EB2E000003C0 /* WNPlayer */,
+			);
+			name = WNPlayerPlus;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		46EB2E000000D0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E000000E0 /* CategoryHeader.h */,
+				46EB2E000000F0 /* NSArray+Log.h */,
+				46EB2E00000100 /* NSArray+Log.m */,
+				46EB2E00000110 /* NSBundle+Resources.h */,
+				46EB2E00000120 /* NSBundle+Resources.m */,
+				46EB2E00000130 /* NSDate+Extend.h */,
+				46EB2E00000140 /* NSDate+Extend.m */,
+				46EB2E00000150 /* NSDictionary+Log.h */,
+				46EB2E00000160 /* NSDictionary+Log.m */,
+				46EB2E00000170 /* NSString+CaesarCode.h */,
+				46EB2E00000180 /* NSString+CaesarCode.m */,
+				46EB2E00000190 /* NSString+Json.h */,
+				46EB2E000001A0 /* NSString+Json.m */,
+				46EB2E000001B0 /* UIDevice+Extension.h */,
+				46EB2E000001C0 /* UIDevice+Extension.m */,
+				46EB2E000001D0 /* UIViewController+Autorotate.h */,
+				46EB2E000001E0 /* UIViewController+Autorotate.m */,
+			);
+			name = Category;
+			path = WNPlayerPlus/Category;
+			sourceTree = "<group>";
+		};
+		46EB2E000001F0 /* Codec */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E00000200 /* WNAudioManager.h */,
+				46EB2E00000210 /* WNAudioManager.m */,
+				46EB2E00000220 /* WNPlayerDecoder.h */,
+				46EB2E00000230 /* WNPlayerDecoder.m */,
+			);
+			name = Codec;
+			path = WNPlayerPlus/Codec;
+			sourceTree = "<group>";
+		};
+		46EB2E00000240 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E00000250 /* ProjectResourcesManager.h */,
+				46EB2E00000260 /* ProjectResourcesManager.m */,
+				46EB2E00000270 /* WNPlayerDef.h */,
+				46EB2E00000280 /* WNPlayerUtils.h */,
+				46EB2E00000290 /* WNPlayerUtils.m */,
+			);
+			name = Common;
+			path = WNPlayerPlus/Common;
+			sourceTree = "<group>";
+		};
+		46EB2E000002A0 /* ConfigHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E000002B0 /* BlockHeader.h */,
+				46EB2E000002C0 /* ConfigHeader.h */,
+				46EB2E000002D0 /* DefineHeader.h */,
+			);
+			name = ConfigHeaders;
+			path = WNPlayerPlus/ConfigHeaders;
+			sourceTree = "<group>";
+		};
+		46EB2E000002E0 /* FFMpegBasicTool */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E000002F0 /* FFMpegBasicTool.h */,
+				46EB2E00000300 /* FFMpegBasicTool.m */,
+			);
+			name = FFMpegBasicTool;
+			path = WNPlayerPlus/FFMpegBasicTool;
+			sourceTree = "<group>";
+		};
+		46EB2E00000310 /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E00000320 /* WNPlayerAudioFrame.h */,
+				46EB2E00000330 /* WNPlayerAudioFrame.m */,
+				46EB2E00000340 /* WNPlayerFrame.h */,
+				46EB2E00000350 /* WNPlayerFrame.m */,
+				46EB2E00000360 /* WNPlayerVideoFrame.h */,
+				46EB2E00000370 /* WNPlayerVideoFrame.m */,
+				46EB2E00000380 /* WNPlayerVideoRGBFrame.h */,
+				46EB2E00000390 /* WNPlayerVideoRGBFrame.m */,
+				46EB2E000003A0 /* WNPlayerVideoYUVFrame.h */,
+				46EB2E000003B0 /* WNPlayerVideoYUVFrame.m */,
+			);
+			name = Frame;
+			path = WNPlayerPlus/Frame;
+			sourceTree = "<group>";
+		};
+		46EB2E000003C0 /* WNPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E000003D0 /* WNControlView.h */,
+				46EB2E000003E0 /* WNControlView.m */,
+				46EB2E000003F0 /* WNControlViewProtocol.h */,
+				46EB2E00000400 /* WNDisplayView.h */,
+				46EB2E00000410 /* WNDisplayView.m */,
+				46EB2E00000420 /* WNPlayer.h */,
+				46EB2E00000430 /* WNPlayer.m */,
+				46EB2E00000440 /* WNPlayerManager.h */,
+				46EB2E00000450 /* WNPlayerManager.m */,
+			);
+			name = WNPlayer;
+			path = WNPlayerPlus/WNPlayer;
+			sourceTree = "<group>";
+		};
+		46EB2E00000470 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E00000480 /* FFmpeg.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46EB2E00000490 /* Resouce */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E000004C0 /* WNPlayerRGBFragmentShader.glsl */,
+				46EB2E000004D0 /* WNPlayerRotationScaleVertexShader.glsl */,
+				46EB2E000004E0 /* WNPlayerRotationVertexShader.glsl */,
+				46EB2E000004A0 /* WNPlayerStrings.strings */,
+				46EB2E000004F0 /* WNPlayerVertexShader.glsl */,
+				46EB2E00000500 /* WNPlayerYUVFragmentShader.glsl */,
+			);
+			name = Resouce;
+			path = WNPlayerPlus/Resouce;
+			sourceTree = "<group>";
+		};
+		46EB2E00000530 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E00000540 /* LICENSE.txt */,
+				46EB2E00000550 /* README.md */,
+				46EB2E00000560 /* WNPlayerPlus.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		46EB2E00000600 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E00000B20 /* Accelerate.framework */,
+				46EB2E00000B00 /* AVFoundation.framework */,
+				46EB2E00000610 /* Foundation.framework */,
+				46EB2E00000B40 /* OpenGLES.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		46EB2E00000720 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E00000730 /* ResourceBundle-WNPlayerPlus-WNPlayerPlus-Info.plist */,
+				46EB2E00000A90 /* WNPlayerPlus.modulemap */,
+				46EB2E00000AE0 /* WNPlayerPlus-dummy.m */,
+				46EB2E00000AC0 /* WNPlayerPlus-Info.plist */,
+				46EB2E00000AD0 /* WNPlayerPlus-prefix.pch */,
+				46EB2E00000AA0 /* WNPlayerPlus-umbrella.h */,
+				46EB2E00000A70 /* WNPlayerPlus.debug.xcconfig */,
+				46EB2E00000A80 /* WNPlayerPlus.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/WNPlayerPlus";
+			sourceTree = "<group>";
+		};
+		46EB2E00000C00 /* Pods-WNPlayerPlus_Example */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E00000C40 /* Pods-WNPlayerPlus_Example.modulemap */,
+				46EB2E00000C90 /* Pods-WNPlayerPlus_Example-acknowledgements.markdown */,
+				46EB2E00000C80 /* Pods-WNPlayerPlus_Example-acknowledgements.plist */,
+				46EB2E00000CA0 /* Pods-WNPlayerPlus_Example-dummy.m */,
+				46EB2E00000C70 /* Pods-WNPlayerPlus_Example-frameworks.sh */,
+				46EB2E00000C30 /* Pods-WNPlayerPlus_Example-Info.plist */,
+				46EB2E00000C50 /* Pods-WNPlayerPlus_Example-umbrella.h */,
+				46EB2E00000C20 /* Pods-WNPlayerPlus_Example.debug.xcconfig */,
+				46EB2E00000C10 /* Pods-WNPlayerPlus_Example.release.xcconfig */,
+			);
+			name = "Pods-WNPlayerPlus_Example";
+			path = "Target Support Files/Pods-WNPlayerPlus_Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		46EB2E000005C0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EB2E00000980 /* BlockHeader.h in Headers */,
+				46EB2E000008A0 /* CategoryHeader.h in Headers */,
+				46EB2E00000990 /* ConfigHeader.h in Headers */,
+				46EB2E000009A0 /* DefineHeader.h in Headers */,
+				46EB2E000009B0 /* FFMpegBasicTool.h in Headers */,
+				46EB2E000008B0 /* NSArray+Log.h in Headers */,
+				46EB2E000008C0 /* NSBundle+Resources.h in Headers */,
+				46EB2E000008D0 /* NSDate+Extend.h in Headers */,
+				46EB2E000008E0 /* NSDictionary+Log.h in Headers */,
+				46EB2E000008F0 /* NSString+CaesarCode.h in Headers */,
+				46EB2E00000900 /* NSString+Json.h in Headers */,
+				46EB2E00000950 /* ProjectResourcesManager.h in Headers */,
+				46EB2E00000910 /* UIDevice+Extension.h in Headers */,
+				46EB2E00000920 /* UIViewController+Autorotate.h in Headers */,
+				46EB2E00000930 /* WNAudioManager.h in Headers */,
+				46EB2E00000A10 /* WNControlView.h in Headers */,
+				46EB2E00000A20 /* WNControlViewProtocol.h in Headers */,
+				46EB2E00000A30 /* WNDisplayView.h in Headers */,
+				46EB2E00000A40 /* WNPlayer.h in Headers */,
+				46EB2E000009C0 /* WNPlayerAudioFrame.h in Headers */,
+				46EB2E00000940 /* WNPlayerDecoder.h in Headers */,
+				46EB2E00000960 /* WNPlayerDef.h in Headers */,
+				46EB2E000009D0 /* WNPlayerFrame.h in Headers */,
+				46EB2E00000A50 /* WNPlayerManager.h in Headers */,
+				46EB2E00000A60 /* WNPlayerPlus.h in Headers */,
+				46EB2E00000AB0 /* WNPlayerPlus-umbrella.h in Headers */,
+				46EB2E00000970 /* WNPlayerUtils.h in Headers */,
+				46EB2E000009E0 /* WNPlayerVideoFrame.h in Headers */,
+				46EB2E000009F0 /* WNPlayerVideoRGBFrame.h in Headers */,
+				46EB2E00000A00 /* WNPlayerVideoYUVFrame.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EB2E00000BB0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EB2E00000C60 /* Pods-WNPlayerPlus_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		493A11CF2A77139CC7FCC05B8E6A200F /* Pods-WNPlayerPlus_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46EB2E00000B70 /* Build configuration list for PBXNativeTarget "Pods-WNPlayerPlus_Example" */;
+			buildPhases = (
+				46EB2E00000BB0 /* Headers */,
+				46EB2E00000BC0 /* Sources */,
+				46EB2E00000BD0 /* Frameworks */,
+				46EB2E00000BE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46EB2E00000CD0 /* PBXTargetDependency */,
+			);
+			name = "Pods-WNPlayerPlus_Example";
+			productName = Pods_WNPlayerPlus_Example;
+			productReference = 4EF348FDB4863EE19A86FD6D81A54D19 /* Pods-WNPlayerPlus_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+		63E2B09F5E6CC052B7D9006B81150B62 /* WNPlayerPlus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46EB2E00000580 /* Build configuration list for PBXNativeTarget "WNPlayerPlus" */;
+			buildPhases = (
+				46EB2E000005C0 /* Headers */,
+				46EB2E000005D0 /* Sources */,
+				46EB2E000005E0 /* Frameworks */,
+				46EB2E000005F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46EB2E00000CF0 /* PBXTargetDependency */,
+			);
+			name = WNPlayerPlus;
+			productName = WNPlayerPlus;
+			productReference = B748384295FE221AB6FF77F13A2BDC85 /* WNPlayerPlus */;
+			productType = "com.apple.product-type.framework";
+		};
+		E0A2E6FE700F322B8BD2CFB886B819EE /* WNPlayerPlus-WNPlayerPlus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46EB2E00000640 /* Build configuration list for PBXNativeTarget "WNPlayerPlus-WNPlayerPlus" */;
+			buildPhases = (
+				46EB2E00000680 /* Sources */,
+				46EB2E00000690 /* Frameworks */,
+				46EB2E000006A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WNPlayerPlus-WNPlayerPlus";
+			productName = WNPlayerPlus;
+			productReference = 129BB89599AB2FDAD9E1D3F2CFDEA3C1 /* WNPlayerPlus-WNPlayerPlus */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46EB2E00000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 46EB2E00000030 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				"zh-Hans",
+			);
+			mainGroup = 46EB2E00000010;
+			productRefGroup = 46EB2E00000020 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				493A11CF2A77139CC7FCC05B8E6A200F /* Pods-WNPlayerPlus_Example */,
+				63E2B09F5E6CC052B7D9006B81150B62 /* WNPlayerPlus */,
+				E0A2E6FE700F322B8BD2CFB886B819EE /* WNPlayerPlus-WNPlayerPlus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46EB2E000005F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EB2E00000D00 /* WNPlayerPlus-WNPlayerPlus in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EB2E000006A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EB2E00000710 /* Images.xcassets in Resources */,
+				46EB2E000006C0 /* WNPlayerRGBFragmentShader.glsl in Resources */,
+				46EB2E000006D0 /* WNPlayerRotationScaleVertexShader.glsl in Resources */,
+				46EB2E000006E0 /* WNPlayerRotationVertexShader.glsl in Resources */,
+				46EB2E000006B0 /* WNPlayerStrings.strings in Resources */,
+				46EB2E000006F0 /* WNPlayerVertexShader.glsl in Resources */,
+				46EB2E00000700 /* WNPlayerYUVFragmentShader.glsl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EB2E00000BE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46EB2E000005D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EB2E00000800 /* FFMpegBasicTool.m in Sources */,
+				46EB2E00000740 /* NSArray+Log.m in Sources */,
+				46EB2E00000750 /* NSBundle+Resources.m in Sources */,
+				46EB2E00000760 /* NSDate+Extend.m in Sources */,
+				46EB2E00000770 /* NSDictionary+Log.m in Sources */,
+				46EB2E00000780 /* NSString+CaesarCode.m in Sources */,
+				46EB2E00000790 /* NSString+Json.m in Sources */,
+				46EB2E000007E0 /* ProjectResourcesManager.m in Sources */,
+				46EB2E000007A0 /* UIDevice+Extension.m in Sources */,
+				46EB2E000007B0 /* UIViewController+Autorotate.m in Sources */,
+				46EB2E000007C0 /* WNAudioManager.m in Sources */,
+				46EB2E00000860 /* WNControlView.m in Sources */,
+				46EB2E00000870 /* WNDisplayView.m in Sources */,
+				46EB2E00000880 /* WNPlayer.m in Sources */,
+				46EB2E00000810 /* WNPlayerAudioFrame.m in Sources */,
+				46EB2E000007D0 /* WNPlayerDecoder.m in Sources */,
+				46EB2E00000820 /* WNPlayerFrame.m in Sources */,
+				46EB2E00000890 /* WNPlayerManager.m in Sources */,
+				46EB2E00000AF0 /* WNPlayerPlus-dummy.m in Sources */,
+				46EB2E000007F0 /* WNPlayerUtils.m in Sources */,
+				46EB2E00000830 /* WNPlayerVideoFrame.m in Sources */,
+				46EB2E00000840 /* WNPlayerVideoRGBFrame.m in Sources */,
+				46EB2E00000850 /* WNPlayerVideoYUVFrame.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EB2E00000680 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EB2E00000BC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EB2E00000CB0 /* Pods-WNPlayerPlus_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46EB2E00000CD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WNPlayerPlus;
+			target = 63E2B09F5E6CC052B7D9006B81150B62 /* WNPlayerPlus */;
+			targetProxy = 46EB2E00000CC0 /* PBXContainerItemProxy */;
+		};
+		46EB2E00000CF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "WNPlayerPlus-WNPlayerPlus";
+			target = E0A2E6FE700F322B8BD2CFB886B819EE /* WNPlayerPlus-WNPlayerPlus */;
+			targetProxy = 46EB2E00000CE0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		46EB2E000004A0 /* WNPlayerStrings.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46EB2E000004B0 /* WNPlayerStrings.strings */,
+				46EB2E00000510 /* WNPlayerStrings.strings */,
+			);
+			name = WNPlayerStrings.strings;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46EB2E00000040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		46EB2E00000050 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		46EB2E00000590 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46EB2E00000A80 /* WNPlayerPlus.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WNPlayerPlus/WNPlayerPlus-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WNPlayerPlus/WNPlayerPlus-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WNPlayerPlus/WNPlayerPlus.modulemap";
+				PRODUCT_MODULE_NAME = WNPlayerPlus;
+				PRODUCT_NAME = WNPlayerPlus;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		46EB2E000005A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46EB2E00000A70 /* WNPlayerPlus.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WNPlayerPlus/WNPlayerPlus-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WNPlayerPlus/WNPlayerPlus-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WNPlayerPlus/WNPlayerPlus.modulemap";
+				PRODUCT_MODULE_NAME = WNPlayerPlus;
+				PRODUCT_NAME = WNPlayerPlus;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		46EB2E00000650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46EB2E00000A80 /* WNPlayerPlus.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/WNPlayerPlus";
+				IBSC_MODULE = WNPlayerPlus;
+				INFOPLIST_FILE = "Target Support Files/WNPlayerPlus/ResourceBundle-WNPlayerPlus-WNPlayerPlus-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = WNPlayerPlus;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		46EB2E00000660 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46EB2E00000A70 /* WNPlayerPlus.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/WNPlayerPlus";
+				IBSC_MODULE = WNPlayerPlus;
+				INFOPLIST_FILE = "Target Support Files/WNPlayerPlus/ResourceBundle-WNPlayerPlus-WNPlayerPlus-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = WNPlayerPlus;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		46EB2E00000B80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46EB2E00000C10 /* Pods-WNPlayerPlus_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WNPlayerPlus_Example/Pods-WNPlayerPlus_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WNPlayerPlus_Example/Pods-WNPlayerPlus_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		46EB2E00000B90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46EB2E00000C20 /* Pods-WNPlayerPlus_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WNPlayerPlus_Example/Pods-WNPlayerPlus_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WNPlayerPlus_Example/Pods-WNPlayerPlus_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46EB2E00000030 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46EB2E00000040 /* Debug */,
+				46EB2E00000050 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46EB2E00000580 /* Build configuration list for PBXNativeTarget "WNPlayerPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46EB2E000005A0 /* Debug */,
+				46EB2E00000590 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46EB2E00000640 /* Build configuration list for PBXNativeTarget "WNPlayerPlus-WNPlayerPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46EB2E00000660 /* Debug */,
+				46EB2E00000650 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46EB2E00000B70 /* Build configuration list for PBXNativeTarget "Pods-WNPlayerPlus_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46EB2E00000B90 /* Debug */,
+				46EB2E00000B80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46EB2E00000000 /* Project object */;
+}

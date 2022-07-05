@@ -26,8 +26,7 @@
     [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 -(void)viewWillDisappear:(BOOL)animated{
-    
-    [super viewDidDisappear:animated];
+    [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
@@ -56,7 +55,7 @@
     contrlView.coverImageView.image = [UIImage imageNamed:@"Cover"];
     self.wnPlayer.controlView = contrlView;
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videoSample" ofType:@"mp4"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videoSample123" ofType:@"mp4"];
     self.wnPlayer.urlString = filePath;
     [self.view addSubview:self.wnPlayer];
     [self.wnPlayer play];

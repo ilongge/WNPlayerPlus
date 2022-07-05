@@ -22,12 +22,12 @@
 
 + (void)showAllLibInfo {
     int ver_major,ver_minor,ver_micro;
-    unsigned version = avcodec_version();
-    version = avutil_version();
+    unsigned version = avutil_version();
     ver_major = (version>>16)&0xff;
     ver_minor = (version>>8)&0xff;
     ver_micro = (version)&0xff;
     printf("\tlibavutil     %3d.%2d.%3d\n",ver_major,ver_minor,ver_micro);
+    version = avcodec_version();
     ver_major = (version>>16)&0xff;
     ver_minor = (version>>8)&0xff;
     ver_micro = (version)&0xff;

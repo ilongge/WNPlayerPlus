@@ -1,5 +1,5 @@
 PODS:
-  - WNPlayerPlus (1.0.0)
+  - WNPlayerPlus (1.0.1)
 
 DEPENDENCIES:
   - WNPlayerPlus (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WNPlayerPlus: 1d97a77d0ea47cb7a79e21557f9ea56f55be6d07
+  WNPlayerPlus: c7506c541c6680f99a8054fe00636b89385ddc39
 
 PODFILE CHECKSUM: 75beb62ae1bd55da40c74491aa54b018bbdb1dec
 

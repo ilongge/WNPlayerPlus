@@ -47,7 +47,7 @@
     self.wnPlayer.isFullScreen = self.view.frame.size.width > self.view.frame.size.height;
     self.wnPlayer.autoplay = YES;
     self.wnPlayer.delegate = self;
-    self.wnPlayer.repeat = YES;
+    self.wnPlayer.repeat = NO;
     self.wnPlayer.restorePlayAfterAppEnterForeground = YES;
     //连接设置控制层
     WNControlView *contrlView = [[WNControlView alloc] initWithFrame:self.wnPlayer.bounds];
@@ -55,8 +55,8 @@
     contrlView.coverImageView.image = [UIImage imageNamed:@"Cover"];
     self.wnPlayer.controlView = contrlView;
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"videoSample123" ofType:@"mp4"];
-    self.wnPlayer.urlString = filePath;
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"4K60-265" ofType:@"mp4"];
+    self.wnPlayer.urlString = @"rtmp://live.qizhi.link/live/1400346552_44699_10261_44699_123";
     [self.view addSubview:self.wnPlayer];
     [self.wnPlayer play];
     NSLog(@"%@", self.view);

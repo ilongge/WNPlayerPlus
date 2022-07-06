@@ -21,6 +21,10 @@
 		BA1D1D5B280651C000531AFB /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1D1D52280651C000531AFB /* FirstViewController.m */; };
 		BA1D1D5C280651C000531AFB /* CustomerControlView_test.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1D1D54280651C000531AFB /* CustomerControlView_test.m */; };
 		BA1D1D5D280651C000531AFB /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1D1D55280651C000531AFB /* SecondViewController.m */; };
+		BAC3EEE92875275900935B9B /* 4K30-265.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BAC3EEE72875263600935B9B /* 4K30-265.mp4 */; };
+		BAC3EEEA2875275D00935B9B /* 4K60-265.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BAC3EEE82875263900935B9B /* 4K60-265.mp4 */; };
+		BAC3EEEB2875276100935B9B /* 4K60-264.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BAC3EEE62875263400935B9B /* 4K60-264.mp4 */; };
+		BAC3EEEC2875276600935B9B /* 4K30-264.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BAC3EEE52875263100935B9B /* 4K30-264.mp4 */; };
 		BAF6C4B3280AFF70005B4484 /* videoSample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BAF6C4B2280AFF70005B4484 /* videoSample.mp4 */; };
 		F2BD4DEE13A030659E7A5F09 /* Pods_WNPlayerPlus_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED6511A310DB47DC1AF021C /* Pods_WNPlayerPlus_Example.framework */; };
 /* End PBXBuildFile section */
@@ -29,8 +33,6 @@
 		09CF77338797AFF8E3958420 /* Pods-WNPlayerPlus_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayerPlus_Example.debug.xcconfig"; path = "Target Support Files/Pods-WNPlayerPlus_Example/Pods-WNPlayerPlus_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		0F1299FBD4AFFD0F5429FF7A /* WNPlayerPlus.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WNPlayerPlus.podspec; path = ../WNPlayerPlus.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		103B1FD6494000E59CBD5B49 /* Pods-WNPlayerPlus_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayerPlus_Example.release.xcconfig"; path = "Target Support Files/Pods-WNPlayerPlus_Example/Pods-WNPlayerPlus_Example.release.xcconfig"; sourceTree = "<group>"; };
-		1CAF9E7E630E0DE8F1B57A37 /* Pods_WNPlayerPlus_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WNPlayerPlus_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C6F8008A5A6A515629A8470 /* Pods-WNPlayerPlus_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayerPlus_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WNPlayerPlus_Tests/Pods-WNPlayerPlus_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* WNPlayerPlus_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WNPlayerPlus_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -42,8 +44,6 @@
 		6003F59C195388D20070C39A /* WNPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WNPAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* WNPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WNPAppDelegate.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		692D1B65AC401B5D7FEA03B9 /* Pods-WNPlayerPlus_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNPlayerPlus_Tests.release.xcconfig"; path = "Target Support Files/Pods-WNPlayerPlus_Tests/Pods-WNPlayerPlus_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9ED6511A310DB47DC1AF021C /* Pods_WNPlayerPlus_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WNPlayerPlus_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA1D1D4C280651C000531AFB /* CustomerControlView_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerControlView_test.h; sourceTree = "<group>"; };
@@ -59,6 +59,10 @@
 		BA1D1D56280651C000531AFB /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		BA1D1D57280651C000531AFB /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		BA9E29C528066D0300322FF0 /* package.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = package.sh; path = ../package.sh; sourceTree = "<group>"; };
+		BAC3EEE52875263100935B9B /* 4K30-264.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4K30-264.mp4"; sourceTree = "<group>"; };
+		BAC3EEE62875263400935B9B /* 4K60-264.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4K60-264.mp4"; sourceTree = "<group>"; };
+		BAC3EEE72875263600935B9B /* 4K30-265.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4K30-265.mp4"; sourceTree = "<group>"; };
+		BAC3EEE82875263900935B9B /* 4K60-265.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4K60-265.mp4"; sourceTree = "<group>"; };
 		BAF6C4B2280AFF70005B4484 /* videoSample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoSample.mp4; sourceTree = "<group>"; };
 		D47178C450ECC7504A5227DE /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
 		DD58BDC7C29E00D1B5753990 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -104,9 +108,7 @@
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
-				6003F5AF195388D20070C39A /* XCTest.framework */,
 				9ED6511A310DB47DC1AF021C /* Pods_WNPlayerPlus_Example.framework */,
-				1CAF9E7E630E0DE8F1B57A37 /* Pods_WNPlayerPlus_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +152,10 @@
 		BA1D1D4B280651C000531AFB /* WNPlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BAC3EEE52875263100935B9B /* 4K30-264.mp4 */,
+				BAC3EEE72875263600935B9B /* 4K30-265.mp4 */,
+				BAC3EEE62875263400935B9B /* 4K60-264.mp4 */,
+				BAC3EEE82875263900935B9B /* 4K60-265.mp4 */,
 				BAF6C4B2280AFF70005B4484 /* videoSample.mp4 */,
 				BA1D1D56280651C000531AFB /* BaseNavigationController.h */,
 				BA1D1D4F280651C000531AFB /* BaseNavigationController.m */,
@@ -172,8 +178,6 @@
 			children = (
 				09CF77338797AFF8E3958420 /* Pods-WNPlayerPlus_Example.debug.xcconfig */,
 				103B1FD6494000E59CBD5B49 /* Pods-WNPlayerPlus_Example.release.xcconfig */,
-				3C6F8008A5A6A515629A8470 /* Pods-WNPlayerPlus_Tests.debug.xcconfig */,
-				692D1B65AC401B5D7FEA03B9 /* Pods-WNPlayerPlus_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -243,6 +247,10 @@
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 				BAF6C4B3280AFF70005B4484 /* videoSample.mp4 in Resources */,
+				BAC3EEEA2875275D00935B9B /* 4K60-265.mp4 in Resources */,
+				BAC3EEE92875275900935B9B /* 4K30-265.mp4 in Resources */,
+				BAC3EEEC2875276600935B9B /* 4K30-264.mp4 in Resources */,
+				BAC3EEEB2875276100935B9B /* 4K60-264.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +421,7 @@
 				GCC_PREFIX_HEADER = "WNPlayerPlus/WNPlayerPlus-Prefix.pch";
 				INFOPLIST_FILE = "WNPlayerPlus/WNPlayerPlus-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilongge.WNPlayerPlus-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
@@ -431,7 +439,7 @@
 				GCC_PREFIX_HEADER = "WNPlayerPlus/WNPlayerPlus-Prefix.pch";
 				INFOPLIST_FILE = "WNPlayerPlus/WNPlayerPlus-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilongge.WNPlayerPlus-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;

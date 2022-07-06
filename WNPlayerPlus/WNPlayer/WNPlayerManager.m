@@ -207,8 +207,8 @@
 - (void)readFrame {
     self.buffering = YES;
     
-    NSMutableArray *tempVFrames = [NSMutableArray arrayWithCapacity:8];
-    NSMutableArray *tempAFrames = [NSMutableArray arrayWithCapacity:8];
+    NSMutableArray *tempVFrames = [NSMutableArray array];
+    NSMutableArray *tempAFrames = [NSMutableArray array];
     double tempDuration = 0;
     dispatch_time_t t = dispatch_time(DISPATCH_TIME_NOW, 0.02 * NSEC_PER_SEC);
     

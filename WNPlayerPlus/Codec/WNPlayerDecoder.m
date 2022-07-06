@@ -397,7 +397,7 @@ static int interruptCallback(void *context) {
     
     AVPacket packet;
     
-    NSMutableArray *frames = [NSMutableArray arrayWithCapacity:15];
+    NSMutableArray *frames = [NSMutableArray array];
     BOOL reading = YES;
     while (reading) {
         g_dIOStartTime = [NSDate timeIntervalSinceReferenceDate];

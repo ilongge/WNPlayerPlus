@@ -80,7 +80,7 @@ static int interruptCallback(void *context) {
     avformat_network_init();
     
     // 2. Open Input
-    AVFormatContext *fmtctx = avformat_alloc_context();;
+    AVFormatContext *fmtctx = avformat_alloc_context();
     AVDictionary* options = NULL;
     //默认为UDP连接，如果需要，请开发者手动切换为tcp连接（一般播放RTSP协议的摄像头数据需要TCP连接）
     if (self.usesTCP) {

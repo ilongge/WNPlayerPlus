@@ -21,10 +21,6 @@
 		BA1D1D5B280651C000531AFB /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1D1D52280651C000531AFB /* FirstViewController.m */; };
 		BA1D1D5C280651C000531AFB /* CustomerControlView_test.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1D1D54280651C000531AFB /* CustomerControlView_test.m */; };
 		BA1D1D5D280651C000531AFB /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1D1D55280651C000531AFB /* SecondViewController.m */; };
-		BAC3EEE92875275900935B9B /* 4K30-265.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BAC3EEE72875263600935B9B /* 4K30-265.mp4 */; };
-		BAC3EEEA2875275D00935B9B /* 4K60-265.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BAC3EEE82875263900935B9B /* 4K60-265.mp4 */; };
-		BAC3EEEB2875276100935B9B /* 4K60-264.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BAC3EEE62875263400935B9B /* 4K60-264.mp4 */; };
-		BAC3EEEC2875276600935B9B /* 4K30-264.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BAC3EEE52875263100935B9B /* 4K30-264.mp4 */; };
 		BAF6C4B3280AFF70005B4484 /* videoSample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BAF6C4B2280AFF70005B4484 /* videoSample.mp4 */; };
 		F2BD4DEE13A030659E7A5F09 /* Pods_WNPlayerPlus_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED6511A310DB47DC1AF021C /* Pods_WNPlayerPlus_Example.framework */; };
 /* End PBXBuildFile section */
@@ -59,10 +55,6 @@
 		BA1D1D56280651C000531AFB /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		BA1D1D57280651C000531AFB /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		BA9E29C528066D0300322FF0 /* package.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = package.sh; path = ../package.sh; sourceTree = "<group>"; };
-		BAC3EEE52875263100935B9B /* 4K30-264.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4K30-264.mp4"; sourceTree = "<group>"; };
-		BAC3EEE62875263400935B9B /* 4K60-264.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4K60-264.mp4"; sourceTree = "<group>"; };
-		BAC3EEE72875263600935B9B /* 4K30-265.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4K30-265.mp4"; sourceTree = "<group>"; };
-		BAC3EEE82875263900935B9B /* 4K60-265.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4K60-265.mp4"; sourceTree = "<group>"; };
 		BAF6C4B2280AFF70005B4484 /* videoSample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoSample.mp4; sourceTree = "<group>"; };
 		D47178C450ECC7504A5227DE /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
 		DD58BDC7C29E00D1B5753990 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -152,10 +144,6 @@
 		BA1D1D4B280651C000531AFB /* WNPlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				BAC3EEE52875263100935B9B /* 4K30-264.mp4 */,
-				BAC3EEE72875263600935B9B /* 4K30-265.mp4 */,
-				BAC3EEE62875263400935B9B /* 4K60-264.mp4 */,
-				BAC3EEE82875263900935B9B /* 4K60-265.mp4 */,
 				BAF6C4B2280AFF70005B4484 /* videoSample.mp4 */,
 				BA1D1D56280651C000531AFB /* BaseNavigationController.h */,
 				BA1D1D4F280651C000531AFB /* BaseNavigationController.m */,
@@ -247,10 +235,6 @@
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 				BAF6C4B3280AFF70005B4484 /* videoSample.mp4 in Resources */,
-				BAC3EEEA2875275D00935B9B /* 4K60-265.mp4 in Resources */,
-				BAC3EEE92875275900935B9B /* 4K30-265.mp4 in Resources */,
-				BAC3EEEC2875276600935B9B /* 4K30-264.mp4 in Resources */,
-				BAC3EEEB2875276100935B9B /* 4K60-264.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

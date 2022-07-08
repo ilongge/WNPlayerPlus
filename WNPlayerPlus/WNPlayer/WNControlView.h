@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)playerReadyToPlay:(WNPlayer *_Nonnull)player;
 - (void)playerBufferStateChanged:(NSNumber *_Nonnull)info;
 - (void)playerError:(NSError *_Nonnull)error;
-- (void)playerEOF:(WNPlayer *_Nonnull)player;;
+- (void)playerEOF:(WNPlayer *_Nonnull)player;
 - (void)playerIsFullScreen:(NSNumber *_Nonnull)isFullScreen;
 
 @end

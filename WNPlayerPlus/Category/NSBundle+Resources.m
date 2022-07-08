@@ -15,7 +15,7 @@
     static NSBundle *resourcesBundle = nil;
     if (resourcesBundle == nil) {
         NSBundle *currrentBundle = [NSBundle bundleForClass:[ProjectResourcesManager class]];
-        NSString *buntdlePath = [currrentBundle pathForResource:@"JFCloundChat" ofType:@"bundle"];
+        NSString *buntdlePath = [currrentBundle pathForResource:@"WNPlayerPlus" ofType:@"bundle"];
         NSBundle *bundle = [NSBundle bundleWithPath:buntdlePath];
         dispatch_once(&onceToken, ^{
             resourcesBundle = bundle;

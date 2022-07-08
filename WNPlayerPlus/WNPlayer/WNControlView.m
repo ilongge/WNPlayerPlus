@@ -96,7 +96,7 @@
         self.loadFailedLabel.font = [UIFont systemFontOfSize:14];
         self.loadFailedLabel.textColor = [UIColor whiteColor];
         [self addSubview:self.loadFailedLabel];
-                
+        
         //bottomView
         self.bottomView = [[UIImageView alloc]initWithImage:WNPlayerImage(@"bottom_shadow")];
         self.bottomView.userInteractionEnabled = NO;
@@ -117,7 +117,7 @@
         self.leftTimeLabel.font = [UIFont systemFontOfSize:10];
         self.leftTimeLabel.textColor = [UIColor whiteColor];
         [self.bottomView addSubview:self.leftTimeLabel];
-
+        
         // rightTimeLabel
         self.rightTimeLabel = [[UILabel alloc] init];
         self.rightTimeLabel.backgroundColor = [UIColor clearColor];
@@ -126,7 +126,7 @@
         self.rightTimeLabel.textColor = [UIColor whiteColor];
         self.rightTimeLabel.textAlignment = NSTextAlignmentRight;
         [self.bottomView addSubview:self.rightTimeLabel];
-
+        
         //fullScreenBtn
         self.fullScreenBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         self.fullScreenBtn.showsTouchWhenHighlighted = YES;
@@ -155,7 +155,7 @@
         //        self.progressTap.delegate = self;
         //        [self.progressSlider addGestureRecognizer:self.progressTap];
         [self.bottomView addSubview:self.progressSlider];
-
+        
         self.loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
         [self addSubview:self.loadingView];
         self.loadingView.hidesWhenStopped = YES;
@@ -181,9 +181,9 @@
 }
 #pragma mark - Gesture Delegate
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-        if ([touch.view isKindOfClass:[UIControl class]]) {
-            return NO;
-        }
+    if ([touch.view isKindOfClass:[UIControl class]]) {
+        return NO;
+    }
     return YES;
 }
 #pragma mark - hiddenControlView
@@ -192,13 +192,13 @@
     self.animating = YES;
     [UIView animateWithDuration:0.5f
                      animations:^{
-                        self.topView.frame = CGRectMake(self.topView.frame.origin.x, -self.topView.frame.size.height, self.topView.frame.size.width, self.topView.frame.size.height);
-                        self.bottomView.frame = CGRectMake(self.bottomView.frame.origin.x, self.frame.size.height, self.bottomView.frame.size.width, self.bottomView.frame.size.height);
-                        self.slideOutside = YES;
-                     }
+        self.topView.frame = CGRectMake(self.topView.frame.origin.x, -self.topView.frame.size.height, self.topView.frame.size.width, self.topView.frame.size.height);
+        self.bottomView.frame = CGRectMake(self.bottomView.frame.origin.x, self.frame.size.height, self.bottomView.frame.size.width, self.bottomView.frame.size.height);
+        self.slideOutside = YES;
+    }
                      completion:^(BOOL finished) {
-                        self.animating = NO;
-                     }];
+        self.animating = NO;
+    }];
 }
 -(void)setTitle:(NSString *)title{
     _title = title;
@@ -213,28 +213,28 @@
     self.animating = YES;
     [UIView animateWithDuration:0.5f
                      animations:^{
-                    if (kStatusBarHeight > 24) {
-                           if (self.player.isFullScreen) {
-                               self.topView.frame = CGRectMake(0, 0, self.frame.size.width, 120);
-                               self.bottomView.frame = CGRectMake(0, self.frame.size.height-50-44, self.frame.size.width, 50+44);
-                               
-                           }else{
-                               self.topView.frame = CGRectMake(0, 0, self.frame.size.width, 64);
-                               self.bottomView.frame = CGRectMake(0, self.frame.size.height-50, self.frame.size.width, 50);
-                           }
-                       }else{//非刘海屏
-                           self.topView.frame = CGRectMake(0, 0, self.frame.size.width, 84);
-                           if (self.player.isFullScreen) {
-                               self.bottomView.frame = CGRectMake(0, self.frame.size.height-50-30, self.frame.size.width, 50+30);
-                           }else{
-                               self.bottomView.frame = CGRectMake(0, self.frame.size.height-50, self.frame.size.width, 50);
-                           }
-                       }
-                        self.slideOutside = NO;
-                     }
+        if (kStatusBarHeight > 24) {
+            if (self.player.isFullScreen) {
+                self.topView.frame = CGRectMake(0, 0, self.frame.size.width, 120);
+                self.bottomView.frame = CGRectMake(0, self.frame.size.height-50-44, self.frame.size.width, 50+44);
+                
+            }else{
+                self.topView.frame = CGRectMake(0, 0, self.frame.size.width, 64);
+                self.bottomView.frame = CGRectMake(0, self.frame.size.height-50, self.frame.size.width, 50);
+            }
+        }else{//非刘海屏
+            self.topView.frame = CGRectMake(0, 0, self.frame.size.width, 84);
+            if (self.player.isFullScreen) {
+                self.bottomView.frame = CGRectMake(0, self.frame.size.height-50-30, self.frame.size.width, 50+30);
+            }else{
+                self.bottomView.frame = CGRectMake(0, self.frame.size.height-50, self.frame.size.width, 50);
+            }
+        }
+        self.slideOutside = NO;
+    }
                      completion:^(BOOL finished) {
-                            self.animating = NO;
-                     }];
+        self.animating = NO;
+    }];
 }
 -(void)autoDismissControlView{
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hiddenControlView) object:nil];
@@ -266,8 +266,8 @@
 //close btn action
 -(void)colseVideo:(UIButton *)sender{
     if (self.player.delegate&&[self.player.delegate respondsToSelector:@selector(player:clickedCloseButton:)]) {
-           [self.player.delegate player:self.player clickedCloseButton:sender];
-       }
+        [self.player.delegate player:self.player clickedCloseButton:sender];
+    }
 }
 //fullScreen btn action
 -(void)fullScreenAction:(UIButton *)sender{
@@ -310,7 +310,7 @@
     self.leftTimeLabel.text = [self convertTime:position];
     self.sliderValueChanged = YES;
     self.progressSlider.value = position;
-
+    
 }
 - (void)onSliderEndSlide:(UISlider *)slider {
     float position = slider.value;
@@ -323,7 +323,7 @@
     int seconds = ceil(position.doubleValue);
     self.leftTimeLabel.text = [self convertTime:seconds];
     if (!self.sliderValueChanged) {
-        self.progressSlider                                                                                      .value = seconds;
+        self.progressSlider.value = seconds;
     }
 }
 -(void)playerReadyToPlay:(WNPlayer *)player{
@@ -341,23 +341,14 @@
     [self autoDismissControlView];
     self.coverImageView.hidden = YES;
     self.loadFailedLabel.hidden = YES;
-
-    //        NSString *title = nil;
-    //        if (self.playerManager.metadata != nil) {
-    //            NSString *t = self.playerManager.metadata[@"title"];
-    //            NSString *a = self.playerManager.metadata[@"artist"];
-    //            if (t != nil) title = t;
-    //            if (a != nil) title = [title stringByAppendingFormat:@" - %@", a];
-    //        }
-    //        if (title == nil) title = [self.url lastPathComponent];
 }
 -(void)playerBufferStateChanged:(NSNumber *)info{
     BOOL state = [info boolValue];
-     if (state){
-            [self.loadingView startAnimating];
-        } else {
-            [self.loadingView stopAnimating];
-        }
+    if (state){
+        [self.loadingView startAnimating];
+    } else {
+        [self.loadingView stopAnimating];
+    }
 }
 -(void)playerEOF:(WNPlayer *_Nonnull)player{
     if (self.player.delegate&&[self.player.delegate respondsToSelector:@selector(playerFinishedPlay:)]) {
@@ -366,20 +357,20 @@
 }
 -(void)playerError:(NSError *)error{
     if (self.player.delegate&&[self.player.delegate respondsToSelector:@selector(playerFailedPlay:error:)]) {
-          [self.player.delegate playerFailedPlay:self.player error:error];
-      }
-     if ([error.domain isEqualToString:WNPlayerErrorDomainDecoder]) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.loadingView stopAnimating];
-                self.bottomView.userInteractionEnabled = YES;
-                self.loadFailedLabel.hidden = NO;
-            });
-            NSLog(@"Player decoder error: %@", error);
-        } else if ([error.domain isEqualToString:WNPlayerErrorDomainAudioManager]) {
-            NSLog(@"Player audio error: %@", error);
-            // I am not sure what will cause the audio error,
-            // if it happens, please issue to me
-        }
+        [self.player.delegate playerFailedPlay:self.player error:error];
+    }
+    if ([error.domain isEqualToString:WNPlayerErrorDomainDecoder]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.loadingView stopAnimating];
+            self.bottomView.userInteractionEnabled = YES;
+            self.loadFailedLabel.hidden = NO;
+        });
+        NSLog(@"Player decoder error: %@", error);
+    } else if ([error.domain isEqualToString:WNPlayerErrorDomainAudioManager]) {
+        NSLog(@"Player audio error: %@", error);
+        // I am not sure what will cause the audio error,
+        // if it happens, please issue to me
+    }
 }
 -(void)playerIsFullScreen:(NSNumber *_Nonnull)isFullScreen{
     if (isFullScreen.boolValue) {
@@ -427,7 +418,7 @@
     self.coverImageView.frame = self.bounds;
     self.backItemView.frame = CGRectMake(0, 0, 50, self.topView.frame.size.height);
     self.backBtn.frame = CGRectMake(10, (self.backItemView.frame.size.height-self.backBtn.currentImage.size.height)/2.0f, self.backBtn.currentImage.size.width, self.backBtn.currentImage.size.height);
-    self.titleLabel.frame = CGRectMake(CGRectGetMaxX(self.backItemView.frame)+10, 0, self.topView.frame.size.width-10-self.backItemView.frame.size.width-80, self.topView.frame.size.height);    
+    self.titleLabel.frame = CGRectMake(CGRectGetMaxX(self.backItemView.frame)+10, 0, self.topView.frame.size.width-10-self.backItemView.frame.size.width-80, self.topView.frame.size.height);
     self.fullScreenBtn.frame = CGRectMake(self.bottomView.frame.size.width-self.fullScreenBtn.currentImage.size.width-10, self.bottomView.frame.size.height/2-self.fullScreenBtn.currentImage.size.height/2, self.fullScreenBtn.currentImage.size.width, self.fullScreenBtn.currentImage.size.height);
     self.loadingView.center = CGPointMake(self.frame.size.width/2-self.loadingView.frame.size.width/2, self.frame.size.height/2-self.loadingView.frame.size.height/2);
     self.loadFailedLabel.frame = CGRectMake(self.frame.size.width/2-self.loadFailedLabel.frame.size.width/2, self.frame.size.height/2-self.loadFailedLabel.frame.size.height/2, self.loadFailedLabel.frame.size.width, self.loadFailedLabel.frame.size.height);

@@ -108,6 +108,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic,assign) BOOL restorePlayAfterAppEnterForeground;
 /**
+ * 是否静音
+ */
+@property (nonatomic,assign) BOOL isMute;
+/**
  * 播放器状态
  */
 @property (nonatomic,readonly) WNPlayerStatus status;

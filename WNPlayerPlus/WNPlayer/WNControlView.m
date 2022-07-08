@@ -145,6 +145,12 @@
         [self.fullScreenButton setImage:WNPlayerImage(@"player_icon_fullscreen") forState:UIControlStateSelected];
         [self.bottomView addSubview:self.fullScreenButton];
         
+        self.muteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.muteButton.showsTouchWhenHighlighted = YES;
+        [self.muteButton addTarget:self action:@selector(muteAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self.muteButton setImage:WNPlayerImage(@"player_ctrl_icon_voice") forState:UIControlStateNormal];
+        [self.muteButton setImage:WNPlayerImage(@"player_ctrl_icon_mute") forState:UIControlStateSelected];
+        [self.bottomView addSubview:self.muteButton];
         //slider
         self.progressSlider = [UISlider new];
         self.progressSlider.minimumValue = 0.0;
@@ -298,6 +304,10 @@
         [self.player.delegate player:self.player clickedPlayOrPauseButton:sender];
     }
 }
+- (void)muteAction:(UIButton *)button {
+    BOOL mute = [self.player.playerManager muteVoice];
+    self.muteButton.selected = mute;
+}
 #pragma mark WNControlViewProtocol
 - (void)play{
     [self playOrPause:self.playOrPauseButton];
@@ -396,40 +406,41 @@
         if (self.player.isFullScreen) {
             self.topView.frame = CGRectMake(0, 0, self.frame.size.width, 120);
             self.bottomView.frame = CGRectMake(0, self.frame.size.height-50-44, self.frame.size.width, 50+44);
-            self.playOrPauseButton.frame = CGRectMake(10, self.bottomView.frame.size.height/2-self.playOrPauseButton.currentImage.size.height/2, self.playOrPauseButton.currentImage.size.width, self.playOrPauseButton.currentImage.size.height);
             self.leftTimeLabel.frame = CGRectMake(15, 0, 45, 20);
             self.progressSlider.frame = CGRectMake(CGRectGetMaxX(self.leftTimeLabel.frame), 0, self.bottomView.frame.size.width-2*(CGRectGetMaxX(self.leftTimeLabel.frame)), 20);
             self.rightTimeLabel.frame = CGRectMake(self.frame.size.width-self.leftTimeLabel.frame.size.width-15, self.leftTimeLabel.frame.origin.y, self.leftTimeLabel.frame.size.width, self.leftTimeLabel.frame.size.height);
         }else{
             self.topView.frame = CGRectMake(0, 0, self.frame.size.width, 64);
             self.bottomView.frame = CGRectMake(0, self.frame.size.height-50, self.frame.size.width, 50);
-            self.playOrPauseButton.frame = CGRectMake(10, self.bottomView.frame.size.height/2-self.playOrPauseButton.currentImage.size.height/2, self.playOrPauseButton.currentImage.size.width, self.playOrPauseButton.currentImage.size.height);
-            self.leftTimeLabel.frame = CGRectMake(CGRectGetMaxX(self.playOrPauseButton.frame)+10, 0, 45, self.bottomView.frame.size.height);
-            self.progressSlider.frame = CGRectMake(CGRectGetMaxX(self.leftTimeLabel.frame), 0, self.bottomView.frame.size.width-2*(CGRectGetMaxX(self.leftTimeLabel.frame)), self.bottomView.frame.size.height);
-            self.rightTimeLabel.frame = CGRectMake(CGRectGetMaxX(self.progressSlider.frame), self.leftTimeLabel.frame.origin.y, self.leftTimeLabel.frame.size.width, self.leftTimeLabel.frame.size.height);
-        }
-    }else{//非刘海屏
-        self.topView.frame = CGRectMake(0, 0, self.frame.size.width, 84);
-        if (self.player.isFullScreen) {
-            self.bottomView.frame = CGRectMake(0, self.frame.size.height-50-30, self.frame.size.width, 50+30);
-            self.playOrPauseButton.frame = CGRectMake(10, self.bottomView.frame.size.height/2-self.playOrPauseButton.currentImage.size.height/2
-                                                      +10, self.playOrPauseButton.currentImage.size.width, self.playOrPauseButton.currentImage.size.height);
-            self.leftTimeLabel.frame = CGRectMake(15, 0, 45, 20);
-            self.progressSlider.frame = CGRectMake(CGRectGetMaxX(self.leftTimeLabel.frame), 0, self.bottomView.frame.size.width-2*(CGRectGetMaxX(self.leftTimeLabel.frame)), 20);
-            self.rightTimeLabel.frame = CGRectMake(self.frame.size.width-self.leftTimeLabel.frame.size.width-15, self.leftTimeLabel.frame.origin.y, self.leftTimeLabel.frame.size.width, self.leftTimeLabel.frame.size.height);
-        }else{
-            self.bottomView.frame = CGRectMake(0, self.frame.size.height-50, self.frame.size.width, 50);
-            self.playOrPauseButton.frame = CGRectMake(10, self.bottomView.frame.size.height/2-self.playOrPauseButton.currentImage.size.height/2, self.playOrPauseButton.currentImage.size.width, self.playOrPauseButton.currentImage.size.height);
             self.leftTimeLabel.frame = CGRectMake(CGRectGetMaxX(self.playOrPauseButton.frame)+10, 0, 45, self.bottomView.frame.size.height);
             self.progressSlider.frame = CGRectMake(CGRectGetMaxX(self.leftTimeLabel.frame), 0, self.bottomView.frame.size.width-2*(CGRectGetMaxX(self.leftTimeLabel.frame)), self.bottomView.frame.size.height);
             self.rightTimeLabel.frame = CGRectMake(CGRectGetMaxX(self.progressSlider.frame), self.leftTimeLabel.frame.origin.y, self.leftTimeLabel.frame.size.width, self.leftTimeLabel.frame.size.height);
         }
     }
+    else{//非刘海屏
+        self.topView.frame = CGRectMake(0, 0, self.frame.size.width, 84);
+        if (self.player.isFullScreen) {
+            self.bottomView.frame = CGRectMake(0, self.frame.size.height-50-30, self.frame.size.width, 50+30);
+           
+            self.progressSlider.frame = CGRectMake(CGRectGetMaxX(self.leftTimeLabel.frame), 0, self.bottomView.frame.size.width-2*(CGRectGetMaxX(self.leftTimeLabel.frame)), 20);
+            self.leftTimeLabel.frame = CGRectMake(15, 0, 45, 20);
+            self.rightTimeLabel.frame = CGRectMake(self.frame.size.width-self.leftTimeLabel.frame.size.width-15, self.leftTimeLabel.frame.origin.y, self.leftTimeLabel.frame.size.width, self.leftTimeLabel.frame.size.height);
+        }else{
+            self.bottomView.frame = CGRectMake(0, self.frame.size.height-50, self.frame.size.width, 50);
+            self.leftTimeLabel.frame = CGRectMake(CGRectGetMaxX(self.playOrPauseButton.frame)+10, 0, 45, self.bottomView.frame.size.height);
+            self.progressSlider.frame = CGRectMake(CGRectGetMaxX(self.leftTimeLabel.frame), 0, self.bottomView.frame.size.width-2*(CGRectGetMaxX(self.leftTimeLabel.frame)), self.bottomView.frame.size.height);
+            self.rightTimeLabel.frame = CGRectMake(CGRectGetMaxX(self.progressSlider.frame), self.leftTimeLabel.frame.origin.y, self.leftTimeLabel.frame.size.width, self.leftTimeLabel.frame.size.height);
+        }
+    }
+    
     self.coverImageView.frame = self.bounds;
     self.backItemView.frame = CGRectMake(0, 0, 50, self.topView.frame.size.height);
     self.backButton.frame = CGRectMake(10, (self.backItemView.frame.size.height-self.backButton.currentImage.size.height)/2.0f, self.backButton.currentImage.size.width, self.backButton.currentImage.size.height);
     self.titleLabel.frame = CGRectMake(CGRectGetMaxX(self.backItemView.frame)+10, 0, self.topView.frame.size.width-10-self.backItemView.frame.size.width-80, self.topView.frame.size.height);
-    self.fullScreenButton.frame = CGRectMake(self.bottomView.frame.size.width-self.fullScreenButton.currentImage.size.width-10, self.bottomView.frame.size.height/2-self.fullScreenButton.currentImage.size.height/2, self.fullScreenButton.currentImage.size.width, self.fullScreenButton.currentImage.size.height);
+    self.playOrPauseButton.frame = CGRectMake(10, CGRectGetMaxY(self.progressSlider.frame)+10, 30, 30);
+    self.fullScreenButton.frame = CGRectMake(CGRectGetWidth(self.bottomView.frame) - 40, CGRectGetMinY(self.playOrPauseButton.frame), 30, 30);
+    self.muteButton.frame = CGRectMake(0, 0, 30, 30);
+    self.muteButton.center = CGPointMake(self.bottomView.center.x, self.fullScreenButton.center.y);
     self.loadingView.center = CGPointMake(self.frame.size.width/2-self.loadingView.frame.size.width/2, self.frame.size.height/2-self.loadingView.frame.size.height/2);
     self.loadFailedLabel.frame = CGRectMake(self.frame.size.width/2-self.loadFailedLabel.frame.size.width/2, self.frame.size.height/2-self.loadFailedLabel.frame.size.height/2, self.loadFailedLabel.frame.size.width, self.loadFailedLabel.frame.size.height);
 }

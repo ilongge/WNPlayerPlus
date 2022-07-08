@@ -19,7 +19,7 @@
     }
     [mStr appendString:@"(\n"];
     for (int i = 0; i < self.count; i++) {
-         NSString *lastSymbol = (self.count == i + 1) ? @"":@",";
+        NSString *lastSymbol = (self.count == i + 1) ? @"":@",";
         id value = self[i];
         if ([value respondsToSelector:@selector(descriptionWithLocale:indent:)]) {
             [mStr appendFormat:@"\t%@%@%@\n",tab,[value descriptionWithLocale:locale indent:level + 1],lastSymbol];

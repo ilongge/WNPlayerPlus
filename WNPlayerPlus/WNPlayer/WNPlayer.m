@@ -62,7 +62,7 @@ typedef enum : NSUInteger {
     }
     return self;
 }
- 
+
 -(void)setControlView:(UIView<WNControlViewProtocol> *)controlView{
     _controlView = controlView;
     if (!controlView) {
@@ -79,9 +79,9 @@ typedef enum : NSUInteger {
     self.status = WNPlayerStatusNone;
     self.nextOperation = WNPlayerOperationNone;    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidEnterBackground:)
-               name:UIApplicationDidEnterBackgroundNotification object:nil];
+                                                 name:UIApplicationDidEnterBackgroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillEnterForeground:)
-               name:UIApplicationWillEnterForegroundNotification object:nil];
+                                                 name:UIApplicationWillEnterForegroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerOpened:) name:WNPlayerNotificationOpened object:self.playerManager];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerClosed:) name:WNPlayerNotificationClosed object:self.playerManager];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerEOF:) name:WNPlayerNotificationEOF object:self.playerManager];
@@ -123,11 +123,11 @@ typedef enum : NSUInteger {
 }
 
 -(void)syncScrubber{
-       if (!self.playerManager.playing) return;
-       double position = self.playerManager.position;
-        if (self.controlView&&[self.controlView respondsToSelector:@selector(syncScrubber:)]) {
-            [self.controlView performSelector:@selector(syncScrubber:) withObject:@(position)];
-        }
+    if (!self.playerManager.playing) return;
+    double position = self.playerManager.position;
+    if (self.controlView&&[self.controlView respondsToSelector:@selector(syncScrubber:)]) {
+        [self.controlView performSelector:@selector(syncScrubber:) withObject:@(position)];
+    }
 }
 - (void)openWithTCP:(BOOL)usesTCP optionDic:(NSDictionary *)optionDic{
     self.usesTCP = usesTCP;
@@ -212,7 +212,7 @@ typedef enum : NSUInteger {
     if (self.playerManager.playing) {
         [self pause];
         if (self.restorePlayAfterAppEnterForeground) {
-           self.restorePlay = YES;
+            self.restorePlay = YES;
         }
     }
 }
@@ -260,7 +260,7 @@ typedef enum : NSUInteger {
         [self.controlView performSelector:@selector(playerEOF:) withObject:self];
     }
     if (self.repeat){
-      [self replay];
+        [self replay];
     }else{
         [self close];
     }
@@ -273,16 +273,16 @@ typedef enum : NSUInteger {
 }
 
 - (void)playerOpened:(NSNotification *)notif {
-        self.status = WNPlayerStatusOpened;
-        if (self.controlView&&[self.controlView respondsToSelector:@selector(playerReadyToPlay:)]) {
-            [self.controlView performSelector:@selector(playerReadyToPlay:) withObject:self];
+    self.status = WNPlayerStatusOpened;
+    if (self.controlView&&[self.controlView respondsToSelector:@selector(playerReadyToPlay:)]) {
+        [self.controlView performSelector:@selector(playerReadyToPlay:) withObject:self];
+    }
+    [self createTimer];
+    if (![self doNextOperation]) {
+        if (self.autoplay){
+            [self play];
         }
-        [self createTimer];
-        if (![self doNextOperation]) {
-            if (self.autoplay){
-                [self play];
-            }
-        }
+    }
 }
 
 - (void)playerBufferStateChanged:(NSNotification *)notif {
@@ -307,11 +307,11 @@ typedef enum : NSUInteger {
         // if it happens, please issue to me
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:WNPlayerNotificationError object:self userInfo:userInfo];
-  
+    
     if (self.controlView&&[self.controlView respondsToSelector:@selector(playerError:)]) {
         [self.controlView performSelector:@selector(playerError:) withObject:error];
     }
-
+    
 }
 
 - (void)createTimer {

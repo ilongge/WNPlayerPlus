@@ -28,7 +28,7 @@
     for (int i=0; i<self.length; i++) {
         NSString *c = [NSString stringWithFormat:@"%@",[self substringWithRange:NSMakeRange(i, 1)]];
         if ([c isEqualToString:@"{"]) {
-             depth+=1;
+            depth+=1;
             [formated appendString:c];
             [formated appendString:@"\n"];
             for (int j=0; j<depth; j++) {

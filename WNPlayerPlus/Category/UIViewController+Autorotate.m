@@ -64,11 +64,11 @@
     if ([vc isKindOfClass:UINavigationController.class]) {
         UINavigationController *nav = (UINavigationController *)vc;
         NSString *className = NSStringFromClass(self.class);
-            if ([@[@"AVPlayerViewController", @"AVFullScreenViewController", @"AVFullScreenPlaybackControlsViewController"
-                   ] containsObject:className]) {
-                return YES;
-            }
-            return [nav.topViewController shouldAutorotate];
+        if ([@[@"AVPlayerViewController", @"AVFullScreenViewController", @"AVFullScreenPlaybackControlsViewController"
+             ] containsObject:className]) {
+            return YES;
+        }
+        return [nav.topViewController shouldAutorotate];
     } else {
         return [vc shouldAutorotate];
     }
@@ -79,10 +79,10 @@
     if ([vc isKindOfClass:UINavigationController.class]) {
         UINavigationController *nav = (UINavigationController *)vc;
         NSString *className = NSStringFromClass(self.class);
-            if ([@[@"AVPlayerViewController", @"AVFullScreenViewController", @"AVFullScreenPlaybackControlsViewController"
-                   ] containsObject:className]) {
-                return UIInterfaceOrientationMaskAllButUpsideDown;
-            }
+        if ([@[@"AVPlayerViewController", @"AVFullScreenViewController", @"AVFullScreenPlaybackControlsViewController"
+             ] containsObject:className]) {
+            return UIInterfaceOrientationMaskAllButUpsideDown;
+        }
         return [nav.topViewController supportedInterfaceOrientations];
     } else {
         return [vc supportedInterfaceOrientations];

@@ -55,8 +55,8 @@
     contrlView.coverImageView.image = [UIImage imageNamed:@"Cover"];
     self.wnPlayer.controlView = contrlView;
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"4K60-265" ofType:@"mp4"];
-    self.wnPlayer.urlString = @"http://111.63.117.13:6060/030000001000/CCTV-4/CCTV-4.m3u8";
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"4K60-265" ofType:@"mp4"];
+    self.wnPlayer.urlString = @"http://39.134.115.163:8080/PLTV/88888910/224/3221225618/index.m3u8";
     [self.view addSubview:self.wnPlayer];
     [self.wnPlayer play];
     NSLog(@"%@", self.view);

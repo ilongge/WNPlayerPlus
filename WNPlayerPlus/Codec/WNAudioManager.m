@@ -70,10 +70,10 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
     NSError *rawError = nil;
     if (![session setCategory:AVAudioSessionCategoryPlayback error:&rawError]) {
         [WNPlayerUtils createError:error
-                         withDomain:WNPlayerErrorDomainAudioManager
-                            andCode:WNPlayerErrorCodeCannotSetAudioCategory
-                         andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_SET_AUDIO_CATEGORY"]
-                        andRawError:rawError];
+                        withDomain:WNPlayerErrorDomainAudioManager
+                           andCode:WNPlayerErrorCodeCannotSetAudioCategory
+                        andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_SET_AUDIO_CATEGORY"]
+                       andRawError:rawError];
         return NO;
     }
     
@@ -91,28 +91,28 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
     //激活session
     if (![session setActive:YES error:&rawError]) {
         [WNPlayerUtils createError:error
-                         withDomain:WNPlayerErrorDomainAudioManager
-                            andCode:WNPlayerErrorCodeCannotSetAudioActive
-                         andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_SET_AUDIO_ACTIVE"]
-                        andRawError:rawError];
+                        withDomain:WNPlayerErrorDomainAudioManager
+                           andCode:WNPlayerErrorCodeCannotSetAudioActive
+                        andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_SET_AUDIO_ACTIVE"]
+                       andRawError:rawError];
         return NO;
     }
     //输出线路的描述
     AVAudioSessionRouteDescription *route = session.currentRoute;
     if (route.outputs.count == 0) {
         [WNPlayerUtils createError:error
-                         withDomain:WNPlayerErrorDomainAudioManager
-                            andCode:WNPlayerErrorCodeNoAudioOuput
-                         andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_NO_AUDIO_OUTPUT"]];
+                        withDomain:WNPlayerErrorDomainAudioManager
+                           andCode:WNPlayerErrorCodeNoAudioOuput
+                        andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_NO_AUDIO_OUTPUT"]];
         return NO;
     }
     
     NSInteger channels = session.outputNumberOfChannels;
     if (channels <= 0) {
         [WNPlayerUtils createError:error
-                         withDomain:WNPlayerErrorDomainAudioManager
-                            andCode:WNPlayerErrorCodeNoAudioChannel
-                         andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_NO_AUDIO_CHANNEL"]];
+                        withDomain:WNPlayerErrorDomainAudioManager
+                           andCode:WNPlayerErrorCodeNoAudioChannel
+                        andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_NO_AUDIO_CHANNEL"]];
         return NO;
     }
     
@@ -120,9 +120,9 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
     //采样速度
     if (sampleRate <= 0) {
         [WNPlayerUtils createError:error
-                         withDomain:WNPlayerErrorDomainAudioManager
-                            andCode:WNPlayerErrorCodeNoAudioSampleRate
-                         andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_NO_AUDIO_SAMPLE_RATE"]];
+                        withDomain:WNPlayerErrorDomainAudioManager
+                           andCode:WNPlayerErrorCodeNoAudioSampleRate
+                        andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_NO_AUDIO_SAMPLE_RATE"]];
         return NO;
     }
     
@@ -130,9 +130,9 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
     //系统音量
     if (volume < 0) {
         [WNPlayerUtils createError:error
-                         withDomain:WNPlayerErrorDomainAudioManager
-                            andCode:WNPlayerErrorCodeNoAudioVolume
-                         andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_NO_AUDIO_VOLUME"]];
+                        withDomain:WNPlayerErrorDomainAudioManager
+                           andCode:WNPlayerErrorCodeNoAudioVolume
+                        andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_NO_AUDIO_VOLUME"]];
         return NO;
     }
     
@@ -162,10 +162,10 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
     if (status != noErr) {
         NSError *rawError = [NSError errorWithDomain:NSOSStatusErrorDomain code:status userInfo:nil];
         [WNPlayerUtils createError:error
-                         withDomain:WNPlayerErrorDomainAudioManager
-                            andCode:WNPlayerErrorCodeCannotCreateAudioComponent
-                         andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_CREATE_AUDIO_UNIT"]
-                        andRawError:rawError];
+                        withDomain:WNPlayerErrorDomainAudioManager
+                           andCode:WNPlayerErrorCodeCannotCreateAudioComponent
+                        andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_CREATE_AUDIO_UNIT"]
+                       andRawError:rawError];
         return NO;
     }
     
@@ -176,10 +176,10 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
     if (status != noErr) {
         NSError *rawError = [NSError errorWithDomain:NSOSStatusErrorDomain code:status userInfo:nil];
         [WNPlayerUtils createError:error
-                         withDomain:WNPlayerErrorDomainAudioManager
-                            andCode:WNPlayerErrorCodeCannotGetAudioStreamDescription
-                         andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_GET_AUDIO_STREAM_DESCRIPTION"]
-                        andRawError:rawError];
+                        withDomain:WNPlayerErrorDomainAudioManager
+                           andCode:WNPlayerErrorCodeCannotGetAudioStreamDescription
+                        andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_GET_AUDIO_STREAM_DESCRIPTION"]
+                       andRawError:rawError];
         return NO;
     }
     
@@ -201,10 +201,10 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
     if (status != noErr) {
         NSError *rawError = [NSError errorWithDomain:NSOSStatusErrorDomain code:status userInfo:nil];
         [WNPlayerUtils createError:error
-                         withDomain:WNPlayerErrorDomainAudioManager
-                            andCode:WNPlayerErrorCodeCannotSetAudioRenderCallback
-                         andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_SET_AUDIO_RENDER_CALLBACK"]
-                        andRawError:rawError];
+                        withDomain:WNPlayerErrorDomainAudioManager
+                           andCode:WNPlayerErrorCodeCannotSetAudioRenderCallback
+                        andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_SET_AUDIO_RENDER_CALLBACK"]
+                       andRawError:rawError];
         return NO;
     }
     
@@ -212,10 +212,10 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
     if (status != noErr) {
         NSError *rawError = [NSError errorWithDomain:NSOSStatusErrorDomain code:status userInfo:nil];
         [WNPlayerUtils createError:error
-                         withDomain:WNPlayerErrorDomainAudioManager
-                            andCode:WNPlayerErrorCodeCannotInitAudioUnit
-                         andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_INIT_AUDIO_UNIT"]
-                        andRawError:rawError];
+                        withDomain:WNPlayerErrorDomainAudioManager
+                           andCode:WNPlayerErrorCodeCannotInitAudioUnit
+                        andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_INIT_AUDIO_UNIT"]
+                       andRawError:rawError];
         return NO;
     }
     
@@ -249,10 +249,10 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
                 NSError *error = nil;
                 NSError *rawError = [NSError errorWithDomain:NSOSStatusErrorDomain code:status userInfo:nil];
                 [WNPlayerUtils createError:&error
-                                 withDomain:WNPlayerErrorDomainAudioManager
-                                    andCode:WNPlayerErrorCodeCannotUninitAudioUnit
-                                 andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_UNINIT_AUDIO_UNIT"]
-                                andRawError:rawError];
+                                withDomain:WNPlayerErrorDomainAudioManager
+                                   andCode:WNPlayerErrorCodeCannotUninitAudioUnit
+                                andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_UNINIT_AUDIO_UNIT"]
+                               andRawError:rawError];
                 [errs addObject:error];
             }
         }
@@ -264,10 +264,10 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
                 NSError *error = nil;
                 NSError *rawError = [NSError errorWithDomain:NSOSStatusErrorDomain code:status userInfo:nil];
                 [WNPlayerUtils createError:&error
-                                 withDomain:WNPlayerErrorDomainAudioManager
-                                    andCode:WNPlayerErrorCodeCannotDisposeAudioUnit
-                                 andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_DISPOSE_AUDIO_UNIT"]
-                                andRawError:rawError];
+                                withDomain:WNPlayerErrorDomainAudioManager
+                                   andCode:WNPlayerErrorCodeCannotDisposeAudioUnit
+                                andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_DISPOSE_AUDIO_UNIT"]
+                               andRawError:rawError];
                 [errs addObject:error];
             }
         }
@@ -280,10 +280,10 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
                 NSError *error = nil;
                 NSError *rawError = [NSError errorWithDomain:NSOSStatusErrorDomain code:status userInfo:nil];
                 [WNPlayerUtils createError:&error
-                                 withDomain:WNPlayerErrorDomainAudioManager
-                                    andCode:WNPlayerErrorCodeCannotDeactivateAudio
-                                 andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_DEACTIVATE_AUDIO"]
-                                andRawError:rawError];
+                                withDomain:WNPlayerErrorDomainAudioManager
+                                   andCode:WNPlayerErrorCodeCannotDeactivateAudio
+                                andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_DEACTIVATE_AUDIO"]
+                               andRawError:rawError];
                 [errs addObject:error];
             }
         }
@@ -304,10 +304,10 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
         if (!_playing) {
             NSError *rawError = [NSError errorWithDomain:NSOSStatusErrorDomain code:status userInfo:nil];
             [WNPlayerUtils createError:error
-                             withDomain:WNPlayerErrorDomainAudioManager
-                                andCode:WNPlayerErrorCodeCannotStartAudioUnit
-                             andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_START_AUDIO_UNIT"]
-                            andRawError:rawError];
+                            withDomain:WNPlayerErrorDomainAudioManager
+                               andCode:WNPlayerErrorCodeCannotStartAudioUnit
+                            andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_START_AUDIO_UNIT"]
+                           andRawError:rawError];
         }
     }
     return _playing;
@@ -324,10 +324,10 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
         if (_playing) {
             NSError *rawError = [NSError errorWithDomain:NSOSStatusErrorDomain code:status userInfo:nil];
             [WNPlayerUtils createError:error
-                             withDomain:WNPlayerErrorDomainAudioManager
-                                andCode:WNPlayerErrorCodeCannotStopAudioUnit
-                             andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_STOP_AUDIO_UNIT"]
-                            andRawError:rawError];
+                            withDomain:WNPlayerErrorDomainAudioManager
+                               andCode:WNPlayerErrorCodeCannotStopAudioUnit
+                            andMessage:[WNPlayerUtils localizedString:@"WN_PLAYER_STRINGS_CANNOT_STOP_AUDIO_UNIT"]
+                           andRawError:rawError];
         }
     }
     return !_playing;
@@ -379,13 +379,13 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
 #pragma mark - Notifications
 - (void)registerNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self
-           selector:@selector(audioSessionRouteChanged:)
-               name:AVAudioSessionRouteChangeNotification
-             object:nil];
+                                             selector:@selector(audioSessionRouteChanged:)
+                                                 name:AVAudioSessionRouteChangeNotification
+                                               object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
-           selector:@selector(audioSessionInterruptionNotification:)
-               name:AVAudioSessionInterruptionNotification
-             object:nil];
+                                             selector:@selector(audioSessionInterruptionNotification:)
+                                                 name:AVAudioSessionInterruptionNotification
+                                               object:nil];
     
     if (!_registeredKVO) {
         AVAudioSession *session = [AVAudioSession sharedInstance];

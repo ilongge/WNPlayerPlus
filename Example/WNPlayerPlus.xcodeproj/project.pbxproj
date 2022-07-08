@@ -21,6 +21,7 @@
 		BA1D1D5B280651C000531AFB /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1D1D52280651C000531AFB /* FirstViewController.m */; };
 		BA1D1D5C280651C000531AFB /* CustomerControlView_test.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1D1D54280651C000531AFB /* CustomerControlView_test.m */; };
 		BA1D1D5D280651C000531AFB /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1D1D55280651C000531AFB /* SecondViewController.m */; };
+		BA8BFCEF2877E71100BF9F9F /* IPTV_CN.m3u in Resources */ = {isa = PBXBuildFile; fileRef = BA8BFCEE2877E70C00BF9F9F /* IPTV_CN.m3u */; };
 		BAF6C4B3280AFF70005B4484 /* videoSample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BAF6C4B2280AFF70005B4484 /* videoSample.mp4 */; };
 		F2BD4DEE13A030659E7A5F09 /* Pods_WNPlayerPlus_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED6511A310DB47DC1AF021C /* Pods_WNPlayerPlus_Example.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		BA1D1D55280651C000531AFB /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		BA1D1D56280651C000531AFB /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		BA1D1D57280651C000531AFB /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BA8BFCEE2877E70C00BF9F9F /* IPTV_CN.m3u */ = {isa = PBXFileReference; lastKnownFileType = text; path = IPTV_CN.m3u; sourceTree = "<group>"; };
 		BA9E29C528066D0300322FF0 /* package.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = package.sh; path = ../package.sh; sourceTree = "<group>"; };
 		BAF6C4B2280AFF70005B4484 /* videoSample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoSample.mp4; sourceTree = "<group>"; };
 		D47178C450ECC7504A5227DE /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				BA9E29C528066D0300322FF0 /* package.sh */,
 				DD58BDC7C29E00D1B5753990 /* README.md */,
 				0F1299FBD4AFFD0F5429FF7A /* WNPlayerPlus.podspec */,
+				BA8BFCEE2877E70C00BF9F9F /* IPTV_CN.m3u */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				BA8BFCEF2877E71100BF9F9F /* IPTV_CN.m3u in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 				BAF6C4B3280AFF70005B4484 /* videoSample.mp4 in Resources */,

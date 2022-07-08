@@ -14,9 +14,9 @@
     if (error == nil) return NO;
     NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
     if (message != nil) userInfo[NSLocalizedDescriptionKey] = message;
-        *error = [NSError errorWithDomain:domain
-                                     code:code
-                                 userInfo:userInfo];
+    *error = [NSError errorWithDomain:domain
+                                 code:code
+                             userInfo:userInfo];
     return YES;
 }
 

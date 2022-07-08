@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
     spec.name             = 'WNPlayerPlus'
-    spec.version          = '1.0.2'
+    spec.version          = '1.0.3'
     spec.summary          = 'A short description of WNPlayerPlus.'
     spec.description      = <<-DESC
     '基于WNPlayer开发，原始库地址[https://github.com/zhengwenming/WNPlayer.git]，项目内使用自编译FFMpeg.Framework，版本4.3.3。鉴于本人网络环境堪忧，故首选国内开源库托管网站Gitee，同时Github亦会同步一份，望见谅、'

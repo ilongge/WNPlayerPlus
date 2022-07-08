@@ -42,7 +42,31 @@
                                                object:nil
     ];
     self.view.backgroundColor = UIColor.blackColor;
-    CGRect rect = CGRectMake(0, [[UIApplication sharedApplication] statusBarFrame].size.height, self.view.frame.size.width, self.view.frame.size.width*(9/16.0));
+    
+    CGRect rect;
+    UIInterfaceOrientation statusBarOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    switch (statusBarOrientation) {
+        case UIInterfaceOrientationPortrait:
+        case UIInterfaceOrientationPortraitUpsideDown:
+        {
+            rect = CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.width*(9/16.0));
+        }
+            break;
+        case UIInterfaceOrientationUnknown:
+        case UIInterfaceOrientationLandscapeLeft:
+        case UIInterfaceOrientationLandscapeRight:
+        {
+            rect = CGRectMake(44, 0, self.view.frame.size.height*(16/9.0), self.view.frame.size.height);
+        }
+            break;
+    }
+    
+    
+    if (rect.size.height > self.view.frame.size.height) {
+        CGFloat scale = rect.size.height / self.view.frame.size.height;
+        rect.size.width = rect.size.width / scale;
+        rect.size.height = self.view.frame.size.height / scale;
+    }
     self.wnPlayer = [[WNPlayer alloc] initWithFrame:rect];
     self.wnPlayer.isFullScreen = self.view.frame.size.width > self.view.frame.size.height;
     self.wnPlayer.autoplay = YES;
@@ -88,11 +112,12 @@
     }
 }
 //点击全屏按钮代理方法
--(void)player:(WNPlayer *)player clickedFullScreenButton:(UIButton *)fullScreenBtn{
+-(void)player:(WNPlayer *)player clickedFullScreenButton:(UIButton *)fullScreenBtn {
     if (self.wnPlayer.isFullScreen) {//全屏
         //强制翻转屏幕，Home键在下边。
         [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationPortrait) forKey:@"orientation"];
-    }else{//非全屏
+    }
+    else{//非全屏
         [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationLandscapeRight) forKey:@"orientation"];
     }
     //刷新
@@ -130,6 +155,11 @@
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
     CGFloat statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
     CGRect rect = CGRectMake(0, statusHeight, size.width, size.width*(9/16.0));
+    if (rect.size.height > size.height) {
+        CGFloat scale = rect.size.height / size.height;
+        rect.size.width = rect.size.width / scale;
+        rect.size.height = size.height / scale;
+    }
     BOOL isFull = size.width > size.height;
     self.wnPlayer.frame = rect;
     self.wnPlayer.isFullScreen = isFull;
